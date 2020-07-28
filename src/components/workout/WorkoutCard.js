@@ -1,8 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Workout.css"
+import WorkoutManager from "../../modules/WorkoutManager";
 
 const WorkoutCard = props => {
+
+    const handleFieldChange = () =>
+        WorkoutManager.completedWorkout(props.task)
+        .then(() => props.getWorkouts())
+
+
   return (
     <div className="card">
       <div className="card-content">
@@ -17,15 +24,26 @@ const WorkoutCard = props => {
           </span>
         </h3>
 
-        <button 
-            type="button" 
-            onClick={() => props.deleteWorkout(props.workout.id)}>Delete
-        </button>
+        <label>Completed</label>
+
+            <input
+                type="checkbox"
+                required
+                className="forms-control"
+                id="workouts"
+                checked={props.workout.completed}
+                onChange={handleFieldChange}
+            />    
 
                 {/* Hyperlink */}
         <Link to={`/Workouts/${props.workout.id}`}>
             <button>Details</button>
         </Link>
+
+        <button 
+            type="button" 
+            onClick={() => props.deleteWorkout(props.workout.id)}>Delete
+        </button>
 
       </div>
     </div>

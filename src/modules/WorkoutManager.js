@@ -24,5 +24,5 @@ export default {
           },
           body: JSON.stringify(newWorkout)
       }).then(data => data.json())
-  }
+  },
 }
