@@ -52,7 +52,7 @@ const ApplicationViews = () => {
         path="/Workouts/:workoutId(\d+)" 
         render={(props) => {
           return <WorkoutDetail 
-            workoutId={parseInt(props.match.params.workoutId)}/>
+            workoutId={parseInt(props.match.params.workoutId)} {...props}/>
           }} 
       />
 
