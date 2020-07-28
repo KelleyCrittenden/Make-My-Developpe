@@ -1,0 +1,9 @@
+.homeImage {
+    display: flex;
+    width:100%;
+}
+
+.homeInfo {
+    display: flex;
+    justify-content: center;
+}
