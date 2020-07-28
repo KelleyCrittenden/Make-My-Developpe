@@ -6,14 +6,15 @@ import UserList from "./user/UserList";
 
 import WorkoutCard from "./workout/WorkoutCard";
 import WorkoutList from "./workout/WorkoutList";
-import WorkoutDetail from "./workout/WorkoutDetail"
+import WorkoutDetail from "./workout/WorkoutDetail";
+import WorkoutForm from "./workout/WorkoutForm";
 
 import BarreExerciseList from "./barre/BarreExerciseList";
 import BarreExerciseDetail from "./barre/BarreExerciseDetail";
 
 
-import CenterFloorExerciseList from "./centerFloor/CenterFloorExerciseList"
-import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail"
+import CenterFloorExerciseList from "./centerFloor/CenterFloorExerciseList";
+import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail";
 
 
 
@@ -43,7 +44,7 @@ const ApplicationViews = () => {
         exact
         path="/Workouts"
         render={props => {
-          return <WorkoutList />;
+          return <WorkoutList {...props}/>;
         }}
       />
 
@@ -54,6 +55,13 @@ const ApplicationViews = () => {
           return <WorkoutDetail 
             workoutId={parseInt(props.match.params.workoutId)} {...props}/>
           }} 
+      />
+
+      <Route 
+        path="/Workouts/New"
+        render={(props) => {
+          return <WorkoutForm {...props} />
+        }}
       />
 
 {/* Routes For Completed Exercises */}

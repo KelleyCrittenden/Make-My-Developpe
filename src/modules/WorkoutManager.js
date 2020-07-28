@@ -14,5 +14,15 @@ export default {
     return fetch(`${remoteURL}/Workouts/${id}`, {
       method: "DELETE"
     }).then(result => result.json())
+  },
+
+  post(newWorkout) {
+      return fetch(`${remoteURL}/Workouts`, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(newWorkout)
+      }).then(data => data.json())
   }
 }

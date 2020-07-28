@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import WorkoutCard from "./WorkoutCard"
 import WorkoutManager from '../../modules/WorkoutManager';
 
-const WorkoutList = () => {
+const WorkoutList = (props) => {
 
     const [workouts, setWorkouts] = useState ([]);
 
@@ -27,6 +27,14 @@ const WorkoutList = () => {
   }, []);
 
   return (
+      <>
+      <section className="section-content">
+        <button type="button"
+                className="btn"
+                onClick={() => {props.history.push("/Workouts/New")}}>
+                Create New Workout
+        </button>
+</section>
     <div className="container-cards">
       {workouts.map(workout => 
         <WorkoutCard 
@@ -37,6 +45,7 @@ const WorkoutList = () => {
         />)}
 
     </div>
+    </>
   );
 };
 
