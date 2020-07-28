@@ -1,88 +1,82 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Harper",
-            "email": "test@test.com",
-            "password":"123",
-            "image": "pointe-shoes.jpeg",
-            "age": 11,
-            "danceStudio": "Ellen Alvin Dance Exchange",
-            "experience": 5
-    
-        },
-        {
-            "id": 2,
-            "name": "Aralyn",
-            "email": "test@test.com",
-            "password":"123",
-            "image": "pointe-shoes.jpeg",
-            "age": 14,
-            "danceStudio": "Ellen Alvin Dance Exchange",
-            "experience": 0
-    
-        }
-    ],
-    "workouts": [
-        {
-            "id": "1",
-            "userId": "1",
-            "name": "Week One",
-            "date": "2020-07-22",
-            "barreExerciseId": "1",
-            "barreExerciseDescription": "1st position 2 demi and 1 grand",
-            "centerFloorExerciseId": "1",
-            "centerFloorExerciseDescription": "feet in fifth, both sides",
-            "comment": "first day of class",
-            "completed": "false"
-    
+  "users": [
+    {
+      "id": 1,
+      "name": "Harper",
+      "email": "test@test.com",
+      "password": "123",
+      "image": "pointe-shoes.jpeg",
+      "age": 11,
+      "danceStudio": "Ellen Alvin Dance Exchange",
+      "experience": 5
     },
     {
-        "id": "2",
-        "userId": "1",
-        "name": "Week Two",
-        "date": "2020-07-28",
-        "barreExerciseId": "1",
-        "barreExerciseDescription": "1st position 2 demi and 1 grand",
-        "centerFloorExerciseId": "1",
-        "centerFloorExerciseDescription": "feet in fifth, both sides",
-        "comment": "second day of class",
-        "completed": "true"
-    
+      "id": 2,
+      "name": "Aralyn",
+      "email": "test@test.com",
+      "password": "123",
+      "image": "pointe-shoes.jpeg",
+      "age": 14,
+      "danceStudio": "Ellen Alvin Dance Exchange",
+      "experience": 0
     }
-    ],
-    "barreExercises": [
-        {
-        "id":"1",
-        "name": "frappe",
-        "image": "pointe-shoes.jpeg",
-        "typeOfMovement": "leap",
-        "description": "jump high"
-        },
-        {
-        "id":"2",
-        "name": "degage",
-        "image": "pointe-shoes.jpeg",
-        "typeOfMovement": "turn",
-        "description": "turn fast"
-        }
-    ],
-    "centerFloorExercises": [
-        {
-        "id":"1",
-        "name": "Aragesque",
-        "image": "pointe-shoes.jpeg",
-        "typeOfMovement": "leap",
-        "description": "jump high"
-        },
-        {
-        "id":"2",
-        "name": "degage",
-        "image": "pointe-shoes.jpeg",
-        "typeOfMovement": "turn",
-        "description": "turn fast"
-        }
-    
-    ]
-    
+  ],
+  "workouts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Week One",
+      "date": "2020-07-22",
+      "barreExerciseId": "1",
+      "barreExerciseDescription": "1st position 2 demi and 1 grand",
+      "centerFloorExerciseId": "1",
+      "centerFloorExerciseDescription": "feet in fifth, both sides",
+      "comment": "first day of class",
+      "completed": "false"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Week Two",
+      "date": "2020-07-28",
+      "barreExerciseId": "1",
+      "barreExerciseDescription": "1st position 2 demi and 1 grand",
+      "centerFloorExerciseId": "1",
+      "centerFloorExerciseDescription": "feet in fifth, both sides",
+      "comment": "second day of class",
+      "completed": "true"
     }
+  ],
+  "barreExercises": [
+    {
+      "id": 1,
+      "name": "frappe",
+      "image": "pointe-shoes.jpeg",
+      "typeOfMovement": "leap",
+      "description": "jump high"
+    },
+    {
+      "id": 2,
+      "name": "degage",
+      "image": "pointe-shoes.jpeg",
+      "typeOfMovement": "turn",
+      "description": "turn fast"
+    }
+  ],
+  "centerFloorExercises": [
+    {
+      "id": 1,
+      "name": "Aragesque",
+      "image": "pointe-shoes.jpeg",
+      "typeOfMovement": "leap",
+      "description": "jump high"
+    },
+    {
+      "id": 2,
+      "name": "degage",
+      "image": "pointe-shoes.jpeg",
+      "typeOfMovement": "turn",
+      "description": "turn fast"
+    }
+  ]
+}

@@ -36,7 +36,7 @@ const WorkoutForm = props => {
         } else {
             setIsLoading(true);
             WorkoutManager.post(workout)
-            .then(() => props.history.push("./Workouts"))
+            .then(() => props.history.push("/Workouts"))
         }
     }
     return (
