@@ -32,7 +32,7 @@
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "first day of class",
-      "completed": "false"
+      "completed": false
     },
     {
       "id": 2,
@@ -44,7 +44,29 @@
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "second day of class",
-      "completed": "true"
+      "completed": false
+    },
+    {
+      "name": "TEST",
+      "date": "2020-07-10",
+      "barreExerciseId": "1",
+      "barreExerciseDescription": "TESTING completed",
+      "centerFloorExerciseId": "1",
+      "centerFloorExerciseDescription": "testing",
+      "comment": "testing comments",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "name": "Kelley Crittenden",
+      "date": "2020-07-18",
+      "barreExerciseId": "1",
+      "barreExerciseDescription": "testing",
+      "centerFloorExerciseId": "1",
+      "centerFloorExerciseDescription": "testing",
+      "comment": "testing comments",
+      "completed": false,
+      "id": 4
     }
   ],
   "barreExercises": [

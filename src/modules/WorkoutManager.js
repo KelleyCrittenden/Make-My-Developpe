@@ -25,4 +25,26 @@ export default {
           body: JSON.stringify(newWorkout)
       }).then(data => data.json())
   },
+
+  update(editedWorkout) {
+      return fetch(`${remoteURL}/Workouts/${editedWorkout.id}`, {
+          method: "PUT",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(editedWorkout)
+      }).then(data => data.json());
+  },
+
+    completedWorkout(editedWorkout){
+        return fetch(`${remoteURL}/Workouts/${editedWorkout.id}`,{
+            method:"PATCH",
+            body: JSON.stringify({
+                completed: true 
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }) .then(resp => resp.json());
+    }
 }
