@@ -22,6 +22,11 @@ const UserCard = props => {
 
         <p>Years of Experience: {props.user.experience}</p>
 
+        <button type="button"
+          onClick={() => props.history.push(`/Users/${props.user.id}/Edit`)}>
+          Edit
+        </button>
+
 
         </div>
     </div>

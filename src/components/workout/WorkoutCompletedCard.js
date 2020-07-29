@@ -13,7 +13,7 @@ const WorkoutCompletedCard = props => {
 
   return (
     <>
-        {props.workout.completed ?
+       
 
             <div className="card">
                 <div className="card-content">
@@ -57,8 +57,8 @@ const WorkoutCompletedCard = props => {
 
              </div>
             </div>
-        }
-       
+
+        
     </>
 
   );

@@ -3,6 +3,7 @@ import React from "react";
 import Home from "./home/Home";
 
 import UserList from "./user/UserList";
+import UserEditForm from "./user/UserEditForm"
 
 import WorkoutCard from "./workout/WorkoutCard";
 import WorkoutList from "./workout/WorkoutList";
@@ -33,12 +34,23 @@ const ApplicationViews = () => {
           return <Home />;
         }}
       />
+{/* Routes for User Profile */}
 
       <Route
+        exact
         path="/Users"
         render={props => {
-          return <UserList />;
+          return <UserList {...props}/>;
         }}
+      />
+
+      <Route 
+        exact
+        path="/Users/:userId(\d+)/Edit" 
+        render={(props) => {
+          return <UserEditForm 
+            workoutId={parseInt(props.match.params.userId)} {...props}/>
+          }} 
       />
 
 {/* Routes for Workouts */}

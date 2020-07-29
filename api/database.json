@@ -2,10 +2,7 @@
   "users": [
     {
       "id": 1,
-      "name": "Harper",
-      "email": "test@test.com",
-      "password": "123",
-      "image": "pointe-shoes.jpeg",
+      "name": "Harper Alexis",
       "age": 11,
       "danceStudio": "Ellen Alvin Dance Exchange",
       "experience": 5
@@ -44,7 +41,7 @@
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "second day of class",
-      "completed": false
+      "completed": true
     },
     {
       "name": "TEST",

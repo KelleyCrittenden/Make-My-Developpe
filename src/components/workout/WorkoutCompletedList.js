@@ -36,7 +36,7 @@ const WorkoutCompletedList = (props) => {
         </button>
 </section>
     <div className="container-cards">
-      {workouts.map(workout => 
+      {workouts.map(workout => workout.completed &&
         <WorkoutCompletedCard 
                 //unique key, react keeping track of re-rendering only necessary things
             key={workout.id}
