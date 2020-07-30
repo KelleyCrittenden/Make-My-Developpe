@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import WorkoutCard from "./WorkoutCard"
+import WorkoutCompletedCard from "./WorkoutCompletedCard"
 import WorkoutManager from '../../modules/WorkoutManager';
 
-const WorkoutList = (props) => {
+const WorkoutCompletedList = (props) => {
 
     const [workouts, setWorkouts] = useState ([]);
 
@@ -28,18 +28,16 @@ const WorkoutList = (props) => {
 
   return (
       <>
-      
       <section className="section-content">
         <button type="button"
                 className="btn"
                 onClick={() => {props.history.push("/Workouts/New")}}>
                 Create New Workout
         </button>
-      </section>
-
+</section>
     <div className="container-cards">
-      {workouts.map(workout => 
-        <WorkoutCard 
+      {workouts.map(workout => workout.completed &&
+        <WorkoutCompletedCard 
                 //unique key, react keeping track of re-rendering only necessary things
             key={workout.id}
             workout={workout}
@@ -53,4 +51,4 @@ const WorkoutList = (props) => {
   );
 };
 
-export default WorkoutList
+export default WorkoutCompletedList

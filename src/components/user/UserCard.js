@@ -11,9 +11,7 @@ const UserCard = props => {
         </picture>
 
         <h3>
-          Name: <span className="card-userName">
-              {props.user.name}
-          </span>
+          Name: <span className="card-userName">{props.user.name}</span>
         </h3>
 
         <p>Age: {props.user.age}</p>
@@ -21,6 +19,12 @@ const UserCard = props => {
         <p>Dance Studio: {props.user.danceStudio}</p>
 
         <p>Years of Experience: {props.user.experience}</p>
+
+        <button 
+          type="button"
+          onClick={() => props.history.push(`/Users/${props.user.id}/Edit`)}>
+          Edit
+        </button>
 
 
         </div>

@@ -1,11 +1,21 @@
 import React from "react";
+import Login from "../auth/Login"
 
-const Home = () => {
+const Home = (props) => {
+  const hasUser = props.hasUser;
+  const setUser = props.setUser;
+
+  let userId = "";
+
+  if(hasUser) {
+    userId = JSON.parse(sessionStorage.getItem("credentials"));
+  }
   return (
-    <address>
-        Home View
-    </address>
-  );
-};
+    <>
+    <Login hasUser={hasUser} setUser={setUser} {...props} />
+    </>
+  )
+}
+
 
 export default Home;

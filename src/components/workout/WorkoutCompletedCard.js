@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Workout.css"
 import WorkoutManager from "../../modules/WorkoutManager";
 
-const WorkoutCard = props => {
+const WorkoutCompletedCard = props => {
 
     const handleFieldChange = () => {
         WorkoutManager.completedWorkout(props.workout)
@@ -13,7 +13,7 @@ const WorkoutCard = props => {
 
   return (
     <>
-        {props.workout.completed ? null : 
+       
 
             <div className="card">
                 <div className="card-content">
@@ -57,10 +57,11 @@ const WorkoutCard = props => {
 
              </div>
             </div>
-        }
+
+        
     </>
 
   );
 };
 
-export default WorkoutCard;
+export default WorkoutCompletedCard;

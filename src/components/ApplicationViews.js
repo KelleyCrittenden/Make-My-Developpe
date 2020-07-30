@@ -2,12 +2,18 @@ import { Route } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
 
-import UserList from "./user/UserList";
+import Login from "./auth/Login"
+import Register from "./auth/Register"
 
-import WorkoutCard from "./workout/WorkoutCard";
+import UserList from "./user/UserList";
+import UserEditForm from "./user/UserEditForm"
+
 import WorkoutList from "./workout/WorkoutList";
 import WorkoutDetail from "./workout/WorkoutDetail";
 import WorkoutForm from "./workout/WorkoutForm";
+import WorkoutEditForm from "./workout/WorkoutEditForm"
+import WorkoutCompletedList from "./workout/WorkoutCompletedList"
+
 
 import BarreExerciseList from "./barre/BarreExerciseList";
 import BarreExerciseDetail from "./barre/BarreExerciseDetail";
@@ -19,9 +25,29 @@ import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail";
 
 
 
-const ApplicationViews = () => {
+const ApplicationViews = props => {
+  const hasUser = props.hasUser;
+  const setUser = props.setUser;
+
   return (
     <React.Fragment>
+
+      <Route
+        exact
+        path="/"
+        render={props => {
+          return <Login {...props} 
+        setUser={setUser}/>;
+        }}
+      />
+
+      <Route
+        exact
+        path="/"
+        render={props => {
+          return <Register {...props}/>
+        }}
+      />
 
       <Route
         exact
@@ -31,11 +57,24 @@ const ApplicationViews = () => {
         }}
       />
 
+
+{/* Routes for User Profile */}
+
       <Route
+        exact
         path="/Users"
         render={props => {
-          return <UserList />;
+          return <UserList {...props}/>;
         }}
+      />
+
+      <Route 
+        exact
+        path="/Users/:userId(\d+)/Edit" 
+        render={(props) => {
+          return <UserEditForm 
+            workoutId={parseInt(props.match.params.userId)} {...props}/>
+          }} 
       />
 
 {/* Routes for Workouts */}
@@ -58,18 +97,27 @@ const ApplicationViews = () => {
       />
 
       <Route 
+        exact
         path="/Workouts/New"
         render={(props) => {
           return <WorkoutForm {...props} />
         }}
       />
 
-{/* Routes For Completed Exercises */}
+      <Route 
+        exact
+        path="/Workouts/:workoutId(\d+)/Edit" 
+        render={(props) => {
+          return <WorkoutEditForm 
+            workoutId={parseInt(props.match.params.workoutId)} {...props}/>
+          }} 
+      />
 
       <Route
+        exact
         path="/CompletedWorkouts"
         render={props => {
-          return <WorkoutCard />;
+          return <WorkoutCompletedList {...props}/>;
         }}
       />
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import UserCard from './UserCard';
 import UserManager from '../../modules/UserManager';
 
-const UserList = () => {
+const UserList = props => {
 
   const [users, setUsers] = useState([]);
 
@@ -23,7 +23,9 @@ const UserList = () => {
     <div className="container-cards">
       {users.map(user => <UserCard 
         key={user.id} 
-        user={user}/>)}
+        user={user}
+        getUsers={getUsers}
+        {...props}/>)}
     </div>
   );
 };

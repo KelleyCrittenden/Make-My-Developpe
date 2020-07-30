@@ -2,19 +2,18 @@
   "users": [
     {
       "id": 1,
-      "name": "Harper",
-      "email": "test@test.com",
+      "email": "harper@gmail.com",
       "password": "123",
-      "image": "pointe-shoes.jpeg",
+      "name": "Harper Alexis",
       "age": 11,
       "danceStudio": "Ellen Alvin Dance Exchange",
       "experience": 5
     },
     {
       "id": 2,
-      "name": "Aralyn",
-      "email": "test@test.com",
+      "email": "aralyn@gmail.com",
       "password": "123",
+      "name": "Aralyn",
       "image": "pointe-shoes.jpeg",
       "age": 14,
       "danceStudio": "Ellen Alvin Dance Exchange",
@@ -32,11 +31,11 @@
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "first day of class",
-      "completed": "false"
+      "completed": true
     },
     {
       "id": 2,
-      "userId": 1,
+      "userId": 2,
       "name": "Week Two",
       "date": "2020-07-28",
       "barreExerciseId": "1",
@@ -44,23 +43,34 @@
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "second day of class",
-      "completed": "true"
+      "completed": true
+    },
+    {
+      "name": "Kelley Crittenden",
+      "date": "2020-07-18",
+      "barreExerciseId": "1",
+      "barreExerciseDescription": "testing",
+      "centerFloorExerciseId": "1",
+      "centerFloorExerciseDescription": "testing",
+      "comment": "testing comments",
+      "completed": false,
+      "id": 4
     }
   ],
   "barreExercises": [
     {
-      "id": 1,
-      "name": "frappe",
-      "image": "pointe-shoes.jpeg",
-      "typeOfMovement": "leap",
-      "description": "jump high"
+        "id": 1,
+        "name": "first Position",
+        "image": "pointe-shoes.jpeg",
+        "typeOfMovement": "Foot Position",
+        "description": "turn fast"
     },
     {
-      "id": 2,
-      "name": "degage",
-      "image": "pointe-shoes.jpeg",
-      "typeOfMovement": "turn",
-      "description": "turn fast"
+        "id": 2,
+        "name": "first Position",
+        "image": "pointe-shoes.jpeg",
+        "typeOfMovement": "Body Position",
+        "description": "turn fast"
     }
   ],
   "centerFloorExercises": [
