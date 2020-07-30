@@ -2,10 +2,12 @@ import { Route } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
 
+import Login from "./auth/Login"
+import Register from "./auth/Register"
+
 import UserList from "./user/UserList";
 import UserEditForm from "./user/UserEditForm"
 
-import WorkoutCard from "./workout/WorkoutCard";
 import WorkoutList from "./workout/WorkoutList";
 import WorkoutDetail from "./workout/WorkoutDetail";
 import WorkoutForm from "./workout/WorkoutForm";
@@ -23,9 +25,29 @@ import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail";
 
 
 
-const ApplicationViews = () => {
+const ApplicationViews = props => {
+  const hasUser = props.hasUser;
+  const setUser = props.setUser;
+
   return (
     <React.Fragment>
+
+      <Route
+        exact
+        path="/"
+        render={props => {
+          return <Login {...props} 
+        setUser={setUser}/>;
+        }}
+      />
+
+      <Route
+        exact
+        path="/"
+        render={props => {
+          return <Register {...props}/>
+        }}
+      />
 
       <Route
         exact
@@ -34,6 +56,8 @@ const ApplicationViews = () => {
           return <Home />;
         }}
       />
+
+
 {/* Routes for User Profile */}
 
       <Route

@@ -19,9 +19,19 @@ export default {
       body: JSON.stringify(editedUser)
     }).then(data => data.json());
   },
-
-  searchUser(name) {
-    return fetch(`${remoteURL}/Users/?&q=${name}`)
+      //? method that finds anthing after the q
+  searchUser(email) {
+    return fetch(`${remoteURL}/Users/?&q=${email}`)
     .then(result => result.json())
+  },
+
+  createUser: (newUser) => {
+    return fetch(`${remoteURL}/Users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newUser)
+    })
   }
 }
