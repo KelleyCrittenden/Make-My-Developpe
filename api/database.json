@@ -28,7 +28,7 @@
       "date": "2020-07-22",
       "barreExerciseId": "1",
       "barreExerciseDescription": "1st position 2 demi and 1 grand",
-      "centerFloorExerciseId": "1",
+      "centerFloorExerciseId": "2",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "first day of class",
       "completed": true
@@ -46,10 +46,21 @@
       "completed": true
     },
     {
+      "id": 3,
       "name": "Kelley Crittenden",
       "date": "2020-07-18",
-      "barreExerciseId": "1",
+      "barreExerciseId": "2",
       "barreExerciseDescription": "testing",
+      "centerFloorExerciseId": "2",
+      "centerFloorExerciseDescription": "testing",
+      "comment": "testing comments",
+      "completed": false
+    },
+    {
+      "name": "TEST",
+      "date": "2020-07-11",
+      "barreExerciseId": "1",
+      "barreExerciseDescription": "TESTING EDIT",
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "testing",
       "comment": "testing comments",
@@ -59,18 +70,18 @@
   ],
   "barreExercises": [
     {
-        "id": 1,
-        "name": "first Position",
-        "image": "pointe-shoes.jpeg",
-        "typeOfMovement": "Foot Position",
-        "description": "turn fast"
+      "id": 1,
+      "name": "first Position",
+      "image": "pointe-shoes.jpeg",
+      "typeOfMovement": "Foot Position",
+      "description": "turn fast"
     },
     {
-        "id": 2,
-        "name": "first Position",
-        "image": "pointe-shoes.jpeg",
-        "typeOfMovement": "Body Position",
-        "description": "turn fast"
+      "id": 2,
+      "name": "first Position",
+      "image": "pointe-shoes.jpeg",
+      "typeOfMovement": "Body Position",
+      "description": "turn fast"
     }
   ],
   "centerFloorExercises": [

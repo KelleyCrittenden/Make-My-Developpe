@@ -13,6 +13,7 @@ import WorkoutDetail from "./workout/WorkoutDetail";
 import WorkoutForm from "./workout/WorkoutForm";
 import WorkoutEditForm from "./workout/WorkoutEditForm"
 import WorkoutCompletedList from "./workout/WorkoutCompletedList"
+import WorkoutWithExercises from "./workout/WorkoutWithExercises"
 
 
 import BarreExerciseList from "./barre/BarreExerciseList";
@@ -37,7 +38,8 @@ const ApplicationViews = props => {
         path="/"
         render={props => {
           return <Login {...props} 
-        setUser={setUser}/>;
+        setUser={setUser}
+        hasUser={hasUser}/>;
         }}
       />
 
@@ -87,13 +89,20 @@ const ApplicationViews = props => {
         }}
       />
 
-      <Route 
+      {/* <Route 
         exact
         path="/Workouts/:workoutId(\d+)" 
         render={(props) => {
           return <WorkoutDetail 
             workoutId={parseInt(props.match.params.workoutId)} {...props}/>
           }} 
+      /> */}
+
+      <Route
+        path="/Workouts/:workoutId(\d+)/Details"
+        render={(props) => {
+          return <WorkoutWithExercises {...props} />
+        }}
       />
 
       <Route 
