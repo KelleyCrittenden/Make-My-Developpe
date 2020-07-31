@@ -39,6 +39,8 @@ const WorkoutForm = props => {
             .then(() => props.history.push("/Workouts"))
         }
     }
+
+
     return (
         <>
           <form>
@@ -68,15 +70,23 @@ const WorkoutForm = props => {
                 />
 
 
-            <label htmlFor="barreExerciseId">Barre Exercise : </label>
 
-                <input
-                    type="dropDown"
-                    required
-                    onChange={handleFieldChange}
-                    id="barreExerciseId"
-                    placeholder="choose one"
-                />
+            <div class ="ui selection dropdown">
+
+                <label htmlFor="barreExerciseId">Barre Exercise : </label>
+
+                    <input
+                        type="hidden"
+                        name="barreExercise">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Barre Exercise: </div>
+                        <div class="menu"></div>
+                    </input>
+                          
+            </div>
+
+
+
 
             <label htmlFor="barreExerciseDescription">Barre Exercise Comments: </label>
 

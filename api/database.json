@@ -2,10 +2,8 @@
   "users": [
     {
       "id": 1,
-      "email": "harper@gmail.com",
-      "password": "123",
       "name": "Harper Alexis",
-      "age": 11,
+      "age": "14",
       "danceStudio": "Ellen Alvin Dance Exchange",
       "experience": 5
     },
@@ -49,7 +47,7 @@
       "id": 3,
       "name": "Kelley Crittenden",
       "date": "2020-07-18",
-      "barreExerciseId": "2",
+      "barreExerciseId": 1,
       "barreExerciseDescription": "testing",
       "centerFloorExerciseId": "2",
       "centerFloorExerciseDescription": "testing",
@@ -57,15 +55,15 @@
       "completed": false
     },
     {
-      "name": "TEST",
+      "id": 4,
+      "name": "TEST second position",
       "date": "2020-07-11",
-      "barreExerciseId": "1",
+      "barreExerciseId": 2,
       "barreExerciseDescription": "TESTING EDIT",
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "testing",
       "comment": "testing comments",
-      "completed": false,
-      "id": 4
+      "completed": false
     }
   ],
   "barreExercises": [
@@ -78,7 +76,7 @@
     },
     {
       "id": 2,
-      "name": "first Position",
+      "name": "second Position",
       "image": "pointe-shoes.jpeg",
       "typeOfMovement": "Body Position",
       "description": "turn fast"

@@ -44,7 +44,7 @@ const WorkoutWithExercises = props => {
                     <BarreExerciseCard
                     key={barreExercise.id}
                     barreExercise={barreExercise}
-                    //getBarreExercise={getBarreExercise}
+                    // getBarreExercise={getBarreExercise}
                     {...props}
                     />
                 )}
