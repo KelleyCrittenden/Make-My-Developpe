@@ -30,15 +30,16 @@ const Register = props => {
         const experience = document.getElementById("experience").value
 
         UserManager.searchUser(credentials.email)
+            console.log(credentials)
             .then(existingUserByEmail => {
                 if (
-                    email === "" ||
-                    password === "" ||
-                    confirmPassword === "" ||
-                    name === "" ||
-                    age === "" ||
-                    danceStudio === "" ||
-                    experience === "") {
+                    credentials.email === "" ||
+                    credentials.password === "" ||
+                    credentials.confirmPassword === "" ||
+                    credentials.name === "" ||
+                    credentials.age === "" ||
+                    credentials.danceStudio === "" ||
+                    credentials.experience === "") {
                      window.alert("Please input all fields")
                         //if there is an email match in the searchUser array it will count as one, greater than 0
                 }else if (existingUserByEmail.length > 0){

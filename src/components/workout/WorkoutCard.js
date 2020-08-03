@@ -40,9 +40,9 @@ const WorkoutCard = props => {
                         />    
 
                             {/* Hyperlink */}
-                    <Link to={`/Workouts/${props.workout.id}`}>
+                    {/* <Link to={`/Workouts/${props.workout.id}`}>
                         <button>Details</button>
-                    </Link>
+                    </Link> */}
 
                     <button 
                         type="button"
@@ -53,6 +53,12 @@ const WorkoutCard = props => {
                     <button 
                         type="button" 
                         onClick={() => props.deleteWorkout(props.workout.id)}>Delete
+                    </button>
+
+                    <button 
+                        type="button"
+                        onClick={() => { props.history.push(`/Workouts/${props.workout.id}/details`) }}>
+                        Details
                     </button>
 
              </div>

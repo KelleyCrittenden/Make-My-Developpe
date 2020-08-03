@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews";
 import "./Developpe.css";
+import Home from "./home/Home";
 
 
 const Developpe = () => {
@@ -16,19 +17,19 @@ const Developpe = () => {
     if (isAuthenticated()) {
       return (
         <>
+          <NavBar />
           <ApplicationViews
             hasUser={hasUser}
             setUser={setUser} />
           </>
-            //taking to login
+      
       )}else {
         return (
           <div>
             <h2>
+              
               <NavBar />
-              <ApplicationViews
-                hasUser={hasUser}
-                setUser={setUser} />
+              <ApplicationViews />
             </h2>
           </div>
 

@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import WorkoutManager from "../../modules/WorkoutManager"
+import BarreExerciseManager from "../../modules/BarreExerciseManager"
+import CenterFloorExerciseManager from "../../modules/CenterFloorExerciseManager"
 import "./WorkoutForm.css"
 
 
 const WorkoutForm = props => {
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [barreExercises, setBarreExercises] = useState([])
+
+    const [centerFloorExercises, setCenterFloorExercises] = useState([])
+
     const [workout, setWorkout] = useState({ 
         name: "",
         date: "",
@@ -14,8 +22,6 @@ const WorkoutForm = props => {
         comment: "",
         completed: false
     });
-
-    const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = e => {
         const stateToChange = { ...workout };
@@ -30,7 +36,8 @@ const WorkoutForm = props => {
             workout.date === "" || 
             workout.barreExerciseId === "" || 
             workout.barreExerciseDescription === "" || 
-            workout.centerFloorExerciseId === "" || workout.centerFloorExerciseDescription === "" || 
+            workout.centerFloorExerciseId === "" || 
+            workout.centerFloorExerciseDescription === "" || 
             workout.comment === "") {
             window.alert("Please fill out entire form");
         } else {
@@ -39,6 +46,32 @@ const WorkoutForm = props => {
             .then(() => props.history.push("/Workouts"))
         }
     }
+
+    const getBarreExerciseList = () => {
+        BarreExerciseManager.getAll()
+        .then(barreExercises => {
+          setBarreExercises(barreExercises);
+        })
+    }
+    
+    
+      const getCenterFloorExerciseList = () => {
+        CenterFloorExerciseManager.getAll()
+        .then(centerFloorExercises => {
+          setCenterFloorExercises(centerFloorExercises);
+    
+      })
+    }
+    
+    
+      useEffect(() => {
+        getBarreExerciseList();
+        getCenterFloorExerciseList();
+    
+      })
+    
+
+
     return (
         <>
           <form>
@@ -70,14 +103,23 @@ const WorkoutForm = props => {
 
             <label htmlFor="barreExerciseId">Barre Exercise : </label>
 
-                <input
-                    type="dropDown"
-                    required
-                    onChange={handleFieldChange}
+                    <select
+                    className="form-control"
                     id="barreExerciseId"
-                    placeholder="choose one"
-                />
+                    value={workout.barreExerciseId}
+                    onChange={handleFieldChange}
+                    >
+                        {barreExercises.map(barreExercise =>
+                        <option
+                            key={barreExercise.id}
+                            value={barreExercise.id}>
+                            {barreExercise.name}
 
+                        </option>
+                        )}
+                    </select>
+                          
+           
             <label htmlFor="barreExerciseDescription">Barre Exercise Comments: </label>
 
                 <input
@@ -91,13 +133,21 @@ const WorkoutForm = props => {
 
             <label htmlFor="centerFloorExerciseId">Center Floor Exercise : </label>
 
-                <input
-                    type="dropDown"
-                    required
-                    onChange={handleFieldChange}
+                <select
+                    className="form-control"
                     id="centerFloorExerciseId"
-                    placeholder="choose one"
-                />
+                    value={workout.centerFloorExerciseId}
+                    onChange={handleFieldChange}
+                >
+                        {centerFloorExercises.map(centerFloorExercise =>
+                        <option
+                            key={centerFloorExercise.id}
+                            value={centerFloorExercise.id}>
+                            {centerFloorExercise.name}
+
+                        </option>
+                        )}
+            </select>
 
             <label htmlFor="centerFloorExerciseDescription">Center Floor Exercise Comments: </label>
 

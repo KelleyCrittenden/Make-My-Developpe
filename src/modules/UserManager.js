@@ -21,7 +21,7 @@ export default {
   },
       //? method that finds anthing after the q
   searchUser(email) {
-    return fetch(`${remoteURL}/Users/?&q=${email}`)
+    return fetch(`${remoteURL}/Users?=${email}`)
     .then(result => result.json())
   },
 

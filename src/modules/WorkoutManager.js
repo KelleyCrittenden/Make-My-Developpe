@@ -46,5 +46,10 @@ export default {
                 "Content-Type": "application/json"
             },
         }) .then(resp => resp.json());
+    },
+
+    getWithBarreExercises(id) {
+        return fetch(`${remoteURL}/Workouts/${id}?_embed=barreExercises`)
+                .then(result => result.json())
     }
 }

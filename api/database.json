@@ -2,10 +2,8 @@
   "users": [
     {
       "id": 1,
-      "email": "harper@gmail.com",
-      "password": "123",
       "name": "Harper Alexis",
-      "age": 11,
+      "age": "14",
       "danceStudio": "Ellen Alvin Dance Exchange",
       "experience": 5
     },
@@ -23,54 +21,74 @@
   "workouts": [
     {
       "id": 1,
-      "userId": 1,
-      "name": "Week One",
+      "name": "look for second position",
       "date": "2020-07-22",
-      "barreExerciseId": "1",
+      "barreExerciseId": 2,
       "barreExerciseDescription": "1st position 2 demi and 1 grand",
-      "centerFloorExerciseId": "1",
+      "centerFloorExerciseId": "2",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "first day of class",
-      "completed": true
+      "completed": false
     },
     {
       "id": 2,
-      "userId": 2,
-      "name": "Week Two",
-      "date": "2020-07-28",
-      "barreExerciseId": "1",
-      "barreExerciseDescription": "1st position 2 demi and 1 grand",
-      "centerFloorExerciseId": "1",
-      "centerFloorExerciseDescription": "feet in fifth, both sides",
-      "comment": "second day of class",
-      "completed": true
+      "name": "",
+      "date": "",
+      "barreExerciseId": null,
+      "barreExerciseDescription": "",
+      "centerFloorExerciseId": 2,
+      "centerFloorExerciseDescription": "",
+      "comment": "",
+      "completed": false
     },
     {
-      "name": "Kelley Crittenden",
-      "date": "2020-07-18",
-      "barreExerciseId": "1",
-      "barreExerciseDescription": "testing",
-      "centerFloorExerciseId": "1",
+      "id": 3,
+      "name": "",
+      "date": "",
+      "barreExerciseId": null,
+      "barreExerciseDescription": "",
+      "centerFloorExerciseId": null,
+      "centerFloorExerciseDescription": "",
+      "comment": "",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "name": "TEST second position",
+      "date": "2020-07-11",
+      "barreExerciseId": 2,
+      "barreExerciseDescription": "TESTING EDIT",
+      "centerFloorExerciseId": 2,
       "centerFloorExerciseDescription": "testing",
       "comment": "testing comments",
-      "completed": false,
-      "id": 4
+      "completed": false
+    },
+    {
+      "id": 5,
+      "name": "asdfasdfasdfsadfsadf",
+      "date": "2020-08-08",
+      "barreExerciseId": 1,
+      "barreExerciseDescription": "asdfasd",
+      "centerFloorExerciseId": 1,
+      "centerFloorExerciseDescription": "asdf",
+      "comment": "asdfsadf",
+      "completed": false
     }
   ],
   "barreExercises": [
     {
-        "id": 1,
-        "name": "first Position",
-        "image": "pointe-shoes.jpeg",
-        "typeOfMovement": "Foot Position",
-        "description": "turn fast"
+      "id": 1,
+      "name": "first Position",
+      "image": "pointe-shoes.jpeg",
+      "typeOfMovement": "Foot Position",
+      "description": "turn fast"
     },
     {
-        "id": 2,
-        "name": "first Position",
-        "image": "pointe-shoes.jpeg",
-        "typeOfMovement": "Body Position",
-        "description": "turn fast"
+      "id": 2,
+      "name": "second Position",
+      "image": "pointe-shoes.jpeg",
+      "typeOfMovement": "Body Position",
+      "description": "turn fast"
     }
   ],
   "centerFloorExercises": [
