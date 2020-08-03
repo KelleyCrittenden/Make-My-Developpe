@@ -15,10 +15,8 @@ import WorkoutEditForm from "./workout/WorkoutEditForm"
 import WorkoutCompletedList from "./workout/WorkoutCompletedList"
 import WorkoutWithExercises from "./workout/WorkoutWithExercises"
 
-
 import BarreExerciseList from "./barre/BarreExerciseList";
 import BarreExerciseDetail from "./barre/BarreExerciseDetail";
-
 
 import CenterFloorExerciseList from "./centerFloor/CenterFloorExerciseList";
 import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail";

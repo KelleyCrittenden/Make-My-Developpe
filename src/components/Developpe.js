@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews";
 import "./Developpe.css";
+import Home from "./home/Home";
 
 
 const Developpe = () => {
@@ -27,7 +28,8 @@ const Developpe = () => {
           <div>
             <h2>
               
-              <login />
+              <NavBar />
+              <ApplicationViews />
             </h2>
           </div>
 

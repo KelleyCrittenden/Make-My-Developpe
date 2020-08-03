@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react"
 import WorkoutManager from "../../modules/WorkoutManager"
 import "./WorkoutForm.css"
 import BarreExerciseManager from "../../modules/BarreExerciseManager";
+import CenterFloorExerciseManager from "../../modules/CenterFloorExerciseManager";
+
 
 const WorkoutEditForm = props => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [barreExercises, setBarreExercises] = useState([])
+
+  const [centerFloorExercises, setCenterFloorExercises] = useState([]) 
 
   const [workout, setWorkout] = useState({
     name: "",
@@ -35,7 +39,7 @@ const WorkoutEditForm = props => {
       date: workout.date,
       barreExerciseId: parseInt(workout.barreExerciseId),
       barreExerciseDescription: workout.barreExerciseDescription,
-      centerFloorExerciseId: workout.centerFloorExerciseId,
+      centerFloorExerciseId: parseInt(workout.centerFloorExerciseId),
       centerFloorExerciseDescription: workout.centerFloorExerciseDescription,
       comment: workout.comment,
       completed: false
@@ -46,18 +50,45 @@ const WorkoutEditForm = props => {
       .then(() => props.history.push("/Workouts"))
   }
 
+  const getBarreExerciseList = () => {
+    BarreExerciseManager.getAll()
+    .then(barreExercises => {
+      setBarreExercises(barreExercises);
+    })
+  }
+
+
+  const getCenterFloorExerciseList = () => {
+    CenterFloorExerciseManager.getAll()
+    .then(centerFloorExercises => {
+      setCenterFloorExercises(centerFloorExercises);
+    })
+  }
+
   useEffect(() => {
-      WorkoutManager.get(props.match.params.workoutId)
-        .then(workout => {
-          BarreExerciseManager.getAll()
-            .then(barreExercises => {
-              setBarreExercises(barreExercises);
-              setWorkout(workout);
-              setIsLoading(false);
-            })
-        });
-    }, [props.match.params.workoutId]
+    WorkoutManager.get(props.match.params.workoutId)
+    .then(workout => {
+      getBarreExerciseList()
+      getCenterFloorExerciseList()
+      setWorkout(workout);
+      setIsLoading(false);
+      })
+    },[props.match.params.workoutId]
   );
+
+//   useEffect(() => {
+//     WorkoutManager.get(props.match.params.workoutId)
+//     .then(workout => {
+//       BarreExerciseManager.getAll()
+//         .then(barreExercises => {
+//           setBarreExercises(barreExercises);
+//           setWorkout(workout);
+//           setIsLoading(false);
+//         })
+//     });
+// }, [props.match.params.workoutId]
+// );
+
 
   return (
     <>
@@ -107,7 +138,7 @@ const WorkoutEditForm = props => {
 
               <label htmlFor="barreExerciseDescription">Barre Exercise Comments: </label>
 
-              <select
+              <input
                 type="text"
                 required
                 onChange={handleFieldChange}
@@ -118,13 +149,21 @@ const WorkoutEditForm = props => {
 
               <label htmlFor="centerFloorExerciseId">Center Floor Exercise : </label>
 
-              <input
-                type="dropDown"
-                required
-                onChange={handleFieldChange}
+              <select
+                className="form-control"
                 id="centerFloorExerciseId"
                 value={workout.centerFloorExerciseId}
-              />
+                onChange={handleFieldChange}
+              >
+                  {centerFloorExercises.map(centerFloorExercise =>
+                    <option
+                      key={centerFloorExercise.id}
+                      value={centerFloorExercise.id}>
+                      {centerFloorExercise.name}
+
+                    </option>
+                  )}
+              </select>
 
               <label htmlFor="centerFloorExerciseDescription">Center Floor Exercise Comments: </label>
 
