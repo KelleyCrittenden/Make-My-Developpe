@@ -26,7 +26,7 @@ export default {
   },
 
   createUser: (newUser) => {
-    return fetch(`${remoteURL}/Users`, {
+    return fetch(`${remoteURL}/Home`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

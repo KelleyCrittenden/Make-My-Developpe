@@ -51,5 +51,10 @@ export default {
     getWithBarreExercises(id) {
         return fetch(`${remoteURL}/Workouts/${id}?_embed=barreExercises`)
                 .then(result => result.json())
+    },
+
+    getWithCenterFloorExercises(id) {
+        return fetch(`${remoteURL}/Workouts/${id}?_embed=centerFloorExercises`)
+                .then(result => result.json())
     }
 }

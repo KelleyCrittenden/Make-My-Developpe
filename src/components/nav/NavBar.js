@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = (props) => {
+
+  const handleLogout = () => {
+    sessionStorage.clear();
+  }
+  
   return (
     <header>
 
@@ -49,7 +54,19 @@ const NavBar = () => {
               Center Floor Exercises
             </Link>
           </li>
+
+          <li>
+            <Link className="nav-link" to="/">
+              <button 
+                className="logoutButton"
+                onClick={handleLogout}>
+                Logout
+              </button>
+            </Link>
+          </li>
         </ul>
+
+        
       </nav>
 
     </header>

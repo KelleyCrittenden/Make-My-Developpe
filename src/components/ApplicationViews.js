@@ -1,7 +1,7 @@
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React from "react";
-import Home from "./home/Home";
 
+import Home from "./home/Home";
 import Login from "./auth/Login"
 import Register from "./auth/Register"
 
@@ -9,7 +9,6 @@ import UserList from "./user/UserList";
 import UserEditForm from "./user/UserEditForm"
 
 import WorkoutList from "./workout/WorkoutList";
-import WorkoutDetail from "./workout/WorkoutDetail";
 import WorkoutForm from "./workout/WorkoutForm";
 import WorkoutEditForm from "./workout/WorkoutEditForm"
 import WorkoutCompletedList from "./workout/WorkoutCompletedList"
@@ -20,9 +19,6 @@ import BarreExerciseDetail from "./barre/BarreExerciseDetail";
 
 import CenterFloorExerciseList from "./centerFloor/CenterFloorExerciseList";
 import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail";
-
-
-
 
 const ApplicationViews = props => {
   const hasUser = props.hasUser;
@@ -36,8 +32,7 @@ const ApplicationViews = props => {
         path="/"
         render={props => {
           return <Login {...props} 
-        setUser={setUser}
-        hasUser={hasUser}/>;
+        setUser={setUser} />;
         }}
       />
 
@@ -45,15 +40,20 @@ const ApplicationViews = props => {
         exact
         path="/"
         render={props => {
-          return <Register {...props}/>
+          return <Register {...props}
+          setUser={setUser} />
         }}
       />
 
       <Route
         exact
-        path="/"
+        path="/Home"
         render={props => {
-          return <Home />;
+          if (hasUser) {
+            return <Home {...props} />
+          } else {
+          return <Redirect exact to="/" />;
+          }
         }}
       />
 
@@ -70,6 +70,7 @@ const ApplicationViews = props => {
 
       <Route 
         exact
+        //makes sure that what you are returned is an integer
         path="/Users/:userId(\d+)/Edit" 
         render={(props) => {
           return <UserEditForm 
@@ -87,16 +88,8 @@ const ApplicationViews = props => {
         }}
       />
 
-      {/* <Route 
-        exact
-        path="/Workouts/:workoutId(\d+)" 
-        render={(props) => {
-          return <WorkoutDetail 
-            workoutId={parseInt(props.match.params.workoutId)} {...props}/>
-          }} 
-      /> */}
-
       <Route
+        exact
         path="/Workouts/:workoutId(\d+)/Details"
         render={(props) => {
           return <WorkoutWithExercises {...props} />

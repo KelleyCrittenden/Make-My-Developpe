@@ -1,41 +1,55 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import UserManager from "../../modules/UserManager"
 
 const Login = props => {
-
-    
-
-  const [credentials, setCredentials] = useState({ 
-      email: "", 
-      password: "" 
+    const [credentials, setCredentials] = useState({ 
+      userId:0 
     });
 
-    const [isLoading, setIsLoading] = useState(false);
+    const [users, setUsers] = useState([])
 
     const handleFieldChange = (e) => {
-    const stateToChange = { ...credentials };
-    stateToChange[e.target.id] = e.target.value;
-    setCredentials(stateToChange);
-  };
+        const stateToChange = { ...credentials };
+        stateToChange[e.target.id] = e.target.value;
+        setCredentials(stateToChange);
+    };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
+    const handleLogin = (e) => {
+        e.preventDefault();
 
-    UserManager.searchUser(credentials.email)
-        .then((existingEmail) => {
-                    //making sure all input fields are filled if not window alert
-             if(!credentials.email || !credentials.password) {
-                window.alert("Please fill out name and password")
-                    //asking database to retrieve object that matches 
-            }else if (existingEmail.length === 0) {
-                window.alert("Please Create an Account")
-            }else {
-                props.setUser(existingEmail[0].id) 
-                props.history.push("/Users")
+        const emailValue = document.getElementById("email").value
+        const passwordValue = document.getElementById("password").value
+        let emailCheck = false;
+        let passwordCheck = false;
+
+        users.forEach(
+            user => {
+                if(user.email === emailValue) {
+                    emailCheck = true;
+                    if (user.password === passwordValue) {
+                        passwordCheck = true;
+                        credentials.userId = user.id
+                        props.setUser(credentials)
+                        props.history.push("/Home")
+                        }
+                }
+            }) 
+            if (emailCheck === true) {
+            if (passwordCheck === false) {
+                window.alert("Password is incorrect")
             }
-        })
+        } else {
+            window.alert("Username is incorrrect")
+        }
+
     }
+
+    useEffect (() => {
+        UserManager.getAll()
+        .then((response) => {
+            setUsers(response)
+        })
+    })
 
   return (
 
@@ -69,7 +83,6 @@ const Login = props => {
 
                 <button 
                     type="button"
-                    disabled={isLoading}
                     onClick={handleLogin}
                     >Login
                 </button>

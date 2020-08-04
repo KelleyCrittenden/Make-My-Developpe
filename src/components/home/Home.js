@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "../auth/Login"
+import NavBar from "../nav/NavBar"
 
 const Home = (props) => {
   const hasUser = props.hasUser;
@@ -12,7 +12,7 @@ const Home = (props) => {
   }
   return (
     <>
-    <Login hasUser={hasUser} setUser={setUser} {...props} />
+    <NavBar hasUser={hasUser} setUser={setUser} {...props} />
     </>
   )
 }

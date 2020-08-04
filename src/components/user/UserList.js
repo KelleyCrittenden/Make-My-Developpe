@@ -4,7 +4,7 @@ import UserManager from '../../modules/UserManager';
 
 const UserList = props => {
 
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([user]);
 
   const getUsers = () => {
  
@@ -18,7 +18,6 @@ const UserList = props => {
     getUsers();
   }, []);
 
-  
   return (
     <div className="container-cards">
       {users.map(user => <UserCard 

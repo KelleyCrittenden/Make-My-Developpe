@@ -42,7 +42,7 @@ const WorkoutEditForm = props => {
       centerFloorExerciseId: parseInt(workout.centerFloorExerciseId),
       centerFloorExerciseDescription: workout.centerFloorExerciseDescription,
       comment: workout.comment,
-      completed: false
+      completed: true
 
     };
 
@@ -75,19 +75,6 @@ const WorkoutEditForm = props => {
       })
     },[props.match.params.workoutId]
   );
-
-//   useEffect(() => {
-//     WorkoutManager.get(props.match.params.workoutId)
-//     .then(workout => {
-//       BarreExerciseManager.getAll()
-//         .then(barreExercises => {
-//           setBarreExercises(barreExercises);
-//           setWorkout(workout);
-//           setIsLoading(false);
-//         })
-//     });
-// }, [props.match.params.workoutId]
-// );
 
 
   return (
