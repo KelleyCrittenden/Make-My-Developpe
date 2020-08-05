@@ -5,9 +5,9 @@
       "email": "harper@gmail.com",
       "password": "123",
       "name": "Harper Alexis",
-      "age": "11",
+      "age": 11,
       "danceStudio": "Ellen Alvin Dance Exchange",
-      "experience": "5"
+      "experience": 5
     },
     {
       "id": 2,
@@ -30,11 +30,23 @@
       "barreExerciseDescription": "1st position 2 demi and 1 grand",
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
-      "comment": "first day of class",
+      "comment": "testing harper",
       "completed": false
     },
     {
       "id": 2,
+      "userId": 2,
+      "name": "Week Two",
+      "date": "2020-07-28",
+      "barreExerciseId": "1",
+      "barreExerciseDescription": "1st position 2 demi and 1 grand",
+      "centerFloorExerciseId": "1",
+      "centerFloorExerciseDescription": "feet in fifth, both sides",
+      "comment": "testing aralyn",
+      "completed": false
+    },
+    {
+      "id": 3,
       "userId": 1,
       "name": "Week Two",
       "date": "2020-07-28",
@@ -42,30 +54,20 @@
       "barreExerciseDescription": "1st position 2 demi and 1 grand",
       "centerFloorExerciseId": "1",
       "centerFloorExerciseDescription": "feet in fifth, both sides",
-      "comment": "second day of class",
+      "comment": "testing harper",
       "completed": true
     },
     {
-      "name": "TEST",
-      "date": "2020-07-10",
+      "id": 4,
+      "userId": 2,
+      "name": "Week Two",
+      "date": "2020-07-28",
       "barreExerciseId": "1",
-      "barreExerciseDescription": "TESTING completed",
+      "barreExerciseDescription": "1st position 2 demi and 1 grand",
       "centerFloorExerciseId": "1",
-      "centerFloorExerciseDescription": "testing",
-      "comment": "testing comments",
-      "completed": false,
-      "id": 3
-    },
-    {
-      "name": "Kelley Crittenden",
-      "date": "2020-07-18",
-      "barreExerciseId": "1",
-      "barreExerciseDescription": "testing",
-      "centerFloorExerciseId": "1",
-      "centerFloorExerciseDescription": "testing",
-      "comment": "testing comments",
-      "completed": false,
-      "id": 4
+      "centerFloorExerciseDescription": "feet in fifth, both sides",
+      "comment": "testing aralyn",
+      "completed": true
     }
   ],
   "barreExercises": [

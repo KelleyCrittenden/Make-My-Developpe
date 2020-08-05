@@ -33,5 +33,11 @@ export default {
       },
       body: JSON.stringify(newUser)
     })
+  },
+
+  getProfileByUser(Id) {
+    return fetch(`${remoteURL}/Users/?id=${Id}`)
+    .then(result => result.json())
   }
+
 }
