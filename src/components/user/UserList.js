@@ -4,8 +4,6 @@ import UserManager from '../../modules/UserManager';
 
 const UserList = props => {
 
-  
-
   const [users, setUsers] = useState([]);
 
   const getUsers = () => {
@@ -14,7 +12,7 @@ const UserList = props => {
       setUsers(usersFromAPI)
     });
   };
- 
+
   useEffect(() => {
     getUsers();
   }, []);

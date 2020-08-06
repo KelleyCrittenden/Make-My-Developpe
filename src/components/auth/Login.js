@@ -30,7 +30,7 @@ const Login = props => {
                         passwordCheck = true;
                         credentials.userId = user.id
                         props.setUser(credentials)
-                        props.history.push("/Home")
+                        props.history.push("/Splash")
                         }
                 }
             }) 

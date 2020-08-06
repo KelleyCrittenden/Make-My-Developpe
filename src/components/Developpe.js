@@ -30,10 +30,18 @@ const Developpe = (props) => {
     // if (isAuthenticated()) {
       return (
         <>
+          <NavBar 
+            hasUser={hasUser} 
+            setUser={setUser} {...props} />
+
           <ApplicationViews
             hasUser={hasUser}
             setUser={setUser} />
+
+
           </>
+
+          
       );
 
 };

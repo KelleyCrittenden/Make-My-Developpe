@@ -4,10 +4,10 @@
       "id": 1,
       "email": "harper@gmail.com",
       "password": "123",
-      "name": "Harper Alexis",
+      "name": "Harper",
       "age": 11,
       "danceStudio": "Ellen Alvin Dance Exchange",
-      "experience": 5
+      "experience": "3"
     },
     {
       "id": 2,
@@ -24,11 +24,11 @@
     {
       "id": 1,
       "userId": 1,
-      "name": "Week One",
+      "name": "testing edit 5555",
       "date": "2020-07-22",
-      "barreExerciseId": "1",
+      "barreExerciseId": 2,
       "barreExerciseDescription": "1st position 2 demi and 1 grand",
-      "centerFloorExerciseId": "1",
+      "centerFloorExerciseId": 1,
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "testing harper",
       "completed": false
@@ -48,11 +48,11 @@
     {
       "id": 3,
       "userId": 1,
-      "name": "Week Two",
+      "name": "testing edit 99999",
       "date": "2020-07-28",
-      "barreExerciseId": "1",
+      "barreExerciseId": 1,
       "barreExerciseDescription": "1st position 2 demi and 1 grand",
-      "centerFloorExerciseId": "1",
+      "centerFloorExerciseId": 1,
       "centerFloorExerciseDescription": "feet in fifth, both sides",
       "comment": "testing harper",
       "completed": true
@@ -73,32 +73,32 @@
   "barreExercises": [
     {
       "id": 1,
-      "name": "frappe",
+      "name": "Frappe",
       "image": "pointe-shoes.jpeg",
-      "typeOfMovement": "leap",
+      "typeOfMovement": "Turn",
       "description": "jump high"
     },
     {
       "id": 2,
-      "name": "degage",
+      "name": "Plie",
       "image": "pointe-shoes.jpeg",
-      "typeOfMovement": "turn",
+      "typeOfMovement": "Leap",
       "description": "turn fast"
     }
   ],
   "centerFloorExercises": [
     {
       "id": 1,
-      "name": "Aragesque",
+      "name": "Arabesque",
       "image": "pointe-shoes.jpeg",
-      "typeOfMovement": "leap",
+      "typeOfMovement": "Body Position",
       "description": "jump high"
     },
     {
       "id": 2,
-      "name": "degage",
+      "name": "Degage",
       "image": "pointe-shoes.jpeg",
-      "typeOfMovement": "turn",
+      "typeOfMovement": "Feet Position",
       "description": "turn fast"
     }
   ]

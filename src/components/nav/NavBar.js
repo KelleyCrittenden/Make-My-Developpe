@@ -17,13 +17,11 @@ const NavBar = (props) => {
         <small></small>
       </h1>
 
+  {props.hasUser?
+
       <nav>
         <ul className="container">
-          <li>
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
-          </li>
+
 
           <li>
           <Link className="nav-link" to="/Users">
@@ -33,7 +31,7 @@ const NavBar = (props) => {
 
           <li>
             <Link className="nav-link" to="/Workouts">
-              Create New Workout
+              Workouts
             </Link>
           </li>
 
@@ -68,6 +66,7 @@ const NavBar = (props) => {
 
         
       </nav>
+  : null}
 
     </header>
   );

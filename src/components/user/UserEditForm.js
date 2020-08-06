@@ -4,6 +4,8 @@ import "./UserEditForm.css"
 
 const UserEditForm = props => {
   const [user, setUser] = useState({ 
+      email: "",
+      password: "",
       name: "", 
       age: "", 
       danceStudio: "", 
@@ -24,6 +26,8 @@ const UserEditForm = props => {
     
     const editedUser = {
       id: props.match.params.userId,
+      email: user.email,
+      password: user.password,
       name: user.name,
       age: user.age,
       danceStudio: user.danceStudio,
@@ -47,6 +51,29 @@ const UserEditForm = props => {
       <form>
         <fieldset>
           <div className="formgrid">
+
+          <label htmlFor="name">Email: </label>
+
+                  <input
+                      type="text"
+                      required
+                      className="form-control"
+                      onChange={handleFieldChange}
+                      id="name"
+                      value={user.email}
+                  />
+
+
+          <label htmlFor="name">Password: </label>
+
+                  <input
+                      type="password"
+                      required
+                      className="form-control"
+                      onChange={handleFieldChange}
+                      id="name"
+                      value={user.password}
+                  />
 
             <label htmlFor="name">Name: </label>
 

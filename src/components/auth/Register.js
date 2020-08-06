@@ -32,7 +32,7 @@ const Register = props => {
         const experience = document.getElementById("experience").value
         let emailCheck = true
         e.preventDefault();
-        console.log("credentials", credentials)
+        //console.log("credentials", credentials)
 
 
         UserManager.getAll("users")
@@ -44,7 +44,7 @@ const Register = props => {
                     UserManager.createUser(credentials)
                         .then(() => {
                             sessionStorage.setItem("credentials", JSON.stringify(credentials))
-                            props.history.push("/Home")
+                            props.history.push("/Splash")
                         });
                         
                     } else {

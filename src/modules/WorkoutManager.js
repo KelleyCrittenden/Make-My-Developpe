@@ -62,6 +62,4 @@ export default {
         return fetch(`${remoteURL}/Workouts/?userId=${userId}`)
         .then(result => result.json())
     }
-
-
 }
