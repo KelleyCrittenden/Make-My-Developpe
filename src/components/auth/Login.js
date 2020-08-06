@@ -49,7 +49,7 @@ const Login = props => {
         .then((response) => {
             setUsers(response)
         })
-    })
+    },[])
 
   return (
 

@@ -4,7 +4,7 @@
       "id": 1,
       "email": "harper@gmail.com",
       "password": "123",
-      "name": "Harper",
+      "name": "Harper Alexis",
       "age": 11,
       "danceStudio": "Ellen Alvin Dance Exchange",
       "experience": "3"
@@ -24,7 +24,7 @@
     {
       "id": 1,
       "userId": 1,
-      "name": "testing edit 5555",
+      "name": "testing edit",
       "date": "2020-07-22",
       "barreExerciseId": 2,
       "barreExerciseDescription": "1st position 2 demi and 1 grand",
@@ -46,28 +46,15 @@
       "completed": false
     },
     {
-      "id": 3,
-      "userId": 1,
-      "name": "testing edit 99999",
-      "date": "2020-07-28",
-      "barreExerciseId": 1,
-      "barreExerciseDescription": "1st position 2 demi and 1 grand",
-      "centerFloorExerciseId": 1,
-      "centerFloorExerciseDescription": "feet in fifth, both sides",
-      "comment": "testing harper",
-      "completed": true
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "name": "Week Two",
-      "date": "2020-07-28",
-      "barreExerciseId": "1",
-      "barreExerciseDescription": "1st position 2 demi and 1 grand",
-      "centerFloorExerciseId": "1",
-      "centerFloorExerciseDescription": "feet in fifth, both sides",
-      "comment": "testing aralyn",
-      "completed": true
+      "name": "Kelley Crittenden",
+      "date": "2020-08-15",
+      "barreExerciseId": "2",
+      "barreExerciseDescription": "testing",
+      "centerFloorExerciseId": "2",
+      "centerFloorExerciseDescription": "testing",
+      "comment": "testing comments",
+      "completed": false,
+      "id": 3
     }
   ],
   "barreExercises": [

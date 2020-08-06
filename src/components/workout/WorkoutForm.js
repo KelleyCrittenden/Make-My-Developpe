@@ -43,8 +43,10 @@ const WorkoutForm = props => {
         } else {
             setIsLoading(true);
             WorkoutManager.post(workout)
-            .then(() => props.history.push("/Workouts"))
-        }
+            .then(() => {
+              console.log(workout)
+              props.history.push("/Workouts")})
+        } 
     }
 
     const getBarreExerciseList = () => {
@@ -68,7 +70,7 @@ const WorkoutForm = props => {
         getBarreExerciseList();
         getCenterFloorExerciseList();
     
-      })
+      },[])
     
 
 
