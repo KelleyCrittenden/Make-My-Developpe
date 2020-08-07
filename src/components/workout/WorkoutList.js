@@ -7,11 +7,11 @@ const WorkoutList = (props) => {
     const [workouts, setWorkouts] = useState ([]);
 
     const getWorkouts = () => {
-        return WorkoutManager.getAll().then(workoutsFromAPI => {
+        return WorkoutManager.getWorkoutsByUser(parseInt(sessionStorage.getItem("credentials")))
+        .then(workoutsFromAPI => {
         setWorkouts(workoutsFromAPI)
     });
   };
-
 
   const deleteWorkout = id => {
     WorkoutManager.delete(id)

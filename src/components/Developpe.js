@@ -3,38 +3,48 @@ import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews";
 import "./Developpe.css";
 import Home from "./home/Home";
+import Login from "./auth/Login"
+import Register from "./auth/Register"
+import 'semantic-ui-css/semantic.min.css'
 
 
-const Developpe = () => {
-  const isAuthenticated = () => sessionStorage.getItem("credentials") != null;
+const Developpe = (props) => {
+  const isAuthenticated = () => {
+      if (sessionStorage.getItem("credentials")!== null) {
+        return true;
+      } else {
+        return false;
+      }
+  };
   const [hasUser, setHasUser] = useState(isAuthenticated());
 
-  const setUser = (userId) => {
-    sessionStorage.setItem("credentials", JSON.stringify(userId));
+  const setUser = (user) => {
+    sessionStorage.setItem("credentials", JSON.stringify(user.userId));
     setHasUser(isAuthenticated());
   }
 
-    if (isAuthenticated()) {
+  const clearUser= () => {
+    sessionStorage.clear();
+
+}
+
+    // if (isAuthenticated()) {
       return (
         <>
-          <NavBar />
+          <NavBar 
+            hasUser={hasUser} 
+            setUser={setUser} {...props} />
+
           <ApplicationViews
             hasUser={hasUser}
             setUser={setUser} />
-          </>
-      
-      )}else {
-        return (
-          <div>
-            <h2>
-              
-              <NavBar />
-              <ApplicationViews />
-            </h2>
-          </div>
 
+
+          </>
+
+          
       );
-  }
+
 };
       
 export default Developpe;

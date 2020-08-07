@@ -11,7 +11,7 @@ const UserCard = props => {
         </picture>
 
         <h3>
-          Name: <span className="card-userName">{props.user.name}</span>
+          <span className="card-userName">{props.user.name}</span>
         </h3>
 
         <p>Age: {props.user.age}</p>

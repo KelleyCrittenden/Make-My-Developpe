@@ -8,7 +8,7 @@ import './index.css';
 ReactDOM.render(
   <Router>
 
-    <Developpe />,
+    <Developpe />
 
   </Router>,
   document.getElementById("root")

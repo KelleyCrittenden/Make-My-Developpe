@@ -1,30 +1,34 @@
 import React, { useState, useEffect } from 'react'
 import WorkoutManager from "../../modules/WorkoutManager"
 import BarreExerciseCard from "../barre/BarreExerciseCard"
-// import CenterFloorExerciseCard from '../centerFloor/CenterFloorExerciseCard'
+import BarreExerciseManager from "../../modules/BarreExerciseManager"
 
 const WorkoutWithExercises = props => {
     const [workout, setWorkout] = useState({});
     const [barreExercises, setBarreExercises] = useState([]);
-    // const [centerFloorExercises, setCenterFloorExercises] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleDelete = (id) => {
+        setIsLoading(true);
+        BarreExerciseManager.delete(id)
+        .then(() =>
+        props.history.push("/Workouts")
+            );
+    }; 
 
     useEffect(() => {
         WorkoutManager.getWithBarreExercises(props.match.params.workoutId)
             .then(APIResult => {
                 setWorkout(APIResult);
                 setBarreExercises(APIResult.barreExercises);
-                // setCenterFloorExercises(APIResult.centerFloorExercises);
-            });
-    }, [props.match.params.workoutId]
-    );
-
-
+            });setIsLoading(false);
+    },[props.match.params.workoutId]);
 
     return (
         <>
         <div className="card">
 
-            <h3>Name:<span style={{ color: 'darkslategrey' }}>{workout.name}</span></h3>
+            <h3><span style={{ color: 'darkslategrey' }}>{workout.name}</span></h3>
 
             <p>Date: {workout.date}</p>
 
@@ -38,26 +42,14 @@ const WorkoutWithExercises = props => {
 
             <p>Comments: {workout.comment}</p>
 
-            <div>
-
                 {barreExercises.map(barreExercise =>
                     <BarreExerciseCard
                     key={barreExercise.id}
+                    deleteBarreExercise={handleDelete}
                     barreExercise={barreExercise}
-                    // getBarreExercise={getBarreExercise}
                     {...props}
                     />
                 )}
-
-                {/* {centerFloorExercises.map(centerFloorExercise =>
-                    <CenterFloorExerciseCard
-                    key={centerFloorExercise.id}
-                    centerFloorExercise={centerFloorExercise}
-                    //getCenterFloorExercise={getCenterFloorExercise}
-                    {...props}
-                    />
-                )} */}
-            </div>
 
         </div>
         </>

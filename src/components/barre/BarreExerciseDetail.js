@@ -29,7 +29,7 @@ const BarreExerciseDetail = props => {
           <img src={require('./barre-exercise.jpeg')} alt="Barre Exercise" />
         </picture>
 
-        <h3>Name: <span style={{ color: 'darkslategrey' }}>{barreExercise.name}</span></h3>
+        <h3><span style={{ color: 'darkslategrey' }}>{barreExercise.name}</span></h3>
 
         <p>Type Of Movement: {barreExercise.typeOfMovement}</p>
 

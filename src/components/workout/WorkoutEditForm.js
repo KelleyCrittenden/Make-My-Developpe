@@ -13,6 +13,7 @@ const WorkoutEditForm = props => {
   const [centerFloorExercises, setCenterFloorExercises] = useState([]) 
 
   const [workout, setWorkout] = useState({
+    userId: "",
     name: "",
     date: "",
     barreExerciseId: "",
@@ -20,6 +21,7 @@ const WorkoutEditForm = props => {
     centerFloorExerciseId: "",
     centerFloorExerciseDescription: "",
     comment: "",
+    completed: ""
   });
 
 
@@ -35,6 +37,7 @@ const WorkoutEditForm = props => {
 
     const editedWorkout = {
       id: props.match.params.workoutId,
+      userId: parseInt(workout.userId),
       name: workout.name,
       date: workout.date,
       barreExerciseId: parseInt(workout.barreExerciseId),
@@ -42,7 +45,7 @@ const WorkoutEditForm = props => {
       centerFloorExerciseId: parseInt(workout.centerFloorExerciseId),
       centerFloorExerciseDescription: workout.centerFloorExerciseDescription,
       comment: workout.comment,
-      completed: false
+      completed: workout.completed,
 
     };
 
@@ -76,25 +79,16 @@ const WorkoutEditForm = props => {
     },[props.match.params.workoutId]
   );
 
-//   useEffect(() => {
-//     WorkoutManager.get(props.match.params.workoutId)
-//     .then(workout => {
-//       BarreExerciseManager.getAll()
-//         .then(barreExercises => {
-//           setBarreExercises(barreExercises);
-//           setWorkout(workout);
-//           setIsLoading(false);
-//         })
-//     });
-// }, [props.match.params.workoutId]
-// );
-
 
   return (
     <>
       <form>
         <fieldset>
           <div className="formgrid">
+
+            <input type="hidden"
+            id="userId"
+            value={workout.userId} />
 
             <label htmlFor="name">Name: </label>
 

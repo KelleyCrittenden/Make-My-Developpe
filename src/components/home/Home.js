@@ -1,5 +1,6 @@
 import React from "react";
-import Login from "../auth/Login"
+import Register from "../auth/Register";
+import Login from "../auth/Login";
 
 const Home = (props) => {
   const hasUser = props.hasUser;
@@ -12,7 +13,10 @@ const Home = (props) => {
   }
   return (
     <>
-    <Login hasUser={hasUser} setUser={setUser} {...props} />
+   {/* <NavBar hasUser={hasUser} setUser={setUser} {...props} />
+   <ApplicationViews hasUser={hasUser} setUser={setUser} {...props} /> */}
+   <Login />
+   <Register />
     </>
   )
 }

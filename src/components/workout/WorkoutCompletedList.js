@@ -7,8 +7,9 @@ const WorkoutCompletedList = (props) => {
     const [workouts, setWorkouts] = useState ([]);
 
     const getWorkouts = () => {
-        return WorkoutManager.getAll().then(workoutsFromAPI => {
-        setWorkouts(workoutsFromAPI)
+      return WorkoutManager.getWorkoutsByUser(parseInt(sessionStorage.getItem("credentials")))
+      .then(workoutsFromAPI => {
+      setWorkouts(workoutsFromAPI)
     });
   };
 

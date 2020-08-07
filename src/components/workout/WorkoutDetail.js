@@ -72,11 +72,21 @@ const WorkoutDetail = props => {
         <p>Comments: {workout.comment}</p>
 
         <button 
-            type="button" 
-            disabled={isLoading} 
-            onClick={handleDelete}>
-          Delete
-        </button>
+                        type="button"
+                        onClick={() => { props.history.push(`/Workouts/${props.workout.id}/Details`) }}>
+                        Details
+                    </button>
+
+                    <button 
+                        type="button"
+                        onClick={() => props.history.push(`/Workouts/${props.workout.id}/Edit`)}>
+                        Edit
+                    </button>
+
+                    <button 
+                        type="button" 
+                        onClick={() => props.deleteWorkout(props.workout.id)}>Delete
+                    </button>
 
       </div>
     </div>

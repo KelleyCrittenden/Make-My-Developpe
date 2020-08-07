@@ -12,6 +12,8 @@ const Register = props => {
         experience: ""
     });
 
+    const [users, setUsers] = useState([]);
+
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = (e) => {
@@ -28,37 +30,33 @@ const Register = props => {
         const danceStudio = document.getElementById("danceStudio").value
         const name = document.getElementById("name").value
         const experience = document.getElementById("experience").value
+        let emailCheck = true
+        e.preventDefault();
+        //console.log("credentials", credentials)
 
-        UserManager.searchUser(credentials.email)
-            console.log(credentials)
-            .then(existingUserByEmail => {
-                if (
-                    credentials.email === "" ||
-                    credentials.password === "" ||
-                    credentials.confirmPassword === "" ||
-                    credentials.name === "" ||
-                    credentials.age === "" ||
-                    credentials.danceStudio === "" ||
-                    credentials.experience === "") {
-                     window.alert("Please input all fields")
-                        //if there is an email match in the searchUser array it will count as one, greater than 0
-                }else if (existingUserByEmail.length > 0){
-                    window.alert("Email Already In Use")
-                }else if (password !== confirmPassword) {
-                    window.alert("Passwords do not Match")
-                }else {
+
+        UserManager.getAll("users")
+            .then((users) => {
+                users.map((user) => {
+                if (user.email !== email && password === confirmPassword && password !== "") {
+
                     setIsLoading(true);
                     UserManager.createUser(credentials)
                         .then(() => {
                             sessionStorage.setItem("credentials", JSON.stringify(credentials))
-                            props.history.push("/Profile")
+                            props.history.push("/Splash")
                         });
+                        
+                    } else {
+                            window.alert("Passwords do not Match")
                     }
-            
+                })
             })
+            
+            
 
+    
     }
-
     return (
         <div>
             <form>
@@ -73,8 +71,7 @@ const Register = props => {
                             type="email"
                             id="email"
                             placeholder="email@...com"
-                            required=""
-                            autoFocus=""
+
                         />
 
                         <label htmlFor="inputPassword">Password</label>
@@ -83,7 +80,7 @@ const Register = props => {
                             type="password"
                             id="password"
                             placeholder="password"
-                            required="" 
+                         
                         />
                         
                         <label htmlFor="inputPassword">Confirm Password</label>
@@ -92,7 +89,7 @@ const Register = props => {
                             type="password"
                             id="confirmPassword"
                             placeholder="confirm password"
-                            required="" 
+                          
                         />     
 
                         <label htmlFor="inputUserName">Name</label>
@@ -101,7 +98,7 @@ const Register = props => {
                             type="text"
                             id="name"
                             placeholder="name"
-                            required="" 
+                           
                         />
 
                         <label htmlFor="inputUserName">Age</label>
@@ -110,7 +107,7 @@ const Register = props => {
                             type="text"
                             id="age"
                             placeholder="age"
-                            required="" 
+                          
                         />
 
                         <label htmlFor="inputUserName">Dance Studio</label>
@@ -119,7 +116,7 @@ const Register = props => {
                             type="text"
                             id="danceStudio"
                             placeholder="dance studio"
-                            required="" 
+                          
                         />
 
                         <label htmlFor="inputUserName">Years of Experience</label>
@@ -128,7 +125,7 @@ const Register = props => {
                             type="text"
                             id="experience"
                             placeholder="years of experience"
-                            required="" 
+                          
                         />
 
                     </div>

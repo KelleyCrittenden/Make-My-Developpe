@@ -13,6 +13,7 @@ const WorkoutForm = props => {
     const [centerFloorExercises, setCenterFloorExercises] = useState([])
 
     const [workout, setWorkout] = useState({ 
+        userId: sessionStorage.credentials,
         name: "",
         date: "",
         barreExerciseId: "",
@@ -43,8 +44,10 @@ const WorkoutForm = props => {
         } else {
             setIsLoading(true);
             WorkoutManager.post(workout)
-            .then(() => props.history.push("/Workouts"))
-        }
+            .then(() => {
+              console.log(workout)
+              props.history.push("/Workouts")})
+        } 
     }
 
     const getBarreExerciseList = () => {
@@ -68,7 +71,7 @@ const WorkoutForm = props => {
         getBarreExerciseList();
         getCenterFloorExerciseList();
     
-      })
+      },[])
     
 
 

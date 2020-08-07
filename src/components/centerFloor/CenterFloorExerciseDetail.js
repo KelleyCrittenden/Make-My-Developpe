@@ -29,7 +29,7 @@ const CenterFloorExerciseDetail = props => {
           <img src={require('./center-floor-exercise.jpeg')} alt="Center FLoor Exercise" />
         </picture>
 
-        <h3>Name: <span style={{ color: 'darkslategrey' }}>{centerFloorExercise.name}</span></h3>
+        <h3><span style={{ color: 'darkslategrey' }}>{centerFloorExercise.name}</span></h3>
 
         <p>Type Of Movement: {centerFloorExercise.typeOfMovement}</p>
 

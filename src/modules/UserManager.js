@@ -26,12 +26,18 @@ export default {
   },
 
   createUser: (newUser) => {
-    return fetch(`${remoteURL}/Users`, {
+    return fetch(`${remoteURL}/Home`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(newUser)
     })
+  },
+
+  getProfileByUser(Id) {
+    return fetch(`${remoteURL}/Users/?id=${Id}`)
+    .then(result => result.json())
   }
+
 }

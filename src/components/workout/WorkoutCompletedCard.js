@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Workout.css"
 import WorkoutManager from "../../modules/WorkoutManager";
 
@@ -38,11 +37,11 @@ const WorkoutCompletedCard = props => {
                             checked={props.workout.completed}
                             onChange={handleFieldChange}
                         />    
-
-                            {/* Hyperlink */}
-                    <Link to={`/Workouts/${props.workout.id}`}>
-                        <button>Details</button>
-                    </Link>
+                    <button 
+                        type="button"
+                        onClick={() => { props.history.push(`/Workouts/${props.workout.id}/Details`) }}>
+                        Details
+                    </button>
 
                     <button 
                         type="button"
