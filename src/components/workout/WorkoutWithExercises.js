@@ -28,7 +28,7 @@ const WorkoutWithExercises = props => {
         <>
         <div className="card">
 
-            <h3>Name:<span style={{ color: 'darkslategrey' }}>{workout.name}</span></h3>
+            <h3><span style={{ color: 'darkslategrey' }}>{workout.name}</span></h3>
 
             <p>Date: {workout.date}</p>
 

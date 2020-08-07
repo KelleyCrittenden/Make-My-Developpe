@@ -12,7 +12,7 @@ const NavBar = (props) => {
     <header>
 
       <h1 className="site-title">
-        Make My Developpe
+        Make My Développé
         <br />
         <small></small>
       </h1>
@@ -52,7 +52,7 @@ const NavBar = (props) => {
               Center Floor Exercises
             </Link>
           </li>
-
+          
           <li>
             <Link className="nav-link" to="/">
               <button 
@@ -62,6 +62,8 @@ const NavBar = (props) => {
               </button>
             </Link>
           </li>
+
+
         </ul>
 
         

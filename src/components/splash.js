@@ -1,16 +1,70 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 
 const Splash = () => {
 
   return (
     <>
-   {/* <NavBar hasUser={hasUser} setUser={setUser} {...props} />
-   <ApplicationViews hasUser={hasUser} setUser={setUser} {...props} /> */}
-<h1>WORKINGjflskdjf;laskdjflskdjfl;skdjfjl;skdjflskdjflksdjflaksdjflksdjflaksdjfl;sjflsjflksjflsjflksjfl;sdjflsdjflsdjf;lsdfj;sldfjjl;sdfjsal;dfjjsl;kdf
-    a;sdklfj;asldfj;saldfj;saldfj;asldfjsadkjf
-    ;lasdjfsla;dfjals;dkf
-</h1>
+      <div class="row">
+    <div class="col s1">
+      <div class="card grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"></span>
+          <Link className="nav-link" to="/Users">
+              Profile
+          </Link>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s1 m6">
+      <div class="card grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"></span>
+          <Link className="nav-link" to="/Workouts">
+              Workouts
+            </Link>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s1 m6">
+      <div class="card grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"></span>
+          <Link className="nav-link" to="/CompletedWorkouts">
+              Completed Workouts
+            </Link>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s1 m6">
+      <div class="card grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"></span>
+          <Link className="nav-link" to="/BarreExercises">
+              Barre Exercises
+            </Link>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s1 m6">
+      <div class="card grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"></span>
+          <Link className="nav-link" to="CenterFloorExercises">
+              Center Floor Exercises
+            </Link>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </>
   )
 }

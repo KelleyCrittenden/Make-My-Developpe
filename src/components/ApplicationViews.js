@@ -142,17 +142,7 @@ const ApplicationViews = props => {
         render={props => {
           return <BarreExerciseList {...props}/>;
         }}
-      />
-
-        {/* <Route 
-        exact
-        path="/BarreExercises" 
-        render={
-          props => <>
-            <BarreExerciseSearch />
-            <BarreExerciseList {...props} />
-            </>
-        } /> */}
+      /> 
 
       <Route 
         exact
@@ -161,7 +151,7 @@ const ApplicationViews = props => {
           return <BarreExerciseDetail 
           barreExerciseId={parseInt(props.match.params.barreExerciseId)}/>
         }}
-        />
+      />
 
 
 {/* Routes for Center Floor Exercises */}

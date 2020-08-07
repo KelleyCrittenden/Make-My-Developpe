@@ -13,6 +13,7 @@ const WorkoutForm = props => {
     const [centerFloorExercises, setCenterFloorExercises] = useState([])
 
     const [workout, setWorkout] = useState({ 
+        userId: sessionStorage.credentials,
         name: "",
         date: "",
         barreExerciseId: "",

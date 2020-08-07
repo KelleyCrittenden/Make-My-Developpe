@@ -23,7 +23,7 @@
   
   .card-content p {
     font-size: 80%;
-    color: darkslategrey;
+    color: cornsilk;
   }
   
   
@@ -50,6 +50,5 @@
   }
   
   .workoutImage {
-      border-radius: 50%;
-      width: 50%;
+      width: 100%;
   }

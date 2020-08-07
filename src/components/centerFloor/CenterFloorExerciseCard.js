@@ -14,7 +14,7 @@ const CenterFloorExerciseCard = props => {
           <span className="card-barreExerciseName">{props.centerFloorExercise.name}</span>
         </h3>
 
-        <p>Type Of Movement: {props.centerFloorExercise.typeOfMovement}</p>
+        {/* <p>Type Of Movement: {props.centerFloorExercise.typeOfMovement}</p> */}
  
             {/* Hyperlink button to detail page*/}
         <Link to={`/CenterFloorExercises/${props.centerFloorExercise.id}`}>
