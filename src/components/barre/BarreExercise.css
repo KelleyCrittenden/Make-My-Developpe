@@ -21,7 +21,6 @@
     color: darkslategrey;
   }
   
-  /* breed background */
   .card-content p {
     font-size: 80%;
     color: darkslategrey;
@@ -52,4 +51,9 @@
   
   .barreExerciseImage {
       width: 100%;
+  }
+
+  .searchBar {
+    margin-bottom: .5em;
+    margin-left: .5em;
   }

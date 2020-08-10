@@ -52,13 +52,10 @@ const Login = props => {
     },[])
 
   return (
+      <>
 
-    <form>
-
+    <form>      
         <fieldset>
-            <div>
-                
-            </div>
 
             <h3>Please sign in</h3>
                 <div className="formgrid">
@@ -93,6 +90,7 @@ const Login = props => {
         </fieldset>
 
     </form>
+    </>
       
   );
 };

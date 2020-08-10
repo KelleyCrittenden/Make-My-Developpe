@@ -51,9 +51,10 @@ const BarreExerciseList = (props) => {
   return (
     <>
       <div>
-        <input 
+           Search Glosary: 
+        <input className="searchBar"
           type="text" 
-          placeholder="Search Exercises" 
+          placeholder="type here..." 
           //getting value and setting it into state
           onChange={e => setSearch(e.target.value)}/>
      

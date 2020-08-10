@@ -5,15 +5,21 @@ small {
   header {
     background-color: #ffffff;
     border: #B7B7A4 solid 3px;
+    margin-bottom: 10px;
+    display: flex;
+    float: right;
   }
   
   .site-title {
     color: #B7B7A4;
     text-align: center;
-  }
+    height: 10%;
+    width: 30%;
+}
   
   nav .container {
     display: flex;
+    justify-content: center;
     padding: 0;
     margin-bottom: 0;
   }
@@ -27,6 +33,7 @@ small {
     box-sizing: border-box;
     background-color: #DDBEA9;
     list-style-type: none;
+    height: 50px
   }
   
   .nav-link {

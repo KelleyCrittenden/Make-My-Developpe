@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import Logo from "../auth/Logo.png";
 
 const NavBar = (props) => {
 
@@ -9,16 +10,19 @@ const NavBar = (props) => {
   }
   
   return (
+    <>
+    
     <header>
 
       <h1 className="site-title">
-        Make My Développé
+     
+        <img className="logoImage" src={ Logo } alt="Logo" height='50px' width='50px'/>
         <br />
         <small></small>
       </h1>
 
-  {props.hasUser?
-
+ 
+      {props.hasUser?
       <nav>
         <ul className="container">
 
@@ -54,7 +58,7 @@ const NavBar = (props) => {
           </li> */}
           
           <li>
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="">
               <button 
                 className="logoutButton"
                 onClick={handleLogout}>
@@ -68,9 +72,12 @@ const NavBar = (props) => {
 
         
       </nav>
-  : null}
+      : null}
+
 
     </header>
+    
+    </>
   );
 };
 

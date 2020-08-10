@@ -49,12 +49,12 @@ export default {
     },
 
     getWithBarreExercises(id) {
-        return fetch(`${remoteURL}/Workouts/${id}?_embed=barreExercises`)
+        return fetch(`${remoteURL}/Workouts/${id}?_expand=barreExercise`)
                 .then(result => result.json())
     },
 
     getWithCenterFloorExercises(id) {
-        return fetch(`${remoteURL}/Workouts/${id}?_embed=centerFloorExercises`)
+        return fetch(`${remoteURL}/Workouts/${id}?_expand=centerFloorExercise`)
                 .then(result => result.json())
     },
 
