@@ -43,15 +43,15 @@ const NavBar = (props) => {
 
           <li>
             <Link className="nav-link" to="/BarreExercises">
-              Barre Exercises
+              Glossary
             </Link>
           </li>
-
+{/* 
           <li>
             <Link className="nav-link" to="CenterFloorExercises">
-              Center Floor Exercises
+              Center Floor Glossary
             </Link>
-          </li>
+          </li> */}
           
           <li>
             <Link className="nav-link" to="/">

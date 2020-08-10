@@ -19,10 +19,10 @@ const Splash = () => {
       </div>
     </div>
 
-    <div class="col s1 m6">
-      <div class="card grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title"></span>
+    <div className="col s1 m6">
+      <div className="card grey darken-1">
+        <div className="card-content white-text">
+          <span className="card-title"></span>
           <Link className="nav-link" to="/Workouts">
               Workouts
             </Link>

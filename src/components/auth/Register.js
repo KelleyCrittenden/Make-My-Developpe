@@ -44,7 +44,7 @@ const Register = props => {
                     UserManager.createUser(credentials)
                         .then(() => {
                             sessionStorage.setItem("credentials", JSON.stringify(credentials))
-                            props.history.push("/Splash")
+                            props.history.push("/Workouts")
                         });
                         
                     } else {

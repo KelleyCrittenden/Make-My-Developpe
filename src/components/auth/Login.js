@@ -30,7 +30,7 @@ const Login = props => {
                         passwordCheck = true;
                         credentials.userId = user.id
                         props.setUser(credentials)
-                        props.history.push("/Splash")
+                        props.history.push("/Workouts")
                         }
                 }
             }) 
@@ -56,6 +56,9 @@ const Login = props => {
     <form>
 
         <fieldset>
+            <div>
+                
+            </div>
 
             <h3>Please sign in</h3>
                 <div className="formgrid">

@@ -7,7 +7,7 @@
       "name": "Harper Alexis",
       "age": 11,
       "danceStudio": "Ellen Alvin Dance Exchange",
-      "experience": "3"
+      "experience": "4"
     },
     {
       "id": 2,
@@ -29,14 +29,14 @@
       "barreExerciseId": 2,
       "barreExerciseDescription": "Starting in 5th, Tendu Plie (3,4) Tendu(5,6), Plie (7,8) 4 Quick Tendu",
       "centerFloorExerciseId": 2,
-      "centerFloorExerciseDescription": "Feet in Fifth, both sides, 1st 2, 2nd 2, 3rd 2, 4th 2",
-      "comment": "First Day of Class! ",
-      "completed": false
+      "centerFloorExerciseDescription": "Feet in Fifth, both sides, 1st 2, 2nd 2, 3rd 2, 4th 4",
+      "comment": "Second Day of class",
+      "completed": true
     },
     {
       "id": 7,
       "userId": 1,
-      "name": "Tuesday Class",
+      "name": "Sunday Class",
       "date": "2020-08-11",
       "barreExerciseId": 3,
       "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
@@ -46,16 +46,16 @@
       "completed": false
     },
     {
-      "userId": "1",
+      "id": 8,
+      "userId": 1,
       "name": "Wednesday Class",
       "date": "2020-08-05",
-      "barreExerciseId": "4",
+      "barreExerciseId": 4,
       "barreExerciseDescription": "Face Barre, Feet in First, Tendu 2nd (7) Flex (8), 7 Single Frappes side, (1 close 2), Strike 5, Close 1st, 6 Tendu, 8 Flex (other side)",
-      "centerFloorExerciseId": "3",
+      "centerFloorExerciseId": 3,
       "centerFloorExerciseDescription": "Developpe 1st Aragesque, Developpe 2nd Arabesque, Plise, Chasse to 1st Arabesque, Panche (5,6 recover 7, releve 8)",
       "comment": "Bring Extra Water! ",
-      "completed": false,
-      "id": 8
+      "completed": false
     },
     {
       "userId": "1",
@@ -68,6 +68,30 @@
       "comment": "Make Sure to stretch both ankles prior to class",
       "completed": false,
       "id": 9
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "name": "Friday Class",
+      "date": "2020-08-07",
+      "barreExerciseId": 6,
+      "barreExerciseDescription": "At the Barre",
+      "centerFloorExerciseId": 4,
+      "centerFloorExerciseDescription": "7 Across the Floor",
+      "comment": "Stretch before class, bring extra water",
+      "completed": false
+    },
+    {
+      "userId": "1",
+      "name": "Saturday",
+      "date": "2020-08-08",
+      "barreExerciseId": "3",
+      "barreExerciseDescription": "At The Bare",
+      "centerFloorExerciseId": "3",
+      "centerFloorExerciseDescription": "Across the floor",
+      "comment": "make sure to stretch",
+      "completed": false,
+      "id": 11
     }
   ],
   "barreExercises": [

@@ -16,7 +16,6 @@ import WorkoutWithExercises from "./workout/WorkoutWithExercises"
 
 import BarreExerciseList from "./barre/BarreExerciseList";
 import BarreExerciseDetail from "./barre/BarreExerciseDetail";
-import BarreExerciseSearch from "./barre/BarreExerciseSearch"
 
 import CenterFloorExerciseList from "./centerFloor/CenterFloorExerciseList";
 import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail";

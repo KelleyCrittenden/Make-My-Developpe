@@ -32,7 +32,7 @@ const WorkoutWithExercises = props => {
 
             <p>Date: {workout.date}</p>
 
-            <p>Barre Exercise: {workout.barreExerciseId}</p>
+            <p>Barre Exercise:{workout.barreExerciseId}</p>
 
             <p>Description: {workout.barreExerciseDescription}</p>
 
