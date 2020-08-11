@@ -6,7 +6,8 @@ const BarreExerciseDetail = props => {
   const [barreExercise, setBarreExercise] = useState({ 
       name: "", 
       typeOfMovement: "", 
-      description: "" 
+      description: "",
+      image: "" 
     });
 
   useEffect(() => {
@@ -16,7 +17,8 @@ const BarreExerciseDetail = props => {
         setBarreExercise({
           name: barreExercise.name,
           typeOfMovement: barreExercise.typeOfMovement,
-          description: barreExercise.description
+          description: barreExercise.description,
+          image: barreExercise.image
         });
       });
   }, [props.barreExerciseId]);
@@ -25,8 +27,8 @@ const BarreExerciseDetail = props => {
     <div className="card">
       <div className="card-content">
 
-        <picture>
-          <img src={require('./barre-exercise.jpeg')} alt="Barre Exercise" />
+      <picture>
+          <img className="barreExerciseImage" src={barreExercise.image} alt="Barre Exercise" />
         </picture>
 
         <h3><span style={{ color: 'darkslategrey' }}>{barreExercise.name}</span></h3>

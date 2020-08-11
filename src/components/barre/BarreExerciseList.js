@@ -50,13 +50,14 @@ const BarreExerciseList = (props) => {
 
   return (
     <>
-      <div>
-           Search Glosary: 
+    <div>
+     <section className="section-content">
         <input className="searchBar"
           type="text" 
-          placeholder="type here..." 
+          placeholder="Search here..." 
           //getting value and setting it into state
           onChange={e => setSearch(e.target.value)}/>
+          </section>
      
 
         <div className="container-cards">
@@ -66,9 +67,7 @@ const BarreExerciseList = (props) => {
               barreExercise={barreExercise} 
               {...props} 
               />)}
-        </div>
 
-        <div className="container-cards">
           {filteredCenterFloorExercises.map(centerFloorExercise => 
             <CenterFloorExerciseCard
               key={centerFloorExercise.id}

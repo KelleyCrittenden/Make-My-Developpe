@@ -7,7 +7,7 @@ const BarreExerciseCard = props => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img className="barreExerciseImage" src={require("./barre-exercise.jpeg")} alt="Barre Exercise" />
+          <img className="barreExerciseImage" src={props.barreExercise.image} alt="Barre Exercise" />
         </picture>
 
         <h3>

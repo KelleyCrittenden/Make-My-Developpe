@@ -1,11 +1,12 @@
 fieldset {
     max-width: 40em;
     padding: 4px;
-    margin: 2em auto;
+    margin: 5em auto;
     border: 0 none;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     background: #DDBEA9;
+
 }
 
 fieldset input, fieldset button, fieldset select{

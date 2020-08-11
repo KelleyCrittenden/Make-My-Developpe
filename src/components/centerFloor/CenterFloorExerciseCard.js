@@ -7,7 +7,7 @@ const CenterFloorExerciseCard = props => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img className="centerFLoorExerciseImage" src={require("./center-floor-exercise.jpeg")} alt="Center Floor Exercise" />
+          <img className="centerFloorExerciseImage" src={props.centerFloorExercise.image} alt="Center Floor Exercise" />
         </picture>
 
         <h3>

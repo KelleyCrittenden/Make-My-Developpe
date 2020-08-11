@@ -98,42 +98,42 @@
     {
       "id": 1,
       "name": "Tendu",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/barre-exercise.jpeg",
       "typeOfMovement": "Turn",
       "description": "Tendu means tight or stretched. A tendu is one of the fundamental movements in ballet where the working leg is extended along the floor until only the tip of the toe remains touching the floor. It can be performed to the front, side or back and usually begins in 1st or 5th position. Tendu is the common abbreviation for battement tendu and often used in preparation for larger movements like grand battement."
     },
     {
       "id": 2,
       "name": "Plie",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/barre-exercise.jpeg",
       "typeOfMovement": "Body Position",
       "description": "Plié means bent,bending, In ballet, plié is a bending of the knees, usually performed in one of the six positions of the feet. Demi-plié is a small or half bend of the knees, keeping the heels of the feet flat on the floor. "
     },
     {
       "id": 3,
       "name": "Degage",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/barre-exercise.jpeg",
       "typeOfMovement": "Body Position",
       "description": "Dégagé means to disengage. Dégagé is a movement where the working leg disengages from the supporting leg."
     },
     {
       "id": 4,
       "name": "Frappe",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/barre-exercise.jpeg",
       "typeOfMovement": "Body Position",
       "description": "Frappé is a classical ballet term meaning struck.  A frappé is a step almost always done at the barre as an exercise to improve quick and precise movement of the legs feet.  To do a frappé, the dancer usually starts with the outside leg in a flexed, turned out position lifted off the floor with the heel placed slightly above the ankle bone of the standing leg.  The dancer then extends her leg and points her foot, towards the floor and out, causing the “strike” on the floor.  The strike on the floor is exactly how the step got its name, since frappé actually means “struck” or to strike. The term is also used to describe a whole set of steps at the barre, usually called a “frappé combination,” that is usually done as one of the last exercises at barre after a dancer’s muscles have become warm."
     },
     {
       "id": 5,
       "name": "Rond de Jambe",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/barre-exercise.jpeg",
       "typeOfMovement": "Body Position",
       "description": "Rond de Jambe is a classical ballet term meaning round of the leg or circular movements of the leg. A Rond de jambe is a very common step and is seen done in various forms throughout ballet class and performances by both male and female ballet dancers. Ronds de jambe, as a step, can be done a terre or en l’air. Dancers perform ronds de jambe at the bar, in the centre and in the adage and are either clockwise or counterclockwise."
     },
     {
       "id": 6,
       "name": "Developpe",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/barre-exercise.jpeg",
       "typeOfMovement": "Body Position",
       "description": "Rond de Jambe is a classical ballet term meaning round of the leg or circular movements of the leg. A Rond de jambe is a very common step and is seen done in various forms throughout ballet class and performances by both male and female ballet dancers. Ronds de jambe, as a step, can be done a terre or en l’air. Dancers perform ronds de jambe at the bar, in the centre and in the adage and are either clockwise or counterclockwise."
     }
@@ -142,56 +142,56 @@
     {
       "id": 1,
       "name": "Port de Bras",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Arm Position",
       "description": "Port de bras is a classical ballet term meaning movement of the arms. It describes how dancers move their arms from one position to another. For example, if a ballerina moves her arms from first position to fifth position, that is considered a port de bras. When doing proper port de bras, dancers will move their arms from their back and shoulders (without lifting the shoulders awkwardly upwards) while trying to move as smoothly as possible. The shape of the arms should be rounded so there is no visible break at the elbows and wrists. In classical ballet, the arms should never be fully straight or hyper-extended at the elbows. Also, the hands should be shaped with the fingers extended running mostly in the same direction, but not stuck together like a paddle or overly extended."
     },
     {
       "id": 2,
       "name": "Grand Battement",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Kick",
       "description": "Grand Battement is a classical ballet term which means large battement.  A dancer performs a grand battement by throwing the working leg into the air from the hip and brings it back down to a position, typically fifth position.  While doing a grand battement a dancer keeps both legs straight while the rest of the body remains relatively still. A grand battement is very important for grande allegro, allowing a dancer to jump higher when performed correctly."
     },
     {
       "id": 3,
       "name": "Arabesque",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Kick",
       "description": "Arabesque is one of the classic positions in ballet, where the working leg is fully straight extending long behind the dancer either on the floor (a terre) or in the air (en l’air). The supporting (standing) leg can be straight or in a demi-plié. Arabesque can be performed in several variations: first, second, third or fourth arabesque. The variations are based on the position of the arms which create the longest line from the fingers to the toes."
     },
     {
       "id": 4,
       "name": "Pirouette",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Turn",
       "description": "Pirouette is a classical ballet term meaning spin. It describes when a dancer is turning around one leg with the other off the ground and in a position, most commonly in passé.  A pirouette can be done either en dedans, turning in towards the supporting leg that the dancer is turning on, or en dehors, which is turning away from the supporting leg. Pirouettes are often considered one of the most fun ballet steps to practice and do.  Also, since they are quite hard to do cleanly with multiple turns (double pirouettes, triple pirouettes and so on) it becomes very rewarding for dancers once they feel they’ve improved their pirouettes.  A pirouette can come in many different forms since it basically describes any turn, that is done on one leg.  A pirouette, while close in defintion, is not done with a piqué, but with a relevé despite the definitions of pirouette and pique turn being similar."
     },
     {
       "id": 5,
       "name": "Pirouette en dedans",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Turn",
       "description": "A pirouette en dedans is a classical ballet term that describes a pirouette turning inward toward the standing leg.  For example, if a dancer is turning on the right leg, the dancer will be turning to the right in an en dedans pirouette. Pirouettes en dedans are an intermediate ballet step but very commonly seen in all types of dance in school and professional performances.  This is because a pirouette en dedans basically describes any turn that is turning “inward” toward the standing leg.  It can be thought of the opposite of an en dehors pirouette, where you’re turning away. The most common type of pirouette en dedans is with the dancer in a retiré position with the arms in first or high fifth position.  However, there are many other forms too.  For example, you may see a dancer perform an attitude pirouette en dedans, or possibly an arabesque pirouette en dedans.  Those two pirouettes, as you may have guessed, have the dancing turning inward toward the front foot while in a attitude or arabesque position."
     },
     {
       "id": 6,
       "name": "Assemble",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Jump",
       "description": "An assemblé in classical ballet has many different variations, but the basics are always the same: two legs joining together in the air. In a basic form, an assemblé is when one foot slides along the floor before brushing into the air.  As the foot goes into the air, the dancer then jumps by pushing into and off the floor with the supporting leg and foot.  The supporting leg now meets with the other leg in the air and “assembles” into a fifth position.  The dancer then lands on the floor with a plié in fifth position."
     },
     {
       "id": 7,
       "name": "Temps Leve",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Jump",
       "description": "A Temps Levé is a type of jump from one foot, landing on the same foot while the other leg is raised in a position in the air. In this, the raised leg is in Arabesque. An Arabesque describes the position where the dancer has one leg stretched directly behind them. The Arabesque that is demonstrated is a First Arabesque. Arabesques are defined by the position of the arms. A First Arabesque is where the dancer has the arm on the same side as the supporting leg (in this case, the leg doing the jumping) extended in front and the other arm to the side. This is a common step executed by both male and female dancers."
     },
     {
       "id": 8,
       "name": "Sissone",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Jump",
       "description": "Sissonne is a classical ballet term that describes a dancer jumping from two feet and splitting their legs “like scissors” in the air before landing.  It is a very common and popular ballet step, seen in performances and throughout classes of most skill levels. A sissonne in its most simplest form is commonly taught to students at intermediate levels as part of medium and grande allegro. Many pictures featuring dancers in splits in mid-air are commonly pictures of a sissonne."
     }

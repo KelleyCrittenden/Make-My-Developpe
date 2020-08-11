@@ -6,9 +6,16 @@ import CenterFloorExerciseCard from "../centerFloor/CenterFloorExerciseCard"
 const WorkoutWithExercises = props => {
     const [workout, setWorkout] = useState({});
     //setting default barre exercise 
-    const [barreExercise, setBarreExercise] = useState({name:"", typeOfMovement: "", description:""});
-    const [centerFloorExercise, setCenterFloorExercise] = useState({name:"", typeOfMovement: "", description:""});
+    const [barreExercise, setBarreExercise] = useState({name:"", typeOfMovement: "", description:"", image: ""});
+    const [centerFloorExercise, setCenterFloorExercise] = useState({name:"", typeOfMovement: "", description:"", image: ""});
     const [isLoading, setIsLoading] = useState(true);
+
+    const handleDelete = () => {
+        setIsLoading(true);
+          WorkoutManager.delete(props.workoutId).then(() =>
+            props.history.push("/Workouts")
+        );
+      };  
 
     useEffect(() => {
         WorkoutManager.getWithBarreExercises(props.match.params.workoutId)
@@ -39,33 +46,47 @@ const WorkoutWithExercises = props => {
 
             <p>Date: {workout.date}</p>
 
-            <p>Barre Exercise:{workout.barreExerciseId}</p>
+            <p>Barre Exercise: {barreExercise.name}</p>
 
             <p>Description: {workout.barreExerciseDescription}</p>
 
-            <p>Center Floor Exercise: {workout.centerFloorExerciseId}</p>
+            <p>Center Floor Exercise: {centerFloorExercise.name}</p>
 
             <p>Description: {workout.centerFloorExerciseDescription}</p>
 
             <p>Comments: {workout.comment}</p>
 
-            <div>
+            <button 
+                type="button"
+                onClick={() => props.history.push(`/Workouts/${props.workout.id}/Edit`)}>
+                Edit
+            </button>
 
+            <button 
+                type="button" 
+                onClick={() => props.deleteWorkout(props.workout.id)}>Delete
+            </button>
+            </div>
+           
+
+           
+            <div className="container-cards">
                     <BarreExerciseCard
                     key={workout.barreExerciseId}
                     barreExercise={barreExercise}
                     {...props}
-                    />
-
+                    /> 
+      
                     <CenterFloorExerciseCard
-                    key={workout.centerFLoorExerciseId}
+                    key={workout.centerFloorExerciseId}
                     centerFloorExercise={centerFloorExercise}
                     {...props}
-                    />
+                    /></div>
+                    
         
-            </div>
+        
 
-        </div>
+    
 
         </>
     );

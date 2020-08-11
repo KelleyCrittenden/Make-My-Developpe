@@ -13,8 +13,6 @@ const Home = (props) => {
   }
   return (
     <>
-   {/* <NavBar hasUser={hasUser} setUser={setUser} {...props} />
-   <ApplicationViews hasUser={hasUser} setUser={setUser} {...props} /> */}
    <Login />
    <Register />
     </>

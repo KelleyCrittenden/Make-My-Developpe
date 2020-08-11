@@ -20,8 +20,6 @@ import BarreExerciseDetail from "./barre/BarreExerciseDetail";
 import CenterFloorExerciseList from "./centerFloor/CenterFloorExerciseList";
 import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail";
 
-import Splash from "../components/splash"
-
 const ApplicationViews = props => {
   const hasUser = props.hasUser;
   const setUser = props.setUser;
@@ -56,15 +54,6 @@ const ApplicationViews = props => {
           } else {
           return <Redirect exact to="/" />;
           }
-        }}
-      />
-
-      <Route
-        exact
-        path="/Splash"
-        render={props => {
-          return <Splash {...props}
-          setUser={setUser} />
         }}
       />
 
@@ -146,9 +135,9 @@ const ApplicationViews = props => {
       <Route 
         exact
         path="/BarreExercises/:barreExerciseId(\d+)"
-        render={(props) => {
+        render={props => {
           return <BarreExerciseDetail 
-          barreExerciseId={parseInt(props.match.params.barreExerciseId)}/>
+          barreExerciseId={parseInt(props.match.params.barreExerciseId)} {...props}/>
         }}
       />
 

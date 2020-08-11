@@ -6,7 +6,8 @@ const CenterFloorExerciseDetail = props => {
   const [centerFloorExercise, setCenterFloorExercise] = useState({ 
       name: "", 
       typeOfMovement: "", 
-      description: "" 
+      description: "",
+      image: "" 
     });
 
   useEffect(() => {
@@ -16,7 +17,8 @@ const CenterFloorExerciseDetail = props => {
         setCenterFloorExercise({
           name: centerFloorExercise.name,
           typeOfMovement: centerFloorExercise.typeOfMovement,
-          description: centerFloorExercise.description
+          description: centerFloorExercise.description,
+          image: centerFloorExercise.image
         });
       });
   }, [props.centerFloorExerciseId]);
@@ -25,8 +27,8 @@ const CenterFloorExerciseDetail = props => {
     <div className="card">
       <div className="card-content">
 
-        <picture>
-          <img src={require('./center-floor-exercise.jpeg')} alt="Center FLoor Exercise" />
+      <picture>
+          <img className="centerFloorExerciseImage" src={centerFloorExercise.image} alt="Center Floor Exercise" />
         </picture>
 
         <h3><span style={{ color: 'darkslategrey' }}>{centerFloorExercise.name}</span></h3>
