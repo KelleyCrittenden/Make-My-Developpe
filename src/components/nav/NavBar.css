@@ -5,10 +5,10 @@ small {
   header {
     background-color: #ffffff;
     border: #B7B7A4 solid 3px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
-    text-align: center;
+    text-align: center; */
   }
   
   .site-title {

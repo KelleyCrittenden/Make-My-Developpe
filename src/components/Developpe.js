@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews";
 import "./Developpe.css";
-import Home from "./home/Home";
-import Login from "./auth/Login"
-import Register from "./auth/Register"
 import 'semantic-ui-css/semantic.min.css'
 
 

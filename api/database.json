@@ -167,28 +167,12 @@
   ],
   "photoUploads": [
     {
-      "id": 2,
+      "id": 1,
       "userId": 1,
-      "name": "image test",
-      "date": "2020-08-27",
+      "name": "Kelley Crittenden",
+      "date": "2020-08-01",
       "description": "image test",
-      "image": "/Images/center-floor-exercise.jpeg"
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "name": "Sissone",
-      "image": "/Images/center-floor-exercise.jpeg",
-      "date": "Jump",
-      "description": "Just Started learning today!"
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "name": "Sissone",
-      "image": "/Images/center-floor-exercise.jpeg",
-      "date": "Jump",
-      "description": "Just Started learning today!"
+      "image": "/Images/barre-exercise.jpeg"
     }
   ]
 }

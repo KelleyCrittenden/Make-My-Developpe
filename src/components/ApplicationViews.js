@@ -87,11 +87,12 @@ const ApplicationViews = props => {
             }} 
         />
 
-  <Route
+<Route 
           exact
           path="/PhotoUploads/:photoUploadId(\d+)/Details"
           render={(props) => {
-            return <PhotoUploadDetail {...props} />
+            return <PhotoUploadDetail 
+            photoUploadId={parseInt(props.match.params.photoUploadId)} {...props} />
           }}
         />
 

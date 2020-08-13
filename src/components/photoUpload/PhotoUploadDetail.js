@@ -25,14 +25,6 @@ const PhotoUploadDetail = props => {
         });
     }, [props.photoUploadId]);
 
-
-    const handleDelete = () => {
-      setIsLoading(true);
-        PhotoUploadManager.delete(props.photoUploadId).then(() =>
-          props.history.push("/PhotoUploads")
-      );
-    };   
-
   return (
     <div className="card">
       <div className="card-content">
@@ -46,19 +38,6 @@ const PhotoUploadDetail = props => {
         <p>Date: {photoUpload.date}</p>
 
         <p>Description: {photoUpload.description}</p>
-
-        <button 
-          type="button"
-          onClick={() => props.history.push(`/PhotoUploads/${props.photoUpload.id}/Edit`)}>
-          Edit
-        </button>
-
-        <button 
-          type="button" 
-          disabled={isLoading} 
-          onClick={handleDelete}>
-          Delete
-        </button>
 
       </div>
     </div>

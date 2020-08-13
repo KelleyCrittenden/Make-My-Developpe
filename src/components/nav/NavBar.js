@@ -13,10 +13,13 @@ const NavBar = (props) => {
     <>
     
     <header>
-      <h1 className="section-title">
-        <img 
+        {/* <img 
           className="logoImage" 
-          src="https://res.cloudinary.com/kelleycrittenden/image/upload/v1597295200/Logo_iiixa1.png" /></h1>
+          src="https://res.cloudinary.com/kelleycrittenden/image/upload/v1597295200/Logo_iiixa1.png" /> */}
+
+                <div>
+                    <img src={require(`./Logo.png`)} alt="Logo" />
+                </div>
 
       {props.hasUser?
       <nav>

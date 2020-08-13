@@ -57,20 +57,7 @@ const WorkoutWithExercises = props => {
 
             <p>Comments: {workout.comment}</p>
 
-            <button className="button"
-                type="button"
-                onClick={() => props.history.push(`/Workouts/${props.workout.id}/Edit`)}>
-                Edit
-            </button>
-
-            <button className="button"
-                type="button" 
-                onClick={() => props.deleteWorkout(props.workout.id)}>Delete
-            </button>
             </div>
-           
-
-           
             <div className="container-cards">
                     <BarreExerciseCard
                     key={workout.barreExerciseId}
@@ -84,6 +71,7 @@ const WorkoutWithExercises = props => {
                     {...props}
                     />
                     </div>
+                 
                     
         
         

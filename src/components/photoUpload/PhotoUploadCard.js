@@ -1,5 +1,6 @@
 import React from "react";
 import "./PhotoUpload.css"
+import { Link } from "react-router-dom"
 
 const PhotoUploadCard = props => {
   return (
@@ -14,10 +15,22 @@ const PhotoUploadCard = props => {
           <span className="card-photoUploadName">{props.photoUpload.name}</span>
         </h3>
 
+
+        <Link to={`/PhotoUploads/${props.photoUpload.id}/Details`}>
+          <button>Details</button> </Link>
+
+    
+              
+        <button type="button" 
+          onClick={() => props.deletePhotoUpload(props.photoUpload.id)}>
+          Delete
+        </button>
+        
+
         <button 
-          type="button"
-          onClick={() => props.history.push(`/PhotoUploads/${props.photoUpload.id}/Details`)}>
-          Details
+            type="button"
+            onClick={() => props.history.push(`/PhotoUploads/${props.photoUpload.id}/Edit`)}>
+            Edit
         </button>
 
 
