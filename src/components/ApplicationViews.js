@@ -5,8 +5,9 @@ import Home from "./home/Home";
 import Login from "./auth/Login"
 import Register from "./auth/Register"
 
-import UserList from "./user/UserList";
-import UserEditForm from "./user/UserEditForm"
+import PhotoUploadList from "./photoUpload/PhotoUploadList";
+import PhotoUploadEditForm from "./photoUpload/PhotoUploadEditForm"
+import PhotoUploadForm from "./photoUpload/PhotoUploadForm"
 
 import WorkoutList from "./workout/WorkoutList";
 import WorkoutForm from "./workout/WorkoutForm";
@@ -58,23 +59,30 @@ const ApplicationViews = props => {
       />
 
 
-{/* Routes for User Profile */}
+{/* Routes for Photo Uploads */}
 
       <Route
         exact
-        path="/Users"
+        path="/PhotoUploads"
         render={props => {
-          return <UserList {...props}/>;
+          return <PhotoUploadList {...props}/>;
         }}
       />
 
       <Route 
         exact
-        //makes sure that what you are returned is an integer
-        path="/Users/:userId(\d+)/Edit" 
+        path="/PhotoUploads/New"
         render={(props) => {
-          return <UserEditForm 
-            workoutId={parseInt(props.match.params.userId)} {...props}/>
+          return <PhotoUploadForm {...props} />
+        }}
+      />
+
+      <Route 
+        exact
+        path="/PhotoUploads/:photoUploadId(\d+)/Edit" 
+        render={(props) => {
+          return <PhotoUploadEditForm 
+            photoUploadId={parseInt(props.match.params.photoUploadId)} {...props}/>
           }} 
       />
 
@@ -135,9 +143,9 @@ const ApplicationViews = props => {
       <Route 
         exact
         path="/BarreExercises/:barreExerciseId(\d+)"
-        render={props => {
+        render={(props) => {
           return <BarreExerciseDetail 
-          barreExerciseId={parseInt(props.match.params.barreExerciseId)} {...props}/>
+          barreExerciseId={parseInt(props.match.params.barreExerciseId)}/>
         }}
       />
 

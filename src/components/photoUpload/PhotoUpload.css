@@ -28,7 +28,7 @@
   }
   
   
-  .content-userName {
+  .content-photoUploadName {
     color: darkslategrey;
   }
   
@@ -50,6 +50,6 @@
     background-color: #A5A58D;
   }
   
-  .userImage {
+  .photoUploadImage {
       width: 100%;
   }

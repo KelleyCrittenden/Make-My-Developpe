@@ -75,13 +75,14 @@ const WorkoutWithExercises = props => {
                     key={workout.barreExerciseId}
                     barreExercise={barreExercise}
                     {...props}
-                    /> 
+                    />
       
                     <CenterFloorExerciseCard
                     key={workout.centerFloorExerciseId}
                     centerFloorExercise={centerFloorExercise}
                     {...props}
-                    /></div>
+                    />
+                    </div>
                     
         
         

@@ -25,7 +25,7 @@ const WorkoutCard = props => {
                     </span>
                     </h3>
 
-                    <label>Completed</label>
+                    <label>Completed </label>
 
                         <input
                             type="checkbox"

@@ -3,15 +3,34 @@ import UserManager from "../../modules/UserManager"
 import "./UserEditForm.css"
 
 const UserEditForm = props => {
-  const [user, setUser] = useState({ 
-      email: "",
-      password: "",
+  const [userUpload, setUserUpload] = useState({ 
+      userId: "",
       name: "", 
-      age: "", 
-      danceStudio: "", 
-      experience: ""});
+      date: "", 
+      description: "", 
+      image: ""});
 
   const [isLoading, setIsLoading] = useState(false);
+  const [image, setImage] = useState('')
+
+  const uploadImage = async e => {
+    const files = e.target.files
+    const data = new FormData()
+    data.append('file', files[0])
+    data.append('upload_preset', 'developpe')
+    setLoading(true)
+    const res = await fetch(
+      '	https://api.cloudinary.com/v1_1/kelleycrittenden/image/upload',
+      {
+        method: 'POST',
+        body: data
+      }
+    )
+    const file = await res.json()
+
+    setImage(file.secure_url)
+    setLoading(false)
+  }
 
   const handleFieldChange = e => {
     const stateToChange = { ...user };
@@ -26,12 +45,10 @@ const UserEditForm = props => {
     
     const editedUser = {
       id: props.match.params.userId,
-      email: user.email,
-      password: user.password,
-      name: user.name,
-      age: user.age,
-      danceStudio: user.danceStudio,
-      experience: user.experience
+      userId: parseInt(userUpload.userId),
+      name: userUpload.name,
+      date: userUpload.date,
+      description: userUpload.description
     };
 
     UserManager.update(editedUser)
@@ -52,28 +69,24 @@ const UserEditForm = props => {
         <fieldset>
           <div className="formgrid">
 
-          <label htmlFor="name">Email: </label>
+          <h1>Upload Image</h1>
+            <input
+              type="file"
+              name="file"
+              placeholder="Upload an image"
+              onChange={uploadImage}
+            />
+            {loading ? (
+              <h3>Loading...</h3>
+            ) : (
+              <img src={image} style={{ width: '300px' }} />
+            )}
 
-                  <input
-                      type="text"
-                      required
-                      className="form-control"
-                      onChange={handleFieldChange}
-                      id="name"
-                      value={user.email}
-                  />
+            <input type="hidden"
+            id="userId"
+            value={userUpload.userId} />
 
 
-          <label htmlFor="name">Password: </label>
-
-                  <input
-                      type="password"
-                      required
-                      className="form-control"
-                      onChange={handleFieldChange}
-                      id="name"
-                      value={user.password}
-                  />
 
             <label htmlFor="name">Name: </label>
 
@@ -83,21 +96,21 @@ const UserEditForm = props => {
                     className="form-control"
                     onChange={handleFieldChange}
                     id="name"
-                    value={user.name}
+                    value={userUpload.name}
                 />
 
-            <label htmlFor="age">Age: </label>
+            <label htmlFor="age">Date: </label>
 
                 <input
-                    type="text"
+                    type="date"
                     required
                     className="form-control"
                     onChange={handleFieldChange}
                     id="age"
-                    value={user.age}
+                    value={userUpload.date}
                 />
 
-            <label htmlFor="danceStudio">Dance Studio: </label>
+            <label htmlFor="danceStudio">Description: </label>
 
                 <input
                     type="text"
@@ -105,19 +118,8 @@ const UserEditForm = props => {
                     className="form-control"
                     onChange={handleFieldChange}
                     id="danceStudio"
-                    value={user.danceStudio}
+                    value={userUpload.description}
                 />
-
-            <label htmlFor="experience">Years of Exerpience: </label>
-
-            <input
-                type="text"
-                required
-                className="form-control"
-                onChange={handleFieldChange}
-                id="experience"
-                value={user.experience}
-            />
 
           </div>
 

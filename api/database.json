@@ -4,20 +4,13 @@
       "id": 1,
       "email": "harper@gmail.com",
       "password": "123",
-      "name": "Harper Alexis",
-      "age": 11,
-      "danceStudio": "Ellen Alvin Dance Exchange",
-      "experience": "4"
+      "name": "Harper Alexis"
     },
     {
       "id": 2,
       "email": "aralyn@gmail.com",
       "password": "123",
-      "name": "Aralyn",
-      "image": "pointe-shoes.jpeg",
-      "age": "14",
-      "danceStudio": "Ellen Alvin Dance Exchange",
-      "experience": "0"
+      "name": "Aralyn"
     }
   ],
   "workouts": [
@@ -46,18 +39,6 @@
       "completed": false
     },
     {
-      "id": 8,
-      "userId": 1,
-      "name": "Wednesday Class",
-      "date": "2020-08-05",
-      "barreExerciseId": 4,
-      "barreExerciseDescription": "Face Barre, Feet in First, Tendu 2nd (7) Flex (8), 7 Single Frappes side, (1 close 2), Strike 5, Close 1st, 6 Tendu, 8 Flex (other side)",
-      "centerFloorExerciseId": 3,
-      "centerFloorExerciseDescription": "Developpe 1st Aragesque, Developpe 2nd Arabesque, Plise, Chasse to 1st Arabesque, Panche (5,6 recover 7, releve 8)",
-      "comment": "Bring Extra Water! ",
-      "completed": false
-    },
-    {
       "userId": 1,
       "name": "Thursday Class",
       "date": "2020-08-06",
@@ -74,24 +55,24 @@
       "userId": 1,
       "name": "Friday Class",
       "date": "2020-08-07",
-      "barreExerciseId": 6,
+      "barreExerciseId": 5,
       "barreExerciseDescription": "At the Barre",
-      "centerFloorExerciseId": 4,
+      "centerFloorExerciseId": 5,
       "centerFloorExerciseDescription": "7 Across the Floor",
       "comment": "Stretch before class, bring extra water",
       "completed": false
     },
     {
+      "id": 11,
       "userId": 1,
       "name": "Saturday",
       "date": "2020-08-08",
-      "barreExerciseId": 3,
+      "barreExerciseId": 1,
       "barreExerciseDescription": "At The Bare",
-      "centerFloorExerciseId": 3,
+      "centerFloorExerciseId": 1,
       "centerFloorExerciseDescription": "Across the floor",
       "comment": "make sure to stretch",
-      "completed": false,
-      "id": 11
+      "completed": false
     }
   ],
   "barreExercises": [
@@ -135,7 +116,7 @@
       "name": "Developpe",
       "image": "/Images/barre-exercise.jpeg",
       "typeOfMovement": "Body Position",
-      "description": "Rond de Jambe is a classical ballet term meaning round of the leg or circular movements of the leg. A Rond de jambe is a very common step and is seen done in various forms throughout ballet class and performances by both male and female ballet dancers. Ronds de jambe, as a step, can be done a terre or en l’air. Dancers perform ronds de jambe at the bar, in the centre and in the adage and are either clockwise or counterclockwise."
+      "description": "Développé is a classical ballet term meaning to develop, or developing movement. A Développé is a movement where the dancer’s working leg is drawn up to the knee of the supporting leg and extended to an open position. As the working leg is brought up, the standing leg is typically straight while also keeping the hips level.  The opening movement of the working leg should be seamless, yet still pass through a full passé. Développé is a very common step in classical ballet and many other forms of dance.  It is somewhat of a basic step, but can take quite a while to master, with many advanced students and sometimes even professionals still giving in to bad habits.  A good understanding of développé, especially the idea of leaving your hip down as much as possible, can lead to many other steps looking better.  As développés are commonly used in pas de deuxes, it is even more important for women to understand how to do the movement correctly."
     }
   ],
   "centerFloorExercises": [
@@ -194,6 +175,32 @@
       "image": "/Images/center-floor-exercise.jpeg",
       "typeOfMovement": "Jump",
       "description": "Sissonne is a classical ballet term that describes a dancer jumping from two feet and splitting their legs “like scissors” in the air before landing.  It is a very common and popular ballet step, seen in performances and throughout classes of most skill levels. A sissonne in its most simplest form is commonly taught to students at intermediate levels as part of medium and grande allegro. Many pictures featuring dancers in splits in mid-air are commonly pictures of a sissonne."
+    }
+  ],
+  "photoUploads": [
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Test 1",
+      "image": "/Images/center-floor-exercise.jpeg",
+      "date": "Jump",
+      "description": "Just Started learning today!"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "name": "Sissone",
+      "image": "/Images/center-floor-exercise.jpeg",
+      "date": "Jump",
+      "description": "Just Started learning today!"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "name": "Sissone",
+      "image": "/Images/center-floor-exercise.jpeg",
+      "date": "Jump",
+      "description": "Just Started learning today!"
     }
   ]
 }

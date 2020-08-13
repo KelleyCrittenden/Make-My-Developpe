@@ -25,6 +25,7 @@ const Developpe = (props) => {
 
   const clearUser= () => {
     sessionStorage.clear();
+    setHasUser(isAuthenticated());
 
 }
 
@@ -33,7 +34,8 @@ const Developpe = (props) => {
         <>
           <NavBar 
             hasUser={hasUser} 
-            setUser={setUser} {...props} />
+            setUser={setUser} {...props}
+            clearUser={clearUser} />
 
           <ApplicationViews
             hasUser={hasUser}

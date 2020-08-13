@@ -7,7 +7,8 @@ small {
     border: #B7B7A4 solid 3px;
     margin-bottom: 10px;
     display: flex;
-    float: right;
+    justify-content: space-around;
+    /* float: right; */
   }
   
   .site-title {
@@ -43,4 +44,22 @@ small {
   
   .nav-link:hover {
     color: #b7b7a4;
+  }
+
+  .button {
+    background-color:#B7B7A4;
+    border: none;
+    color: cornsilk;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: .5em;
+    border-radius: 2px;
+    margin: .1em;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #A5A58D;
   }
