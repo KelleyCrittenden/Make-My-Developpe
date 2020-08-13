@@ -54,7 +54,7 @@ const BarreExerciseList = (props) => {
      <section className="section-content">
         <input className="searchBar"
           type="text" 
-          placeholder="Search here..." 
+          placeholder="Search Glossary here..." 
           //getting value and setting it into state
           onChange={e => setSearch(e.target.value)}/>
           </section>

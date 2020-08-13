@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import WorkoutManager from "../../modules/WorkoutManager"
 import BarreExerciseCard from "../barre/BarreExerciseCard"
 import CenterFloorExerciseCard from "../centerFloor/CenterFloorExerciseCard"
+import "./Workout.css"
 
 const WorkoutWithExercises = props => {
     const [workout, setWorkout] = useState({});
@@ -56,13 +57,13 @@ const WorkoutWithExercises = props => {
 
             <p>Comments: {workout.comment}</p>
 
-            <button 
+            <button className="button"
                 type="button"
                 onClick={() => props.history.push(`/Workouts/${props.workout.id}/Edit`)}>
                 Edit
             </button>
 
-            <button 
+            <button className="button"
                 type="button" 
                 onClick={() => props.deleteWorkout(props.workout.id)}>Delete
             </button>

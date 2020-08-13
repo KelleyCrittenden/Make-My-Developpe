@@ -31,7 +31,7 @@ const WorkoutList = (props) => {
       
       <section className="section-content">
         <button type="button"
-                className="btn"
+                className="button"
                 onClick={() => {props.history.push("/Workouts/New")}}>
                 Create New Workout
         </button>

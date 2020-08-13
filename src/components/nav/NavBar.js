@@ -52,7 +52,7 @@ const NavBar = (props) => {
           </li>
 
           <li>
-            <Link className="nav-link" to="">
+            <Link className="logoutButtong" to="">
               <button 
                 className="logoutButton"
                 onClick={handleLogout}>

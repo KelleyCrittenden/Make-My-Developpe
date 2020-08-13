@@ -39,18 +39,6 @@
       "completed": false
     },
     {
-      "userId": 1,
-      "name": "Thursday Class",
-      "date": "2020-08-06",
-      "barreExerciseId": 5,
-      "barreExerciseDescription": "Plie Front Tendu, Ronde de jambe, hold (3,4) 4 Ronde de Jambe en de hors, Brush off the Floor, 1 passe 2 front, 3 passe 4 side, 5 close 6 back",
-      "centerFloorExerciseId": 8,
-      "centerFloorExerciseDescription": "3 Sissone Forward, 3 Sissone Backward Changement, Repeat 1 more time",
-      "comment": "Make Sure to stretch both ankles prior to class",
-      "completed": false,
-      "id": 9
-    },
-    {
       "id": 10,
       "userId": 1,
       "name": "Friday Class",
@@ -181,10 +169,10 @@
     {
       "id": 2,
       "userId": 1,
-      "name": "Test 1",
-      "image": "/Images/center-floor-exercise.jpeg",
-      "date": "Jump",
-      "description": "Just Started learning today!"
+      "name": "image test",
+      "date": "2020-08-27",
+      "description": "image test",
+      "image": "/Images/center-floor-exercise.jpeg"
     },
     {
       "id": 3,
@@ -201,6 +189,22 @@
       "image": "/Images/center-floor-exercise.jpeg",
       "date": "Jump",
       "description": "Just Started learning today!"
+    },
+    {
+      "userId": 1,
+      "name": "testing image upload",
+      "date": "2020-08-12",
+      "image": "",
+      "description": "testing image upload",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "name": "Kelley Crittenden",
+      "date": "2020-08-08",
+      "image": "",
+      "description": "why won't this work",
+      "id": 6
     }
   ]
 }

@@ -20,8 +20,8 @@ const PhotoUploadCard = props => {
 
         <button 
           type="button"
-          onClick={() => props.history.push(`/PhotoUploads/${props.photoUpload.id}/Edit`)}>
-          Edit
+          onClick={() => props.history.push(`/PhotoUploads/${props.photoUpload.id}/Details`)}>
+          Details
         </button>
 
 
