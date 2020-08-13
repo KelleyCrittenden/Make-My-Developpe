@@ -189,22 +189,6 @@
       "image": "/Images/center-floor-exercise.jpeg",
       "date": "Jump",
       "description": "Just Started learning today!"
-    },
-    {
-      "userId": 1,
-      "name": "testing image upload",
-      "date": "2020-08-12",
-      "image": "",
-      "description": "testing image upload",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "name": "Kelley Crittenden",
-      "date": "2020-08-08",
-      "image": "",
-      "description": "why won't this work",
-      "id": 6
     }
   ]
 }

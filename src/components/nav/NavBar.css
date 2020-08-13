@@ -8,14 +8,14 @@ small {
     margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
-    /* float: right; */
+    text-align: center;
   }
   
   .site-title {
     color: #B7B7A4;
-    text-align: center;
-    height: 10%;
+    height: 100%;
     width: 30%;
+    color:#B7B7A4;
 }
   
   nav .container {
@@ -63,3 +63,7 @@ small {
   .button:hover {
     background-color: #A5A58D;
   }
+/* 
+  .logoImage {
+    height: 200px;
+  } */

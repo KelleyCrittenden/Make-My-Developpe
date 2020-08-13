@@ -14,10 +14,6 @@ const PhotoUploadCard = props => {
           <span className="card-photoUploadName">{props.photoUpload.name}</span>
         </h3>
 
-        <p>Date: {props.photoUpload.date}</p>
-
-        <p>Description: {props.photoUpload.description}</p>
-
         <button 
           type="button"
           onClick={() => props.history.push(`/PhotoUploads/${props.photoUpload.id}/Details`)}>

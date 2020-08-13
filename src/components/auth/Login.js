@@ -80,12 +80,14 @@ const Login = props => {
                     />
 
                 </div>
-
+                
+                <div className="alignRight">
                 <button 
                     type="button"
                     onClick={handleLogin}
                     >Login
                 </button>
+                </div>
 
         </fieldset>
 

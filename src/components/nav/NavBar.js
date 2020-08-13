@@ -13,15 +13,11 @@ const NavBar = (props) => {
     <>
     
     <header>
+      <h1 className="section-title">
+        <img 
+          className="logoImage" 
+          src="https://res.cloudinary.com/kelleycrittenden/image/upload/v1597295200/Logo_iiixa1.png" /></h1>
 
-      <h1 className="site-title">
-     
-        <img className="logoImage" src="../public/Images/Logo.png" alt="Logo" height='50px' width='50px'/>
-
-  
-      </h1>
-
- 
       {props.hasUser?
       <nav>
         <ul className="container">

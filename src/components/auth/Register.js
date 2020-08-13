@@ -7,9 +7,6 @@ const Register = props => {
         email: "",
         password: "",
         name: "",
-        age: "",
-        danceStudio: "",
-        experience: ""
     });
 
     const [users, setUsers] = useState([]);
@@ -26,13 +23,8 @@ const Register = props => {
         const email = document.getElementById("email").value
         const password = document.getElementById("password").value
         const confirmPassword = document.getElementById("confirmPassword").value
-        const age = document.getElementById("age").value
-        const danceStudio = document.getElementById("danceStudio").value
-        const name = document.getElementById("name").value
-        const experience = document.getElementById("experience").value
         let emailCheck = true
         e.preventDefault();
-        //console.log("credentials", credentials)
 
 
         UserManager.getAll("users")
@@ -92,50 +84,15 @@ const Register = props => {
                           
                         />     
 
-                        <label htmlFor="inputUserName">Name</label>
-                        <input  
-                            onChange={handleFieldChange} 
-                            type="text"
-                            id="name"
-                            placeholder="name"
-                           
-                        />
-
-                        <label htmlFor="inputUserName">Age</label>
-                        <input  
-                            onChange={handleFieldChange} 
-                            type="text"
-                            id="age"
-                            placeholder="age"
-                          
-                        />
-
-                        <label htmlFor="inputUserName">Dance Studio</label>
-                        <input  
-                            onChange={handleFieldChange} 
-                            type="text"
-                            id="danceStudio"
-                            placeholder="dance studio"
-                          
-                        />
-
-                        <label htmlFor="inputUserName">Years of Experience</label>
-                        <input  
-                            onChange={handleFieldChange} 
-                            type="text"
-                            id="experience"
-                            placeholder="years of experience"
-                          
-                        />
-
                     </div>
-
+                    <div className="alignRight">
                     <button 
                         type="button"
                         disabled={isLoading}
                         onClick={createUser}>
                         Create Account
                     </button>
+                    </div>
 
 
                 </fieldset>
