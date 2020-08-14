@@ -12,7 +12,7 @@ const PhotoUploadForm = props => {
         userId: sessionStorage.credentials,
         name: "",
         date: "",
-        image: "",
+        url: "",
         description: ""
     });
 
@@ -43,7 +43,7 @@ const PhotoUploadForm = props => {
       const files = e.target.files
       const data = new FormData()
       data.append('file', files[0])
-      data.append('upload_preset', 'developpe')
+      data.append('upload_preset', "developpe")
       setLoading(true)
       const res = await fetch(
         '	https://api.cloudinary.com/v1_1/kelleycrittenden/image/upload',
@@ -55,6 +55,8 @@ const PhotoUploadForm = props => {
       const file = await res.json()
   
       setImage(file.secure_url)
+      setPhotoUpload({...photoUpload, url: file.secure_url})
+      PhotoUploadManager.getAll()
       setLoading(false)
     }
     
@@ -66,6 +68,21 @@ const PhotoUploadForm = props => {
             <fieldset>
 
               <div className="formgrid">
+
+              <label htmlFor="url">Image: </label>
+{/* <h3>Upload Image</h3> */}
+                <input
+                    type="file"
+                    name="file"
+                    id="file"
+                    placeholder="Upload an image"
+                    onChange={uploadImage}
+                />
+                {loading ? (
+                    <h2>Loading...</h2>
+                ) : (
+                    <img src={image} style={{ width: '300px' }} />
+                )}
 
               <label htmlFor="name">Name: </label>
 
@@ -98,20 +115,6 @@ const PhotoUploadForm = props => {
                     placeholder="description"
                 />
 
-             </div>
-             <div className="formgrid">
-                <h3>Upload Image</h3>
-                <input
-                    type="file"
-                    name="file"
-                    placeholder="Upload an image"
-                    onChange={uploadImage}
-                />
-                {loading ? (
-                    <h3>Loading...</h3>
-                ) : (
-                    <img src={image} style={{ width: '300px' }} />
-                )}
             </div>
 
 

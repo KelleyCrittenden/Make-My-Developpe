@@ -9,7 +9,7 @@ const PhotoUploadEditForm = props => {
       name: "", 
       date: "", 
       description: "", 
-      image: ""
+      url: ""
     });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +54,7 @@ const PhotoUploadEditForm = props => {
       name: photoUpload.name,
       date: photoUpload.date,
       description: photoUpload.description,
-      image: photoUpload.image
+      url: photoUpload.url
     };
 
     PhotoUploadManager.update(editedPhotoUpload)
@@ -70,40 +70,45 @@ const PhotoUploadEditForm = props => {
   }, [props.match.params.photoUploadId]);
 
   return (
-    <>
-      <form>
-        <fieldset>
+    <>    
+     <form>
+      <fieldset>
+        <picture>
+          <img className="photoUploadImage" src={photoUpload.url} alt="Photo Upload" />
+        </picture>
+
           <div className="formgrid">
 
-          <h1>Upload Image</h1>
             <input
               type="file"
               name="file"
               placeholder="Upload an image"
-              onChange={uploadImage}
-            />
+              onChange={uploadImage}/>
+          
+        
             {loading ? (
-              <h3>Loading...</h3>
+              <h4>Loading...</h4>
             ) : (
               <img src={image} style={{ width: '300px' }} />
             )}
+  
 
-            <input type="hidden"
+            <input 
+            type="hidden"
             id="userId"
             value={photoUpload.userId} />
 
+            <label htmlFor="date">Name: </label>
+            
+            <input
+                type="text"
+                required
+                className="form-control"
+                onChange={handleFieldChange}
+                id="name"
+                value={photoUpload.name}
+              />
 
-
-            <label htmlFor="name">Name: </label>
-
-                <input
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={handleFieldChange}
-                    id="name"
-                    value={photoUpload.name}
-                />
 
             <label htmlFor="date">Date: </label>
 

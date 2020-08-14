@@ -8,7 +8,7 @@ const PhotoUploadCard = props => {
       <div className="card-content">
 
         <picture>
-          <img className="photoUploadImage" src={props.photoUpload.image} alt="Photo Upload Image" />
+          <img className="photoUploadImage" src={props.photoUpload.url} alt="Photo Upload Image" />
         </picture>
 
         <h3>

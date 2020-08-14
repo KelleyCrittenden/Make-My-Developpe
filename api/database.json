@@ -61,6 +61,30 @@
       "centerFloorExerciseDescription": "Across the floor",
       "comment": "make sure to stretch",
       "completed": false
+    },
+    {
+      "id": 12,
+      "userId": 2,
+      "name": "Aralyn Crittenden",
+      "date": "2020-08-13",
+      "barreExerciseId": 1,
+      "barreExerciseDescription": "testing",
+      "centerFloorExerciseId": 1,
+      "centerFloorExerciseDescription": "testing",
+      "comment": "testing comments",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "name": "TEST",
+      "date": "2020-08-13",
+      "barreExerciseId": 1,
+      "barreExerciseDescription": "TESTING EDIT",
+      "centerFloorExerciseId": 6,
+      "centerFloorExerciseDescription": "Feet in Fifth, both sides, 1st 2, 2nd 2, 3rd 2, 4th 2",
+      "comment": "First Day of Class! ",
+      "completed": true,
+      "id": 13
     }
   ],
   "barreExercises": [
@@ -167,12 +191,20 @@
   ],
   "photoUploads": [
     {
-      "id": 1,
+      "id": 6,
       "userId": 1,
-      "name": "Kelley Crittenden",
-      "date": "2020-08-01",
-      "description": "image test",
-      "image": "/Images/barre-exercise.jpeg"
+      "name": "Bishop test",
+      "date": "2020-08-13",
+      "description": "sassiest puppy ever!",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597345748/developpe/vopsd5uymebi742bcyhb.heic"
+    },
+    {
+      "userId": 2,
+      "name": "TEST",
+      "date": "2020-08-08",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597371049/developpe/rf2jnbjugi4xgftpignd.heic",
+      "description": "still working on it",
+      "id": 7
     }
   ]
 }

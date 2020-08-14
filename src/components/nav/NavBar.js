@@ -13,24 +13,14 @@ const NavBar = (props) => {
     <>
     
     <header>
-        {/* <img 
-          className="logoImage" 
-          src="https://res.cloudinary.com/kelleycrittenden/image/upload/v1597295200/Logo_iiixa1.png" /> */}
-
-                <div>
-                    <img src={require(`./Logo.png`)} alt="Logo" />
-                </div>
+      <div className="site-title">
+        <img className="logoImage"
+          src= "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597332801/Logo_iiixa1.png"/>
+      </div>
 
       {props.hasUser?
       <nav>
         <ul className="container">
-
-
-          <li>
-          <Link className="nav-link" to="/PhotoUploads">
-              My Progress
-          </Link>
-          </li>
 
           <li>
             <Link className="nav-link" to="/Workouts">
@@ -42,6 +32,12 @@ const NavBar = (props) => {
             <Link className="nav-link" to="/CompletedWorkouts">
               Completed Workouts
             </Link>
+          </li>
+
+          <li>
+          <Link className="nav-link" to="/PhotoUploads">
+              My Progress
+          </Link>
           </li>
 
           <li>

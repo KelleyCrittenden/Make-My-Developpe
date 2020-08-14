@@ -9,7 +9,7 @@ const PhotoUploadDetail = props => {
       name: "", 
       date: "", 
       description: "",
-      image: "" 
+      url: "" 
     });
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const PhotoUploadDetail = props => {
             name: photoUpload.name,
             date: photoUpload.date,
             description: photoUpload.description,
-            image: photoUpload.image
+            url: photoUpload.url
             });
             setIsLoading(false);
         });
@@ -30,7 +30,7 @@ const PhotoUploadDetail = props => {
       <div className="card-content">
 
       <picture>
-          <img className="photoUploadImage" src={photoUpload.image} alt="Photo Upload" />
+          <img className="photoUploadImage" src={photoUpload.url} alt="Photo Upload" />
         </picture>
 
         <h3><span style={{ color: 'darkslategrey' }}>{photoUpload.name}</span></h3>
