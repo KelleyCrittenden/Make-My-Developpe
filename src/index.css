@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://res.cloudinary.com/kelleycrittenden/image/upload/v1597290185/background_bjyw64.png");
+  margin: 0;
 }
 
 code {

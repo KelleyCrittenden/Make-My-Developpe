@@ -30,7 +30,7 @@ const Login = props => {
                         passwordCheck = true;
                         credentials.userId = user.id
                         props.setUser(credentials)
-                        props.history.push("/Splash")
+                        props.history.push("/Workouts")
                         }
                 }
             }) 
@@ -52,9 +52,9 @@ const Login = props => {
     },[])
 
   return (
+      <>
 
-    <form>
-
+    <form>      
         <fieldset>
 
             <h3>Please sign in</h3>
@@ -80,16 +80,19 @@ const Login = props => {
                     />
 
                 </div>
-
+                
+                <div className="alignRight">
                 <button 
                     type="button"
                     onClick={handleLogin}
                     >Login
                 </button>
+                </div>
 
         </fieldset>
 
     </form>
+    </>
       
   );
 };

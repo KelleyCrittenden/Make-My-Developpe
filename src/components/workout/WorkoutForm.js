@@ -16,9 +16,9 @@ const WorkoutForm = props => {
         userId: sessionStorage.credentials,
         name: "",
         date: "",
-        barreExerciseId: "",
+        barreExerciseId: 1,
         barreExerciseDescription: "",
-        centerFloorExerciseId: "",
+        centerFloorExerciseId: 1,
         centerFloorExerciseDescription: "",
         comment: "",
         completed: false
@@ -42,6 +42,9 @@ const WorkoutForm = props => {
             workout.comment === "") {
             window.alert("Please fill out entire form");
         } else {
+          workout.userId=parseInt(workout.userId)
+          workout.barreExerciseId=parseInt(workout.barreExerciseId)
+          workout.centerFloorExerciseId=parseInt(workout.centerFloorExerciseId)
             setIsLoading(true);
             WorkoutManager.post(workout)
             .then(() => {
@@ -145,7 +148,7 @@ const WorkoutForm = props => {
                         {centerFloorExercises.map(centerFloorExercise =>
                         <option
                             key={centerFloorExercise.id}
-                            value={centerFloorExercise.id}>
+                            value={parseInt(centerFloorExercise.id)}>
                             {centerFloorExercise.name}
 
                         </option>

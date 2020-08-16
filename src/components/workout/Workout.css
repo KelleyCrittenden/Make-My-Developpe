@@ -23,7 +23,7 @@
   
   .card-content p {
     font-size: 80%;
-    color: cornsilk;
+    color: darkslategray;
   }
   
   
@@ -51,4 +51,18 @@
   
   .workoutImage {
       width: 100%;
+  }
+
+  .button {
+    background-color:#B7B7A4;
+    border: none;
+    color: cornsilk;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: .5em;
+    border-radius: 2px;
+    margin: .1em;
+    width: 50%;
   }

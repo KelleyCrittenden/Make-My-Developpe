@@ -5,8 +5,10 @@ import Home from "./home/Home";
 import Login from "./auth/Login"
 import Register from "./auth/Register"
 
-import UserList from "./user/UserList";
-import UserEditForm from "./user/UserEditForm"
+import PhotoUploadList from "./photoUpload/PhotoUploadList";
+import PhotoUploadEditForm from "./photoUpload/PhotoUploadEditForm"
+import PhotoUploadForm from "./photoUpload/PhotoUploadForm"
+import PhotoUploadDetail from "./photoUpload/PhotoUploadDetail"
 
 import WorkoutList from "./workout/WorkoutList";
 import WorkoutForm from "./workout/WorkoutForm";
@@ -16,163 +18,165 @@ import WorkoutWithExercises from "./workout/WorkoutWithExercises"
 
 import BarreExerciseList from "./barre/BarreExerciseList";
 import BarreExerciseDetail from "./barre/BarreExerciseDetail";
-import BarreExerciseSearch from "./barre/BarreExerciseSearch"
 
 import CenterFloorExerciseList from "./centerFloor/CenterFloorExerciseList";
 import CenterFloorExerciseDetail from "./centerFloor/CenterFloorExerciseDetail";
-
-import Splash from "../components/splash"
 
 const ApplicationViews = props => {
   const hasUser = props.hasUser;
   const setUser = props.setUser;
 
+
   return (
     <React.Fragment>
+        <Route
+          exact
+          path="/"
+          render={props => {
+            return <Login {...props} 
+          setUser={setUser} />;
+          }}
+        />
 
-      <Route
-        exact
-        path="/"
-        render={props => {
-          return <Login {...props} 
-        setUser={setUser} />;
-        }}
-      />
+        <Route
+          exact
+          path="/"
+          render={props => {
+            return <Register {...props}
+            setUser={setUser} />
+          }}
+        />
 
-      <Route
-        exact
-        path="/"
-        render={props => {
-          return <Register {...props}
-          setUser={setUser} />
-        }}
-      />
-
-      <Route
-        exact
-        path="/Home"
-        render={props => {
-          if (hasUser) {
-            return <Home {...props} />
-          } else {
-          return <Redirect exact to="/" />;
-          }
-        }}
-      />
-
-      <Route
-        exact
-        path="/Splash"
-        render={props => {
-          return <Splash {...props}
-          setUser={setUser} />
-        }}
-      />
+        <Route
+          exact
+          path="/Home"
+          render={props => {
+            if (hasUser) {
+              return <Home {...props} />
+            } else {
+            return <Redirect exact to="/" />;
+            }
+          }}
+        />
 
 
-{/* Routes for User Profile */}
+  {/* Routes for Photo Uploads */}
 
-      <Route
-        exact
-        path="/Users"
-        render={props => {
-          return <UserList {...props}/>;
-        }}
-      />
+        <Route
+          exact
+          path="/PhotoUploads"
+          render={props => {
+            return <PhotoUploadList {...props}/>;
+          }}
+        />
 
-      <Route 
-        exact
-        //makes sure that what you are returned is an integer
-        path="/Users/:userId(\d+)/Edit" 
-        render={(props) => {
-          return <UserEditForm 
-            workoutId={parseInt(props.match.params.userId)} {...props}/>
-          }} 
-      />
+        <Route 
+          exact
+          path="/PhotoUploads/New"
+          render={(props) => {
+            return <PhotoUploadForm {...props} />
+          }}
+        />
 
-{/* Routes for Workouts */}
+        <Route 
+          exact
+          path="/PhotoUploads/:photoUploadId(\d+)/Edit" 
+          render={(props) => {
+            return <PhotoUploadEditForm 
+              photoUploadId={parseInt(props.match.params.photoUploadId)} {...props}/>
+            }} 
+        />
 
-      <Route
-        exact
-        path="/Workouts"
-        render={props => {
-          return <WorkoutList {...props}/>;
-        }}
-      />
+<Route 
+          exact
+          path="/PhotoUploads/:photoUploadId(\d+)/Details"
+          render={(props) => {
+            return <PhotoUploadDetail 
+            photoUploadId={parseInt(props.match.params.photoUploadId)} {...props} />
+          }}
+        />
 
-      <Route
-        exact
-        path="/Workouts/:workoutId(\d+)/Details"
-        render={(props) => {
-          return <WorkoutWithExercises {...props} />
-        }}
-      />
+  {/* Routes for Workouts */}
 
-      <Route 
-        exact
-        path="/Workouts/New"
-        render={(props) => {
-          return <WorkoutForm {...props} />
-        }}
-      />
+        <Route
+          exact
+          path="/Workouts"
+          render={props => {
+            return <WorkoutList {...props}/>;
+          }}
+        />
 
-      <Route 
-        exact
-        path="/Workouts/:workoutId(\d+)/Edit" 
-        render={(props) => {
-          return <WorkoutEditForm 
-            workoutId={parseInt(props.match.params.workoutId)} {...props}/>
-          }} 
-      />
+        <Route
+          exact
+          path="/Workouts/:workoutId(\d+)/Details"
+          render={(props) => {
+            return <WorkoutWithExercises {...props} />
+          }}
+        />
 
-      <Route
-        exact
-        path="/CompletedWorkouts"
-        render={props => {
-          return <WorkoutCompletedList {...props}/>;
-        }}
-      />
+        <Route 
+          exact
+          path="/Workouts/New"
+          render={(props) => {
+            return <WorkoutForm {...props} />
+          }}
+        />
 
+        <Route 
+          exact
+          path="/Workouts/:workoutId(\d+)/Edit" 
+          render={(props) => {
+            return <WorkoutEditForm 
+              workoutId={parseInt(props.match.params.workoutId)} {...props}/>
+            }} 
+        />
 
-{/* Routes For Barre Exercises */}
-
-      <Route
-        exact
-        path="/BarreExercises"
-        render={props => {
-          return <BarreExerciseList {...props}/>;
-        }}
-      /> 
-
-      <Route 
-        exact
-        path="/BarreExercises/:barreExerciseId(\d+)"
-        render={(props) => {
-          return <BarreExerciseDetail 
-          barreExerciseId={parseInt(props.match.params.barreExerciseId)}/>
-        }}
-      />
+        <Route
+          exact
+          path="/CompletedWorkouts"
+          render={props => {
+            return <WorkoutCompletedList {...props}/>;
+          }}
+        />
 
 
-{/* Routes for Center Floor Exercises */}
-      <Route
-        exact
-        path="/CenterFloorExercises"
-        render={props => {
-          return <CenterFloorExerciseList {...props} />;
-        }}
-      />
+  {/* Routes For Barre Exercises */}
 
-      <Route 
-        exact
-        path="/CenterFloorExercises/:centerFloorExerciseId(\d+)"
-        render={(props) => {
-          return <CenterFloorExerciseDetail 
-          centerFloorExerciseId={parseInt(props.match.params.centerFloorExerciseId)}/>
-        }}
-      />
+        <Route
+          exact
+          path="/BarreExercises"
+          render={props => {
+            return <BarreExerciseList {...props}/>;
+          }}
+        /> 
+
+        <Route 
+          exact
+          path="/BarreExercises/:barreExerciseId(\d+)"
+          render={(props) => {
+            return <BarreExerciseDetail 
+            barreExerciseId={parseInt(props.match.params.barreExerciseId)}/>
+          }}
+        />
 
 
+  {/* Routes for Center Floor Exercises */}
+        <Route
+          exact
+          path="/CenterFloorExercises"
+          render={props => {
+            return <CenterFloorExerciseList {...props} />;
+          }}
+        />
+
+        <Route 
+          exact
+          path="/CenterFloorExercises/:centerFloorExerciseId(\d+)"
+          render={(props) => {
+            return <CenterFloorExerciseDetail 
+            centerFloorExerciseId={parseInt(props.match.params.centerFloorExerciseId)}/>
+          }}
+        />
 
     </React.Fragment>
   );

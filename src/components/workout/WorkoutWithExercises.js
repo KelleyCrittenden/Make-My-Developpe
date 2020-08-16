@@ -1,57 +1,83 @@
 import React, { useState, useEffect } from 'react'
 import WorkoutManager from "../../modules/WorkoutManager"
 import BarreExerciseCard from "../barre/BarreExerciseCard"
-import BarreExerciseManager from "../../modules/BarreExerciseManager"
+import CenterFloorExerciseCard from "../centerFloor/CenterFloorExerciseCard"
+import "./Workout.css"
 
 const WorkoutWithExercises = props => {
     const [workout, setWorkout] = useState({});
-    const [barreExercises, setBarreExercises] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    //setting default barre exercise 
+    const [barreExercise, setBarreExercise] = useState({name:"", typeOfMovement: "", description:"", image: ""});
+    const [centerFloorExercise, setCenterFloorExercise] = useState({name:"", typeOfMovement: "", description:"", image: ""});
+    const [isLoading, setIsLoading] = useState(true);
 
-    const handleDelete = (id) => {
+    const handleDelete = () => {
         setIsLoading(true);
-        BarreExerciseManager.delete(id)
-        .then(() =>
-        props.history.push("/Workouts")
-            );
-    }; 
+          WorkoutManager.delete(props.workoutId).then(() =>
+            props.history.push("/Workouts")
+        );
+      };  
 
     useEffect(() => {
         WorkoutManager.getWithBarreExercises(props.match.params.workoutId)
             .then(APIResult => {
                 setWorkout(APIResult);
-                setBarreExercises(APIResult.barreExercises);
-            });setIsLoading(false);
+                setBarreExercise(APIResult.barreExercise);
+                setIsLoading(false);
+            });
+            
+    },[props.match.params.workoutId]);
+
+    useEffect(() => {
+        WorkoutManager.getWithCenterFloorExercises(props.match.params.workoutId)
+            .then(APIResult => {
+                setWorkout(APIResult);
+                setCenterFloorExercise(APIResult.centerFloorExercise);
+                setIsLoading(false);
+            });
+            
     },[props.match.params.workoutId]);
 
     return (
         <>
+        
         <div className="card">
 
             <h3><span style={{ color: 'darkslategrey' }}>{workout.name}</span></h3>
 
-            <p>Date: {workout.date}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Date: {workout.date}</span> </p>
 
-            <p>Barre Exercise: {workout.barreExerciseId}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Barre Exercise: {barreExercise.name}</span> </p>
 
-            <p>Description: {workout.barreExerciseDescription}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Description: {workout.barreExerciseDescription}</span> </p>
 
-            <p>Center Floor Exercise: {workout.centerFloorExerciseId}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Center Floor Exercise: {centerFloorExercise.name}</span> </p>
 
-            <p>Description: {workout.centerFloorExerciseDescription}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Description: {workout.centerFloorExerciseDescription}</span> </p>
 
-            <p>Comments: {workout.comment}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Comments: {workout.comment}</span></p>
 
-                {barreExercises.map(barreExercise =>
+            </div>
+            <div className="container-cards">
                     <BarreExerciseCard
-                    key={barreExercise.id}
-                    deleteBarreExercise={handleDelete}
+                    key={workout.barreExerciseId}
                     barreExercise={barreExercise}
                     {...props}
                     />
-                )}
+      
+                    <CenterFloorExerciseCard
+                    key={workout.centerFloorExerciseId}
+                    centerFloorExercise={centerFloorExercise}
+                    {...props}
+                    />
+                    </div>
+                 
+                    
+        
+        
 
-        </div>
+    
+
         </>
     );
 }

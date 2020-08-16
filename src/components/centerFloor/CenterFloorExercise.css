@@ -50,6 +50,5 @@
   }
   
   .centerFloorExerciseImage {
-      border-radius: 50%;
-      width: 50%;
-  }
+    width: 100%
+}

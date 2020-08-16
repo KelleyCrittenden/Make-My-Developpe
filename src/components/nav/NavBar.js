@@ -1,33 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = (props) => {
 
   const handleLogout = () => {
-    sessionStorage.clear();
+    props.clearUser();
+    props.history.push("")
   }
   
   return (
+    <>
+    
     <header>
+      <div className="site-title">
+        <img className="logoImage"
+          src= "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597332801/Logo_iiixa1.png"/>
+      </div>
 
-      <h1 className="site-title">
-        Make My Développé
-        <br />
-        <small></small>
-      </h1>
-
-  {props.hasUser?
-
+      {props.hasUser?
       <nav>
         <ul className="container">
-
-
-          <li>
-          <Link className="nav-link" to="/Users">
-              Profile
-          </Link>
-          </li>
 
           <li>
             <Link className="nav-link" to="/Workouts">
@@ -42,19 +35,19 @@ const NavBar = (props) => {
           </li>
 
           <li>
+          <Link className="nav-link" to="/PhotoUploads">
+              My Progress
+          </Link>
+          </li>
+
+          <li>
             <Link className="nav-link" to="/BarreExercises">
-              Barre Exercises
+              Glossary
             </Link>
           </li>
 
           <li>
-            <Link className="nav-link" to="CenterFloorExercises">
-              Center Floor Exercises
-            </Link>
-          </li>
-          
-          <li>
-            <Link className="nav-link" to="/">
+            <Link className="logoutButtong" to="">
               <button 
                 className="logoutButton"
                 onClick={handleLogout}>
@@ -68,10 +61,13 @@ const NavBar = (props) => {
 
         
       </nav>
-  : null}
+      : null}
+
 
     </header>
+    
+    </>
   );
 };
 
-export default NavBar;
+export default withRouter(NavBar);

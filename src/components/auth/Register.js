@@ -1,62 +1,39 @@
-import React, { useState } from "react"
-import UserManager from "../../modules/UserManager"
+import React, { useState } from "react";
+import UserManager from "../../modules/UserManager";
 
 const Register = props => {
-
-    const [credentials, setCredentials] = useState({
-        email: "",
-        password: "",
-        name: "",
-        age: "",
-        danceStudio: "",
-        experience: ""
-    });
-
-    const [users, setUsers] = useState([]);
-
-    const [isLoading, setIsLoading] = useState(false);
+    const [credentials, setCredentails] = useState({ email: "", password: "" });
 
     const handleFieldChange = (e) => {
         const stateToChange = { ...credentials };
         stateToChange[e.target.id] = e.target.value;
-        setCredentials(stateToChange);
+        setCredentails(stateToChange)
     };
 
-    const createUser = e => {
+    const handleRegister = e => {
         const email = document.getElementById("email").value
         const password = document.getElementById("password").value
         const confirmPassword = document.getElementById("confirmPassword").value
-        const age = document.getElementById("age").value
-        const danceStudio = document.getElementById("danceStudio").value
-        const name = document.getElementById("name").value
-        const experience = document.getElementById("experience").value
-        let emailCheck = true
+
         e.preventDefault();
-        //console.log("credentials", credentials)
 
-
-        UserManager.getAll("users")
-            .then((users) => {
-                users.map((user) => {
-                if (user.email !== email && password === confirmPassword && password !== "") {
-
-                    setIsLoading(true);
-                    UserManager.createUser(credentials)
-                        .then(() => {
-                            sessionStorage.setItem("credentials", JSON.stringify(credentials))
-                            props.history.push("/Splash")
-                        });
-                        
-                    } else {
-                            window.alert("Passwords do not Match")
-                    }
-                })
+    UserManager.searchUser(credentials.email)
+           .then(existingUserByEmail => {
+                if (email === "" || password === "" || confirmPassword === "") {
+                    window.alert("Please fill out fields")
+                } else if (existingUserByEmail.length > 0) {
+                    window.alert("Email already exist")
+                } else if (password !== confirmPassword) {
+                    window.alert("Passwords don't match")
+                } else {
+                    UserManager.createUser(credentials).then(() => {
+                        sessionStorage.setItem("credentials", JSON.stringify(credentials))
+                        props.history.push("/")
+                    })
+                }
             })
-            
-            
+        }
 
-    
-    }
     return (
         <div>
             <form>
@@ -92,50 +69,15 @@ const Register = props => {
                           
                         />     
 
-                        <label htmlFor="inputUserName">Name</label>
-                        <input  
-                            onChange={handleFieldChange} 
-                            type="text"
-                            id="name"
-                            placeholder="name"
-                           
-                        />
-
-                        <label htmlFor="inputUserName">Age</label>
-                        <input  
-                            onChange={handleFieldChange} 
-                            type="text"
-                            id="age"
-                            placeholder="age"
-                          
-                        />
-
-                        <label htmlFor="inputUserName">Dance Studio</label>
-                        <input  
-                            onChange={handleFieldChange} 
-                            type="text"
-                            id="danceStudio"
-                            placeholder="dance studio"
-                          
-                        />
-
-                        <label htmlFor="inputUserName">Years of Experience</label>
-                        <input  
-                            onChange={handleFieldChange} 
-                            type="text"
-                            id="experience"
-                            placeholder="years of experience"
-                          
-                        />
-
                     </div>
-
+                    <div className="alignRight">
                     <button 
                         type="button"
-                        disabled={isLoading}
-                        onClick={createUser}>
+                        id="login"
+                        onClick={handleRegister}>
                         Create Account
                     </button>
+                    </div>
 
 
                 </fieldset>

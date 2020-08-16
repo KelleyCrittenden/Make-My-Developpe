@@ -22,7 +22,7 @@ const WorkoutCompletedCard = props => {
                     </picture>
 
                     <h3>
-                    Name: <span className="card-workoutName">
+                        <span className="card-workoutName">
                         {props.workout.name}
                     </span>
                     </h3>

@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews";
 import "./Developpe.css";
-import Home from "./home/Home";
-import Login from "./auth/Login"
-import Register from "./auth/Register"
 import 'semantic-ui-css/semantic.min.css'
 
 
@@ -25,6 +22,7 @@ const Developpe = (props) => {
 
   const clearUser= () => {
     sessionStorage.clear();
+    setHasUser(isAuthenticated());
 
 }
 
@@ -33,7 +31,8 @@ const Developpe = (props) => {
         <>
           <NavBar 
             hasUser={hasUser} 
-            setUser={setUser} {...props} />
+            setUser={setUser} {...props}
+            clearUser={clearUser} />
 
           <ApplicationViews
             hasUser={hasUser}

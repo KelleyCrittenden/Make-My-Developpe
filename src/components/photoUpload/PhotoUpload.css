@@ -6,6 +6,7 @@
     margin-bottom: 2em;
     flex: 0 1 24%;
     text-align: center;
+    margin-top: 2em;
   }
   
   /* entire background */
@@ -27,7 +28,7 @@
   }
   
   
-  .content-userName {
+  .content-photoUploadName {
     color: darkslategrey;
   }
   
@@ -49,6 +50,6 @@
     background-color: #A5A58D;
   }
   
-  .userImage {
+  .photoUploadImage {
       width: 100%;
   }

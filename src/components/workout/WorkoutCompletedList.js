@@ -31,11 +31,11 @@ const WorkoutCompletedList = (props) => {
       <>
       <section className="section-content">
         <button type="button"
-                className="btn"
+                className="button"
                 onClick={() => {props.history.push("/Workouts/New")}}>
                 Create New Workout
         </button>
-</section>
+    </section>
     <div className="container-cards">
       {workouts.map(workout => workout.completed &&
         <WorkoutCompletedCard 

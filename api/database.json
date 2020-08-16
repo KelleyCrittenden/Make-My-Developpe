@@ -2,22 +2,13 @@
   "users": [
     {
       "id": 1,
-      "email": "harper@gmail.com",
-      "password": "123",
-      "name": "Harper Alexis",
-      "age": 11,
-      "danceStudio": "Ellen Alvin Dance Exchange",
-      "experience": "3"
+      "email": "user@gmail.com",
+      "password": "123"
     },
     {
       "id": 2,
-      "email": "aralyn@gmail.com",
-      "password": "123",
-      "name": "Aralyn",
-      "image": "pointe-shoes.jpeg",
-      "age": "14",
-      "danceStudio": "Ellen Alvin Dance Exchange",
-      "experience": "0"
+      "email": "user2@gmail.com",
+      "password": "123"
     }
   ],
   "workouts": [
@@ -29,14 +20,14 @@
       "barreExerciseId": 2,
       "barreExerciseDescription": "Starting in 5th, Tendu Plie (3,4) Tendu(5,6), Plie (7,8) 4 Quick Tendu",
       "centerFloorExerciseId": 2,
-      "centerFloorExerciseDescription": "Feet in Fifth, both sides, 1st 2, 2nd 2, 3rd 2, 4th 2",
-      "comment": "First Day of Class! ",
-      "completed": false
+      "centerFloorExerciseDescription": "Feet in Fifth, both sides, 1st 2, 2nd 2, 3rd 2, 4th 4",
+      "comment": "Second Day of class",
+      "completed": true
     },
     {
       "id": 7,
       "userId": 1,
-      "name": "Tuesday Class",
+      "name": "Sunday Class",
       "date": "2020-08-11",
       "barreExerciseId": 3,
       "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
@@ -46,130 +37,700 @@
       "completed": false
     },
     {
-      "userId": "1",
-      "name": "Wednesday Class",
-      "date": "2020-08-05",
-      "barreExerciseId": "4",
-      "barreExerciseDescription": "Face Barre, Feet in First, Tendu 2nd (7) Flex (8), 7 Single Frappes side, (1 close 2), Strike 5, Close 1st, 6 Tendu, 8 Flex (other side)",
-      "centerFloorExerciseId": "3",
-      "centerFloorExerciseDescription": "Developpe 1st Aragesque, Developpe 2nd Arabesque, Plise, Chasse to 1st Arabesque, Panche (5,6 recover 7, releve 8)",
-      "comment": "Bring Extra Water! ",
-      "completed": false,
-      "id": 8
+      "id": 10,
+      "userId": 1,
+      "name": "Friday Class",
+      "date": "2020-08-07",
+      "barreExerciseId": 5,
+      "barreExerciseDescription": "At the Barre",
+      "centerFloorExerciseId": 5,
+      "centerFloorExerciseDescription": "7 Across the Floor",
+      "comment": "Stretch before class, bring extra water",
+      "completed": false
     },
     {
-      "userId": "1",
-      "name": "Thursday Class",
-      "date": "2020-08-06",
-      "barreExerciseId": "5",
-      "barreExerciseDescription": "Plie Front Tendu, Ronde de jambe, hold (3,4) 4 Ronde de Jambe en de hors, Brush off the Floor, 1 passe 2 front, 3 passe 4 side, 5 close 6 back",
-      "centerFloorExerciseId": "8",
-      "centerFloorExerciseDescription": "3 Sissone Forward, 3 Sissone Backward Changement, Repeat 1 more time",
-      "comment": "Make Sure to stretch both ankles prior to class",
-      "completed": false,
-      "id": 9
+      "id": 11,
+      "userId": 1,
+      "name": "Saturday Class",
+      "date": "2020-08-08",
+      "barreExerciseId": 1,
+      "barreExerciseDescription": "At The Bare",
+      "centerFloorExerciseId": 1,
+      "centerFloorExerciseDescription": "Across the floor",
+      "comment": "make sure to stretch",
+      "completed": false
+    },
+    {
+      "id": 12,
+      "userId": 1,
+      "name": "Tuesday Class",
+      "date": "2020-08-15",
+      "barreExerciseId": 3,
+      "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
+      "centerFloorExerciseId": 2,
+      "centerFloorExerciseDescription": "Start in own corner, 2 Battement front in croise devant, 2 Battement 2nd in ecarte, 2 Battement back in epoule",
+      "comment": "Second Day Of Class!!",
+      "completed": true
     }
   ],
   "barreExercises": [
     {
       "id": 1,
       "name": "Tendu",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-turn.png",
       "typeOfMovement": "Turn",
       "description": "Tendu means tight or stretched. A tendu is one of the fundamental movements in ballet where the working leg is extended along the floor until only the tip of the toe remains touching the floor. It can be performed to the front, side or back and usually begins in 1st or 5th position. Tendu is the common abbreviation for battement tendu and often used in preparation for larger movements like grand battement."
     },
     {
       "id": 2,
       "name": "Plie",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-body-position.png",
       "typeOfMovement": "Body Position",
       "description": "Plié means bent,bending, In ballet, plié is a bending of the knees, usually performed in one of the six positions of the feet. Demi-plié is a small or half bend of the knees, keeping the heels of the feet flat on the floor. "
     },
     {
       "id": 3,
       "name": "Degage",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-body-position.png",
       "typeOfMovement": "Body Position",
       "description": "Dégagé means to disengage. Dégagé is a movement where the working leg disengages from the supporting leg."
     },
     {
       "id": 4,
       "name": "Frappe",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-body-position.png",
       "typeOfMovement": "Body Position",
       "description": "Frappé is a classical ballet term meaning struck.  A frappé is a step almost always done at the barre as an exercise to improve quick and precise movement of the legs feet.  To do a frappé, the dancer usually starts with the outside leg in a flexed, turned out position lifted off the floor with the heel placed slightly above the ankle bone of the standing leg.  The dancer then extends her leg and points her foot, towards the floor and out, causing the “strike” on the floor.  The strike on the floor is exactly how the step got its name, since frappé actually means “struck” or to strike. The term is also used to describe a whole set of steps at the barre, usually called a “frappé combination,” that is usually done as one of the last exercises at barre after a dancer’s muscles have become warm."
     },
     {
       "id": 5,
       "name": "Rond de Jambe",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-body-position.png",
       "typeOfMovement": "Body Position",
       "description": "Rond de Jambe is a classical ballet term meaning round of the leg or circular movements of the leg. A Rond de jambe is a very common step and is seen done in various forms throughout ballet class and performances by both male and female ballet dancers. Ronds de jambe, as a step, can be done a terre or en l’air. Dancers perform ronds de jambe at the bar, in the centre and in the adage and are either clockwise or counterclockwise."
     },
     {
       "id": 6,
       "name": "Developpe",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-body-position.png",
       "typeOfMovement": "Body Position",
-      "description": "Rond de Jambe is a classical ballet term meaning round of the leg or circular movements of the leg. A Rond de jambe is a very common step and is seen done in various forms throughout ballet class and performances by both male and female ballet dancers. Ronds de jambe, as a step, can be done a terre or en l’air. Dancers perform ronds de jambe at the bar, in the centre and in the adage and are either clockwise or counterclockwise."
+      "description": "Développé is a classical ballet term meaning to develop, or developing movement. A Développé is a movement where the dancer’s working leg is drawn up to the knee of the supporting leg and extended to an open position. As the working leg is brought up, the standing leg is typically straight while also keeping the hips level.  The opening movement of the working leg should be seamless, yet still pass through a full passé. Développé is a very common step in classical ballet and many other forms of dance.  It is somewhat of a basic step, but can take quite a while to master, with many advanced students and sometimes even professionals still giving in to bad habits.  A good understanding of développé, especially the idea of leaving your hip down as much as possible, can lead to many other steps looking better.  As développés are commonly used in pas de deuxes, it is even more important for women to understand how to do the movement correctly."
+    },
+    {
+      "id": 7,
+      "name": "Adagio",
+      "image": "/Images/ballet-transition.png",
+      "typeOfMovement": "Pace",
+      "description": "Adagio combinations are typically done both at barre and in center.  They usually consist of many basic steps of classical ballet technique, such as arabesque, attitude, développé, grande rond de jambe, and plié, among more advanced steps.  They are usually given at almost all skill levels and classes, from beginner to advanced. The quality of a dancer’s adagio work is shown by how fluid the dancer can move and hit the fine balance of high extensions without sacrificing strong standing legs. Also, how purposeful the movement looks without lots of noticeable movement in their feet or arms to keep balance."
+    },
+    {
+      "id": 8,
+      "name": "Balancoire",
+      "image": "/Images/ballet-kick.png",
+      "typeOfMovement": "Kick",
+      "description": "Balançoire is a ballet term applied to exercises such as grande battements or degagés.  When a dancer is doing a combination with balançoire, they will repeatedly swing their leg from front to back and may tilt their upper body slightly forward or backwards, opposite to the direction their leg is moving."
+    },
+    {
+      "id": 9,
+      "name": "Battement Fondu",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "Battement Fondu is a classical ballet term meaning “battement sinking down.”  During a battement fondu, a dancer’s supporting leg is slowly bent in fondu with the working foot pointing on the ankle.  As the dancer’s supporting leg straightens, the working leg also extends to a straight position in the air or with the toes on the floor. An exercise with battement fondu is typically done en croix, or to the front, side and back."
+    },
+    {
+      "id": 10,
+      "name": "Ballone",
+      "image": "/Images/ballet-feet-position.png",
+      "typeOfMovement": "Feet Position",
+      "description": "The term balloné in classical ballet technique is step where the leg is extended to the second or fourth position (front, side or back) at 45 degrees; then the knee is bent and the foot brough to a sur le cou-de-pied position.  At 45 degrees, it is called petit balloné and when done at 90 degrees, grande balloné."
+    },
+    {
+      "id": 11,
+      "name": "Cambre",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "Cambré is a classical ballet term meaning arched. When a dancer is doing cambré, their body is bent from the waist and stretching backward or sideways with the head following the movement of the upper body and arms."
+    },
+    {
+      "id": 12,
+      "name": "En Cloche",
+      "image": "/Images/ballet-feet-position.png",
+      "typeOfMovement": "Feet Position",
+      "description": "En cloche is a ballet term that means “like a bell.”  It is usually used as “battement en cloche“ which has the dancer going back and forth between battement front and back, passing through first position. En cloche gets the term because as the leg goes back and forth between front and back positions, it looks like a bell that is rocking back and forth to make its sound."
+    },
+    {
+      "id": 13,
+      "name": "Sur le Cou-d-pied",
+      "image": "/Images/ballet-feet-position.png",
+      "typeOfMovement": "Feet Position",
+      "description": "Sur le cou-de-pied is a ballet term meaning “on the ‘neck’ of the foot.” This term is for a position of the foot, not an actual step.  The position of sur le cou-de-pied is when the working foot is placed on the other leg between the base of the calf muscle and the top of the ankle. In Vaganova technique, sue le cou-de-pied is taught in two ways: basic and wrapped. In the basic sur le cou-de-pied position to the front, the small toes of the pointed foot rest in the cou-de-pied position with the entire foot in front of the standing leg.  The same idea holds true for sur le cou-de-pied to the back, or derriére, where the whole pointed foot is behind the standing leg, but now the big toe is pressing forward from the back. In the wrapped sur le cou-de-pied position, the heel is placed in front of the standing leg, while the sole of the pointed foot is placed “wrapping” around the leg so that the toes are behind the leg and ankle of the standing leg."
+    },
+    {
+      "id": 14,
+      "name": "En croix",
+      "image": "/Images/ballet-transition.png",
+      "typeOfMovement": "Direction",
+      "description": "En croix is a classical ballet term meaning “in the shape of a cross.”  This term is usually used in ballet class and lets a dancer know the step should be done to the front, side and then back.  Doing steps en croix can also be done in reverse where they start from the back, side, then front."
+    },
+    {
+      "id": 15,
+      "name": "Detourne",
+      "image": "/Images/ballet-transition.png",
+      "typeOfMovement": "Transition",
+      "description": "Détourné is a classical ballet term meaning “turned aside.” A dancer does a détourné by turning once completely around on both feet, on demi-pointe or pointe(for women on pointe of course). As the dancer turns, the feet position are reversed.  So if the right foot was in front to start the détourné, it will finish in the back with the left foot front."
+    },
+    {
+      "id": 16,
+      "name": "Demi Detourne",
+      "image": "/Images/ballet-transition.png",
+      "typeOfMovement": "Transition",
+      "description": "Demi Détourné is a classical ballet term meaning “half turn aside.”  A demi détourné is when a dancer will do a half turn on both feet on demi-pointe or pointe, while switching the position of the feet as they finish.  It gets its meaning from the ballet terms demi and detourné."
+    },
+    {
+      "id": 17,
+      "name": "Enveloppe",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "Enveloppé is a classical ballet term meaning “enveloped.”  This step or movement can be considered the opposite of développé. When a dancer performs an enveloppé, they start with the working leg stretched to either the front, side or back.  The leg is then brought into either cou-de-pied or passé and then usually closed to fifth position."
+    },
+    {
+      "id": 18,
+      "name": "Pas de cheval",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "Pas de cheval is a classical ballet term meaning “horse’s step.”  It gets its name because a pas de cheval resembles how a horse pulls in its leg before kicking it out again. When doing a pas de cheval, a dancer will start in fifth position, lift the front leg into cou-de-pied, then extend front into a tendu.  It can also be done ending in a degage and to all three directions; front, side and back."
+    },
+    {
+      "id": 19,
+      "name": "Passe",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Postion",
+      "description": "Passé is a classical ballet term meaning “passed.”  It refers to the movement when a dancer goes through a retiré position, which is when one leg is bent so it looks like a triangle with the foot placed near the other leg’s knee."
+    },
+    {
+      "id": 20,
+      "name": "Sus-sous",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Sus-sous, or sous-sus, is a classical ballet term that translates to “over-under” and describes when a dancer springs onto releve demi-pointe or pointe, quickly placing the back foot more closely behind the front in fifth position with fully stretched legs.  The look a dancer having finished a sus-sous is a releve in a fifth position with legs tightly together.  Many dancers are taught to imagine hiding their back foot’s toes, so that you only see “one set of toes and two heels” when looking from the front."
+    },
+    {
+      "id": 21,
+      "name": "Soubresaut",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Soubresaut is a classical ballet term describing when a dancer performs a quick jump from two feet and lands on two feet in fifth position, traveling slightly forward during the jump.  This jump is usually seen in all levels of ballet classes from beginner to professional levels by both male and female dancers.  It can also be seen by male dancers during variations as a preparation before a tour en l’air during a sequence of beated jumps."
     }
   ],
   "centerFloorExercises": [
     {
       "id": 1,
       "name": "Port de Bras",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-arm-position.png",
       "typeOfMovement": "Arm Position",
       "description": "Port de bras is a classical ballet term meaning movement of the arms. It describes how dancers move their arms from one position to another. For example, if a ballerina moves her arms from first position to fifth position, that is considered a port de bras. When doing proper port de bras, dancers will move their arms from their back and shoulders (without lifting the shoulders awkwardly upwards) while trying to move as smoothly as possible. The shape of the arms should be rounded so there is no visible break at the elbows and wrists. In classical ballet, the arms should never be fully straight or hyper-extended at the elbows. Also, the hands should be shaped with the fingers extended running mostly in the same direction, but not stuck together like a paddle or overly extended."
     },
     {
       "id": 2,
       "name": "Grand Battement",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-kick.png",
       "typeOfMovement": "Kick",
       "description": "Grand Battement is a classical ballet term which means large battement.  A dancer performs a grand battement by throwing the working leg into the air from the hip and brings it back down to a position, typically fifth position.  While doing a grand battement a dancer keeps both legs straight while the rest of the body remains relatively still. A grand battement is very important for grande allegro, allowing a dancer to jump higher when performed correctly."
     },
     {
       "id": 3,
       "name": "Arabesque",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-kick.png",
       "typeOfMovement": "Kick",
       "description": "Arabesque is one of the classic positions in ballet, where the working leg is fully straight extending long behind the dancer either on the floor (a terre) or in the air (en l’air). The supporting (standing) leg can be straight or in a demi-plié. Arabesque can be performed in several variations: first, second, third or fourth arabesque. The variations are based on the position of the arms which create the longest line from the fingers to the toes."
     },
     {
       "id": 4,
       "name": "Pirouette",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-turn.png",
       "typeOfMovement": "Turn",
       "description": "Pirouette is a classical ballet term meaning spin. It describes when a dancer is turning around one leg with the other off the ground and in a position, most commonly in passé.  A pirouette can be done either en dedans, turning in towards the supporting leg that the dancer is turning on, or en dehors, which is turning away from the supporting leg. Pirouettes are often considered one of the most fun ballet steps to practice and do.  Also, since they are quite hard to do cleanly with multiple turns (double pirouettes, triple pirouettes and so on) it becomes very rewarding for dancers once they feel they’ve improved their pirouettes.  A pirouette can come in many different forms since it basically describes any turn, that is done on one leg.  A pirouette, while close in defintion, is not done with a piqué, but with a relevé despite the definitions of pirouette and pique turn being similar."
     },
     {
       "id": 5,
       "name": "Pirouette en dedans",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-turn.png",
       "typeOfMovement": "Turn",
       "description": "A pirouette en dedans is a classical ballet term that describes a pirouette turning inward toward the standing leg.  For example, if a dancer is turning on the right leg, the dancer will be turning to the right in an en dedans pirouette. Pirouettes en dedans are an intermediate ballet step but very commonly seen in all types of dance in school and professional performances.  This is because a pirouette en dedans basically describes any turn that is turning “inward” toward the standing leg.  It can be thought of the opposite of an en dehors pirouette, where you’re turning away. The most common type of pirouette en dedans is with the dancer in a retiré position with the arms in first or high fifth position.  However, there are many other forms too.  For example, you may see a dancer perform an attitude pirouette en dedans, or possibly an arabesque pirouette en dedans.  Those two pirouettes, as you may have guessed, have the dancing turning inward toward the front foot while in a attitude or arabesque position."
     },
     {
       "id": 6,
       "name": "Assemble",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-jump.png",
       "typeOfMovement": "Jump",
       "description": "An assemblé in classical ballet has many different variations, but the basics are always the same: two legs joining together in the air. In a basic form, an assemblé is when one foot slides along the floor before brushing into the air.  As the foot goes into the air, the dancer then jumps by pushing into and off the floor with the supporting leg and foot.  The supporting leg now meets with the other leg in the air and “assembles” into a fifth position.  The dancer then lands on the floor with a plié in fifth position."
     },
     {
       "id": 7,
       "name": "Temps Leve",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-jump.png",
       "typeOfMovement": "Jump",
       "description": "A Temps Levé is a type of jump from one foot, landing on the same foot while the other leg is raised in a position in the air. In this, the raised leg is in Arabesque. An Arabesque describes the position where the dancer has one leg stretched directly behind them. The Arabesque that is demonstrated is a First Arabesque. Arabesques are defined by the position of the arms. A First Arabesque is where the dancer has the arm on the same side as the supporting leg (in this case, the leg doing the jumping) extended in front and the other arm to the side. This is a common step executed by both male and female dancers."
     },
     {
       "id": 8,
       "name": "Sissone",
-      "image": "pointe-shoes.jpeg",
+      "image": "/Images/ballet-jump.png",
       "typeOfMovement": "Jump",
       "description": "Sissonne is a classical ballet term that describes a dancer jumping from two feet and splitting their legs “like scissors” in the air before landing.  It is a very common and popular ballet step, seen in performances and throughout classes of most skill levels. A sissonne in its most simplest form is commonly taught to students at intermediate levels as part of medium and grande allegro. Many pictures featuring dancers in splits in mid-air are commonly pictures of a sissonne."
+    },
+    {
+      "id": 9,
+      "name": "Allegro",
+      "image": "/Images/ballet-feet-position.png",
+      "typeOfMovement": "Pace",
+      "description": "In ballet class, allégro combinations are usually done toward the last part of class, as the dancer is usually most warmed up at this point and can better execute quick or large jumps that require lots of control to do properly.  Usually a teacher will provide a warmup combination consisting of simple sautés in the basic positions of classical ballet.  Following the warmup, a teacher will likely give petite allégro combinations or exercises consitsing of petit assemblés and jetés.  Moving onward, the teacher may then give a medium allegro which consists of sissones and entrachat cotes that are done higher and larger than the petite allegro.  Lastly, a class may nearly finish with a grande allegro, which typically will consist of grande jetes, cabrioles, fouettes en l’ air, saut de chats, and other jumps, or allégro, performed at the highest height a dancer can reach while still dancing properly to the music."
+    },
+    {
+      "id": 10,
+      "name": "Allonge",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "In classical ballet, allongé is an adjective that describes a position that is stretched or made longer.  Allongé is usually used with arabesque, such as extending your arm and leg further before closing into another position."
+    },
+    {
+      "id": 11,
+      "name": "Attitude",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "An attitude in classical ballet is a position where the dancer is standing on one leg with the other lifted, usually to the front (devant) or back (derrière).  The leg in the air is bent at the knee so that it forms roughly a 145 degree angle. The attitude position is commonly seen throughout many aspects of classical ballet technique in class and on stage in classical and contemporary choreography. It is important for a dancer not to over, or under, bend the leg in attitude causing the lifted and bent leg to look either too short or too long (possibly being mistaken for an improper extension with a bent leg, for example an arabesque with a bent leg working leg is not an arabesque.)"
+    },
+    {
+      "id": 12,
+      "name": "En avant",
+      "image": "/Images/ballet-direction.png",
+      "typeOfMovement": "Direction",
+      "description": "En avant in classical ballet refers to the direction of the execution for a step, specifically moving forward or to the front.  En avant is not an actual step or position itself and is almost always used with other terms, such as tendu en avant, which would mean to tendu directly toward the front."
+    },
+    {
+      "id": 13,
+      "name": "Adagio",
+      "image": "/Images/ballet-feet-position.png",
+      "typeOfMovement": "Pace",
+      "description": "Adagio combinations are typically done both at barre and in center.  They usually consist of many basic steps of classical ballet technique, such as arabesque, attitude, développé, grande rond de jambe, and plié, among more advanced steps.  They are usually given at almost all skill levels and classes, from beginner to advanced. The quality of a dancer’s adagio work is shown by how fluid the dancer can move and hit the fine balance of high extensions without sacrificing strong standing legs. Also, how purposeful the movement looks without lots of noticeable movement in their feet or arms to keep balance."
+    },
+    {
+      "id": 14,
+      "name": "Battement Developppe",
+      "image": "/Images/ballet-kick.png",
+      "typeOfMovement": "Kick",
+      "description": "Battement Développé is a classical ballet term meaning “battement developed.”  From a fifth position, the dancer moves their working foot up to a retiré position and opens to the front, side or back with a deliberate motion.  A battement développé finishes by closing back into fifth position."
+    },
+    {
+      "id": 15,
+      "name": "Battement Petit",
+      "image": "/Images/ballet-kick.png",
+      "typeOfMovement": "Kick",
+      "description": "Petit Battment is a classical ballet term meaning “small beating” or “small battement.”  It is commonly used as a term to describe any small beating action of the leg or foot."
+    },
+    {
+      "id": 16,
+      "name": "Battement Arrondi",
+      "image": "/Images/ballet-kick.png",
+      "typeOfMovement": "Kick",
+      "description": "Battement Arrondi is a classical ballet term that means “rounded battement.” This term describes a step when the toes of a dancer’s working foot move in a semi-circle in the air, at about 45 degrees starting from front to back(en dehors) or back to front (en dedans). Commonly in ronde jambe exercises at barre, a grand battement arrondi is the same semi-circle idea but bigger, typically above 90 degrees."
+    },
+    {
+      "id": 17,
+      "name": "Battement Battu",
+      "image": "/Images/ballet-kick.png",
+      "typeOfMovement": "Kick",
+      "description": "Battement Battu is a classical ballet term which means “beaten battement.” Battement battu is done by placing your working foot in a sur cou-de-pied position and taping the opposite leg’s ankle devant or derriere (back or front)."
+    },
+    {
+      "id": 18,
+      "name": "Battement Degage",
+      "image": "/Images/ballet-kick.png",
+      "typeOfMovement": "Kick",
+      "description": "Battement Dégagé is a classical ballet term meaning “disengaged battement.”  Usually used in Cecchetti technique, a battement dégagé is very similar to a battement tendu but done at twice the speed, with the working foot rising about 4 inches off the floor."
+    },
+    {
+      "id": 19,
+      "name": "Brise",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Brisé is a classical ballet term meaning “broken” or “breaking.”  A brisé is when a dancer takes off from one or two feet, jumps and beat their legs and ends on one or two feet.  Brisé is either done from fifth or fourth position and can travel forwards or backwards. Basically, a brisé looks like an assemble, but with a “break” between the upper and lower body. This is what the french translation of “broken” is describing."
+    },
+    {
+      "id": 20,
+      "name": "Brise Vole",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Brisé Volé is a classical ballet term that means “flying brise.”  Basically, a brisé volé is when a dancer alternates between brisé front and back in succession.  Each time the dancer jumps and lands, it is on one leg."
+    },
+    {
+      "id": 21,
+      "name": "Balance",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "A balancé in ballet is a step where a dancer moves while alternating balance between their feet.  The rhythm is usually in three counts like a waltz and has the motion of going down, up, down with their legs. Typically a dancer starts in a fifth or “b-plus” position (the front foot straight and back leg bent and crossed behind) and extends the back leg to a degagé to the side on the first “and” count, fondues and transfers weight onto that foot while crossing the other behind the ankle in coupé position, then piques on the back foot while slightly lifting the first, then fondues once again on the first foot."
+    },
+    {
+      "id": 22,
+      "name": "Cabriole",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "Cabriole is a classical ballet term meaning caper.  In a cabriole, a dancer jumps in the air off one leg as the other is thrown upwards, as the bottom leg raises to meet and beat with the top leg, the top leg continues to go higher as the bottom leg returns to the floor. A cabriole can be in a variety of positions and at different degrees.  In petit allegro, a cabriole is usually done at 45 degrees and lower to the ground, while the beating of the legs happens higher in grand allegro. Cabrioles can be done devant, derrière and à la seconde (front, back or side) and in any position of the body (croisé, effacé, and so on)."
+    },
+    {
+      "id": 23,
+      "name": "Double Cabriole",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "A Double Cabriole is a classical ballet term given to the step where the beating of a cabriole happens twice in the air before landing.  A double cabriole is almost always done by men in classical ballet and extremely rarely by women."
+    },
+    {
+      "id": 24,
+      "name": "Cabriole Fermee",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "Cabriole Fermée is a classical ballet term meaning “closed cabriole.”  The beginning and middle is the same as a standard cabriole except that a cabriole fermée has the working leg close into fifth position. A cabriole fermée is somewhat common in petit and grand allegro exercises in a ballet class.  On stage, it is more commonly seen performed by women."
+    },
+    {
+      "id": 25,
+      "name": "Chaines",
+      "image": "/Images/ballet-turn.png",
+      "typeOfMovement": "Turn",
+      "description": "Chaînés or “chaîné turns” is when a dancer is performing a series of turns on both feet, picking up each foot back and forth in order to keep moving in a line or circle.  It could easily be considered one of the most basic turning step or exercise because chaînés or “chaîné turns” don’t rely balancing on one leg."
+    },
+    {
+      "id": 26,
+      "name": "Changement",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "A changement is when a dancer performs a jump from fifth position with the feet, jumping and changing the foot position in the air so they land with the opposite foot in front.  So a dancer performing a changement with the right foot in front will plié, jump and straighten their legs, switch their legs and feet so the left foot is now in front while keeping their legs straight and feet pointed, then land in a plié."
+    },
+    {
+      "id": 27,
+      "name": "Chasse",
+      "image": "/Images/ballet-transition.png",
+      "typeOfMovement": "Transition",
+      "description": "When a dancer is doing a chassé, they have one foot extended forward, the back foot then “chases” and meets up with the front for a quick moment before the front foot shoots forward again, all while traveling forward.  They are often done one after the other in a series, but not always.  The step is called chassé because the back foot literally looks like it is chasing after the front. Chassé back or chassé derrière is also possible, where simply the back leg and foot are extended behind the dancer, and the front foot and leg must now chase the back.  The dancer would then of course be moving backwards."
+    },
+    {
+      "id": 28,
+      "name": "en Cloche",
+      "image": "/Images/ballet-feet-position.png",
+      "typeOfMovement": "Feet Position",
+      "description": "En cloche is a ballet term that means “like a bell.”  It is usually used as “battement en cloche“ which has the dancer going back and forth between battement front and back, passing through first position. En cloche gets the term because as the leg goes back and forth between front and back positions, it looks like a bell that is rocking back and forth to make its sound."
+    },
+    {
+      "id": 29,
+      "name": "Contretemps",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Contretemps is a classical ballet term meaning “beating against time.”  A dancer doing a contretemps looks like they are a brisé, but opening their body to the other side at the last moment.  It is usually done as a preparatory step, and before the beat of the music the dancer will start a new step."
+    },
+    {
+      "id": 30,
+      "name": "Coupe",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Coupé is a classical ballet term meaning “cut” or “cutting.”  A coupé describes a step where one foot cuts the other foot away, taking its place.  Its usually done as an in-between step for a larger step, such as a coupé jeté or a coupé-chassé en tournant (the typical preparation for many big jumps for males)."
+    },
+    {
+      "id": 31,
+      "name": "Coupe-jete en tournant",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Ccoupé-jeté en tournant is a classical ballet term that is usually called “coupé jeté.” It is an intermediate step that is basically a split jeté with a turn in between."
+    },
+    {
+      "id": 32,
+      "name": "Coupe-chasse en tournant",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "A coupé-chassé en tournant is a classical ballet term that describes a step where a dancer is turning in the air in a coupé position.  More specifically, it is almost always a preparation, especially for men for grand allegro."
+    },
+    {
+      "id": 33,
+      "name": "Croise",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "Croisé is a classical ballet term meaning “crossed.”  Croisé is one of the directions of épaulement.  Basically, a croisé position is when the legs appear crossed from the audience.  This can be done in croisé derriére or croisé efface, or back and front. Croisé is used to describe any position of the body and legs, so a grande jeté could be done croisé, but also effacé."
+    },
+    {
+      "id": 34,
+      "name": "Ecarte",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "Écarté is a classical ballet term meaning “separated, thrown apart.” It is one of the eight directions of the body. In écarté, (specifically écarté devant) a dancer is facing their entire body to one of the two front corners of their square box. (a box drawn perfectly around the dancer that is has its front and back lines parallel to the front of the room or stage).  To complete an écarté, one of the dancer’s legs must be in an a la seconde position en l’air or à terre.  The same side arm as the working leg is usually in a high fifth position. In écarté derrière [ay-kar-TAY deh-re-ehr] the same rules above apply except that the dancer is facing one of the two back corners."
+    },
+    {
+      "id": 35,
+      "name": "Echappe",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Échappé is a classical ballet term meaning “slipping movement” or “escaping.” A dancer does an échappé with their legs and feet.  Starting in a closed position, usually fifth position with the feet, the dancer slides both feet out equally into either second or fourth position."
+    },
+    {
+      "id": 36,
+      "name": "Efface",
+      "image": "/Images/ballet-body-position.png",
+      "typeOfMovement": "Body Position",
+      "description": "Effacé is classical ballet term meaning “shaded.”  The term describes another step or pose in which the legs looks open, or not crossed, when seen from the front. You can say that effacé is the opposite of croisé."
+    },
+    {
+      "id": 37,
+      "name": "Entrechat",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Entrechat is a classical ballet term meaning “interweaving” or “braiding.”  It describes when a dancer jumps into the air and beats their legs by changing the position of their legs and feet to the front or back of each other.  This beating action with the legs could be described as looking “braided” since each leg crosses over the other for each beat."
+    },
+    {
+      "id": 38,
+      "name": "Entrelace",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Entrelacé is a classical ballet term meaning “interlaced.”  A dancer performs an entrelacé by battementing one leg to the front while plieing on the other, then jumping and landing on the first leg while completing a half turn in the air. The second leg, or the push off leg, typically ends in an arabesque."
+    },
+    {
+      "id": 39,
+      "name": "Fouette Turns",
+      "image": "/Images/ballet-turn.png",
+      "typeOfMovement": "Turn",
+      "description": "Fouetté turns is a classical ballet term meaning “whipped turns.”  A fouetté turn is when a dancer, usually female, does a full turn in passe (pirouette), followed by a plie on the standing leg while the retiré leg extends to  croise front and rond de jambes to the side (a la seconde).  As the leg hits the a la second and still in plie, the dancer releves and brings the leg into retiré and begins a turn again."
+    },
+    {
+      "id": 40,
+      "name": "Failli",
+      "image": "/Images/ballet-transition.png",
+      "typeOfMovement": "Transition",
+      "description": "Failli is a classical ballet term describing a step where the dancer seems to degage each leg to the front immediately after the other with a small jump.  A failli is usually done as a preperation step for jumps and is considered an in-between step."
+    },
+    {
+      "id": 41,
+      "name": "Glissage",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Glissade is a classical ballet term meaning “glide.”  It is a traveling, usually small, jump that is usually used to link other steps together.  It can be considered an in-between step. A dancer performs a glissade by plieing in fifth position, sliding (or gliding) one foot out into a degage side.  The working leg reaches about 20 degree off the floor, the dancer pushes off the supporting foot and extends it to the side. For a moment, the dancer is in the air with both legs and feet fully stretched and pointed as if in a sauté in second position.  The working leg then lands on the floor as the supporting leg (in the air already) quickly closes into fifth position."
+    },
+    {
+      "id": 42,
+      "name": "Petit jete",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Petit jeté is a classical ballet term meaning “small throw.”  It describes a jump where a dancer throws, or brushes, one leg into the air, then pushes off the floor with the other jumping into the air and landing on the first leg."
+    },
+    {
+      "id": 43,
+      "name": "Grand jete",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Grand jeté is a classical ballet term meaning “big throw.”  It describes a big jump where the dancer throws one leg into the air, pushes off the floor with the other, jumping into the air and landing again on the first leg."
+    },
+    {
+      "id": 44,
+      "name": "Jete battu",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "always describes a petit jeté that is beaten with straight legs before landing in cou-de-pied."
+    },
+    {
+      "id": 45,
+      "name": "Jete entrelace",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Jeté entrelacé is a classical ballet term meaning “interlaced throw.”  It describes a step where the dancer throws one leg in the air, jumps and brings the other leg up to meet the first leg, while switching their body position half way around, then landing in an arabesque."
+    },
+    {
+      "id": 46,
+      "name": "Pas de couru",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "A pas de couru is a classical ballet term meaning “running step.”  It is a very common preparatory step for many grandé allegro jumps such as a grandé jeté.  A dancer doing a pas d’couru will look like they’re kicking their legs infront of themselves with a specific rhythm.  For example, a dancer will degage both legs separately in front of them in a quick 1-2 rhythm, then finish with a strong demi-plié before a large grandé battement for a big jump."
+    },
+    {
+      "id": 47,
+      "name": "Pas de basque",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "Pas de basque is a classical ballet term meaning “basque step.”  It gets its name because the step was taken from the national dances of the Basques. A dancer doing a pas de basque will start in fifth position with the right foot in front.  Doing a plié on the left leg, the dancer extends their right leg into a tendu front croise, then slides their right foot around in a half ronde jambe to ecarte back while staying in plié.  The dancer then transfers weight from the left leg completely on to the right leg so the left leg is now in tendu ecarte front before closing it to fifth position."
+    },
+    {
+      "id": 48,
+      "name": "Pas de bourree",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "Pas de bourrée is a classical ballet term meaning “beating steps.”  A Pas de bourrée has many forms that mostly relate to the direction the dancer is moving or if the legs are bending or staying straight.  It gets its defintion because a dancer doing a pas de bourrée will have his or her legs coming together for a moment before opening again."
+    },
+    {
+      "id": 49,
+      "name": "Pas de chat",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Pas de chat is a classical ballet term meaning “cat’s step.”  It gets its name because the step resembles how a cat jumps. A dancer does a pas de chat by starting in fifth position with the right foot in back.  The dancer pliés then jumps with the right leg going into a passé (also known as retiré) quickly followed by the left leg moving into passé.  For a moment, the dancer is in the air with both legs in high passés (looking like a grande plié in fifth position but with pointed feet).  The dancer then places their right foot on the floor first followed by the left back in front to fifth position.  Pas de chat has variations including starting and ending from a fourth position."
+    },
+    {
+      "id": 50,
+      "name": "Pas de valse",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Pas de valse is a classical ballet term meaning “waltz step.”  It is usually done individually by female dancers, but is sometimes done with a partner. A dancer doing a pas de valse will extend and step one leg as the other brushes front while decorating the step with classical looking port de bras.  A dancer may also do a pas de valse en tournant which would be turning half way around each waltz step."
+    },
+    {
+      "id": 51,
+      "name": "Penche",
+      "image": "/Images/ballet-kick.png",
+      "typeOfMovement": "Leg Extension",
+      "description": "Penché is a classical ballet term meaning “leaning.”  When a dancer is doing or in a penché they are usually bent forward over one leg with the other in arabesque well above 90 degrees.  A penché’s arabesque leg can be at many different heights and doesn’t necessarily need to be pointing straight to the ceiling (referred to as a 180 degree penché) though in most classical ballets a 180 degree penché is ideal."
+    },
+    {
+      "id": 52,
+      "name": "Pique tour",
+      "image": "/Images/ballet-turn.png",
+      "typeOfMovement": "Turn",
+      "description": "Piqué tour is a classical ballet term meaning “pricked turn”  It is most commonly used as simply “pique turn” which is a very common step for female ballet dancers. A dancer doing a piqué tour, or piqué turn, will step directly on to a full point (when in pointe shoes) or a high demi-pointe right as they begin the turn onto that same leg.  A piqué turn can be done with the working leg in passe (both front and back), in arabesque, attitude or any other position that may be given.  The freedom for the position is open because piqué turn simply describes that the dancer has gone into the turn with a pique as opposed to relevé."
+    },
+    {
+      "id": 53,
+      "name": "Pique manege",
+      "image": "/Images/ballet-turn.png",
+      "typeOfMovement": "Turn",
+      "description": "Piqué manege is a common classical ballet term meaning “piqués in a circle.”  It is a shortened term that usually means “pique turns in a circle” or a “pique turn menage.”"
+    },
+    {
+      "id": 54,
+      "name": "Pique a la seconde",
+      "image": "/Images/ballet-turn.png",
+      "typeOfMovement": "Turn",
+      "description": "Pirouette a la seconde is a classical ballet term meaning a “spin with leg to the side” or “spin with leg in second position.” A dancing performing a pirouette a la seconde will be turning on their supporting leg with their other leg to the side and straight with a pointed foot.  It can be done en dehors or en dedans, or with a plié between repeating, multiple turns."
+    },
+    {
+      "id": 55,
+      "name": "Promenade",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "Promenade is a classical ballet term meaning “a walk.”  A promenade is when a dancer turns around on one leg with the standing leg’s heel on the floor, while the other leg is in a position such as an arabesque or attitude derriere.  It is different than a pirouette, where a dancer is on releve and is spotting as she or he turns.  The dancer makes the turn happen by slightly lifting the heel just enough to scoot it en dehors or en dedans while maintaining turnout in the supporting leg."
+    },
+    {
+      "id": 56,
+      "name": "Pirouette en dehors",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "A pirouette en dehors is a classical ballet term meaning “a spin, turning outward” and describes when a dancer turns toward the direction of the leg they lift into the turning position.  For example, a dancer with their left foot in front, will lift the right foot into the pirouette and also turn to the right in a pirouette en dehors."
+    },
+    {
+      "id": 57,
+      "name": "Polonaise",
+      "image": "/Images/ballet-step.png",
+      "typeOfMovement": "Step",
+      "description": "A polonaise is a dance within a classical ballet done in 3/4 time. It is most often seen as a processional dance in ballets like Swan Lake or The Sleeping Beauty where there are royal courts leaving, or sometimes entering, a scene. When doing a polonaise step, a dancer take two steps forward on demi-pointe, then the third step flat footed with the knees bent in a plié as the other foot brushes to the front raised off slightly off the floor."
+    },
+    {
+      "id": 58,
+      "name": "Royal",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Royale is a classical ballet term that describes when a dancer jumps in the air and beats their legs once before changing the position of their feet and landing.  When the dancer lands this jump, the leg that started in front should now be in back."
+    },
+    {
+      "id": 59,
+      "name": "Saute",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Sauté is a classical ballet term that can be used alone or with another term to mean the step is performed while jumping. When used alone, it simply means “jump” and may be often repeated by a teacher during a combination in a ballet class… “Sauté, sauté, sauté, close fifth!”"
+    },
+    {
+      "id": 60,
+      "name": "Saut de basque",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "Saut de basque is a classical ballet term that describes a traveling jump in which the dancer jumps and turns in the air with one leg placed in a retire position.  A dancer first grande battements one leg (leaving it straight in the jump), as they push off the floor with the other leg and bring the foot near the knee of the other leg the battement leg. This retire position makes a saute de basque look like a pirouette in the air.”"
+    },
+    {
+      "id": 61,
+      "name": "Saut de chat",
+      "image": "/Images/ballet-jump.png",
+      "typeOfMovement": "Jump",
+      "description": "American schools this ballet term us used for a grand jete where the front leg developpes instead of brushing straight. At the height of the jump, the dancer is in a split position. A saut de chat is very commonly seen performed by ballerinas in female variations, codas, and in corps de ballet.  But, it is also performed by male dancers as well."
+    }
+  ],
+  "photoUploads": [
+    {
+      "id": 8,
+      "userId": 1,
+      "name": "Arabesque",
+      "date": "2020-08-01",
+      "description": "At the Barre",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600245/developpe/hnad8u3emcm2lw2fn525.jpg"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "name": "Arabesque",
+      "date": "2020-08-02",
+      "description": "First time without the barre",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600341/developpe/me8q0nb9jpgaclgm5upu.jpg"
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "name": "Coupe",
+      "date": "2020-08-03",
+      "description": "Still working on it",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600402/developpe/ateopccslscjlfdvqxy9.jpg"
+    },
+    {
+      "id": 11,
+      "userId": 1,
+      "name": "Attitude",
+      "date": "2020-08-11",
+      "description": "At the Barre for balance",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600481/developpe/fevxglcerbckz5jihxho.jpg"
+    },
+    {
+      "id": 12,
+      "userId": 1,
+      "name": "Degage on Releve",
+      "date": "2020-08-01",
+      "description": "On Releve",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600737/developpe/n6uta8eemvfnpga3tie9.jpg"
+    },
+    {
+      "userId": 1,
+      "name": "Degage",
+      "date": "2020-08-19",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600811/developpe/xd2wjkpz6jtg1qgn7j9o.jpg",
+      "description": "Don't sickle right foot!",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "name": "Echappe",
+      "date": "2020-08-08",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600866/developpe/cuhr5k9zzcumuk6sfmzp.jpg",
+      "description": "Stretch feet more",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "name": "Plie",
+      "date": "2020-08-05",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600946/developpe/cnb8daodgfbbr7bruqtd.jpg",
+      "description": "Bend More!",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "name": "Releve",
+      "date": "2020-08-13",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600995/developpe/zska7pjmww5doont8bmv.jpg",
+      "description": "Come on to toes more",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "name": "Sou-sous",
+      "date": "2020-08-03",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597601064/developpe/nqd6pywou2ixwmvlyt6r.jpg",
+      "description": "First time using new pointe shoes",
+      "id": 17
     }
   ]
 }

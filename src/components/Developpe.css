@@ -1,8 +1,6 @@
-/* Import the google web fonts you want to use */
+
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
-/*Typography
---------------------------------------------------------------*/
 body,
 button,
 input,
@@ -41,16 +39,22 @@ address {
 img {
   display: block;
   border: 0;
-  width: 100%;
+  width: 0%;
   height: auto;
 }
 
 .section-content {
   padding: 1.4em;
+  display: flex;
+  justify-content: space-around;
 }
 
 .container-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.button {
+  width: auto;
 }

@@ -6,6 +6,8 @@ fieldset {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     background:  #DDBEA9;
+    display: flex;
+    justify-content: space-around;
 }
 
 fieldset input, fieldset button, fieldset select{
@@ -36,7 +38,7 @@ fieldset label {
     box-sizing: border-box;
     user-select: none;
     cursor: pointer;
-    text-align: right;
+    text-align: center;
 }
 fieldset input:focus + label {
     color: #933;
@@ -51,7 +53,7 @@ fieldset .formgrid {
 }
 
 fieldset input, fieldset button, fieldset select {
-    grid-column: 2 /4;
+    grid-column: 1 /4;
     width: auto;
     margin: 0
 }
