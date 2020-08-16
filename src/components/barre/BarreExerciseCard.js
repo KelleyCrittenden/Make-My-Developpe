@@ -6,11 +6,7 @@ const BarreExerciseCard = props => {
   return (
     <div className="card">
       <div className="card-content">
-        <picture>
-          <img className="barreExerciseImage" src={props.barreExercise.image} alt="Barre Exercise" />
-        </picture>
-
-        <h3>
+         <h3>
           <span className="card-barreExerciseName">{props.barreExercise.name}</span>
         </h3>
  

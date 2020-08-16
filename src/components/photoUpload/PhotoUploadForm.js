@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PhotoUploadManager from "../../modules/PhotoUploadManager"
 import "./PhotoUploadForm.css"
 
@@ -69,21 +69,6 @@ const PhotoUploadForm = props => {
 
               <div className="formgrid">
 
-              <label htmlFor="url">Image: </label>
-{/* <h3>Upload Image</h3> */}
-                <input
-                    type="file"
-                    name="file"
-                    id="file"
-                    placeholder="Upload an image"
-                    onChange={uploadImage}
-                />
-                {loading ? (
-                    <h2>Loading...</h2>
-                ) : (
-                    <img src={image} style={{ width: '300px' }} />
-                )}
-
               <label htmlFor="name">Name: </label>
 
                 <input
@@ -116,9 +101,25 @@ const PhotoUploadForm = props => {
                 />
 
             </div>
+            <div className="alignRight">
+{/* 
+            <label htmlFor="url">Image: </label> */}
+{/* <h3>Upload Image</h3> */}
+                <input
+                    type="file"
+                    name="file"
+                    id="url"
+                    placeholder="Upload an image"
+                    onChange={uploadImage}
+                />
+                {loading ? (
+                    <h2>Loading...</h2>
+                ) : (
+                    <img src={image} style={{ width: '300px' }} />
+                )}
 
 
-              <div className="alignRight">
+              {/* <div className="alignRight"> */}
 
                 <button
                   type="button"

@@ -6,10 +6,7 @@ const CenterFloorExerciseCard = props => {
   return (
     <div className="card">
       <div className="card-content">
-        <picture>
-          <img className="centerFloorExerciseImage" src={props.centerFloorExercise.image} alt="Center Floor Exercise" />
-        </picture>
-
+        
         <h3>
           <span className="card-centerFloorExerciseName">{props.centerFloorExercise.name}</span>
         </h3>

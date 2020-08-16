@@ -1,54 +1,39 @@
-import React, { useState } from "react"
-import UserManager from "../../modules/UserManager"
+import React, { useState } from "react";
+import UserManager from "../../modules/UserManager";
 
 const Register = props => {
-
-    const [credentials, setCredentials] = useState({
-        email: "",
-        password: "",
-        name: "",
-    });
-
-    const [users, setUsers] = useState([]);
-
-    const [isLoading, setIsLoading] = useState(false);
+    const [credentials, setCredentails] = useState({ email: "", password: "" });
 
     const handleFieldChange = (e) => {
         const stateToChange = { ...credentials };
         stateToChange[e.target.id] = e.target.value;
-        setCredentials(stateToChange);
+        setCredentails(stateToChange)
     };
 
-    const createUser = e => {
+    const handleRegister = e => {
         const email = document.getElementById("email").value
         const password = document.getElementById("password").value
         const confirmPassword = document.getElementById("confirmPassword").value
-        let emailCheck = true
+
         e.preventDefault();
 
-
-        UserManager.getAll("users")
-            .then((users) => {
-                users.map((user) => {
-                if (user.email !== email && password === confirmPassword && password !== "") {
-
-                    setIsLoading(true);
-                    UserManager.createUser(credentials)
-                        .then(() => {
-                            sessionStorage.setItem("credentials", JSON.stringify(credentials))
-                            props.history.push("/Workouts")
-                        });
-                        
-                    } else {
-                            window.alert("Passwords do not Match")
-                    }
-                })
+    UserManager.searchUser(credentials.email)
+           .then(existingUserByEmail => {
+                if (email === "" || password === "" || confirmPassword === "") {
+                    window.alert("Please fill out fields")
+                } else if (existingUserByEmail.length > 0) {
+                    window.alert("Email already exist")
+                } else if (password !== confirmPassword) {
+                    window.alert("Passwords don't match")
+                } else {
+                    UserManager.createUser(credentials).then(() => {
+                        sessionStorage.setItem("credentials", JSON.stringify(credentials))
+                        props.history.push("/")
+                    })
+                }
             })
-            
-            
+        }
 
-    
-    }
     return (
         <div>
             <form>
@@ -88,8 +73,8 @@ const Register = props => {
                     <div className="alignRight">
                     <button 
                         type="button"
-                        disabled={isLoading}
-                        onClick={createUser}>
+                        id="login"
+                        onClick={handleRegister}>
                         Create Account
                     </button>
                     </div>

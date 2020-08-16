@@ -20,8 +20,8 @@ export default {
     }).then(data => data.json());
   },
       //? method that finds anthing after the q
-  searchUser(email) {
-    return fetch(`${remoteURL}/Users?=${email}`)
+      searchUser(email) {
+        return fetch(`${remoteURL}/users/?&q=${email}`)
     .then(result => result.json())
   },
 

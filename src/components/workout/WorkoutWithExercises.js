@@ -45,17 +45,17 @@ const WorkoutWithExercises = props => {
 
             <h3><span style={{ color: 'darkslategrey' }}>{workout.name}</span></h3>
 
-            <p>Date: {workout.date}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Date: {workout.date}</span> </p>
 
-            <p>Barre Exercise: {barreExercise.name}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Barre Exercise: {barreExercise.name}</span> </p>
 
-            <p>Description: {workout.barreExerciseDescription}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Description: {workout.barreExerciseDescription}</span> </p>
 
-            <p>Center Floor Exercise: {centerFloorExercise.name}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Center Floor Exercise: {centerFloorExercise.name}</span> </p>
 
-            <p>Description: {workout.centerFloorExerciseDescription}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Description: {workout.centerFloorExerciseDescription}</span> </p>
 
-            <p>Comments: {workout.comment}</p>
+            <p><span style={{ color: 'darkslategrey' }}>Comments: {workout.comment}</span></p>
 
             </div>
             <div className="container-cards">
