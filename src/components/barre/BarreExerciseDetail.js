@@ -33,9 +33,9 @@ const BarreExerciseDetail = props => {
 
         <h3><span style={{ color: 'darkslategrey' }}>{barreExercise.name}</span></h3>
 
-        <p>Type Of Movement: {barreExercise.typeOfMovement}</p>
+        <p>{barreExercise.typeOfMovement}</p>
 
-        <p>Description: {barreExercise.description}</p>
+        <p>{barreExercise.description}</p>
 
       </div>
     </div>

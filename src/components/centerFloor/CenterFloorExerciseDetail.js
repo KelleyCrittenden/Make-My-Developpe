@@ -33,9 +33,9 @@ const CenterFloorExerciseDetail = props => {
 
         <h3><span style={{ color: 'darkslategrey' }}>{centerFloorExercise.name}</span></h3>
 
-        <p>Type Of Movement: {centerFloorExercise.typeOfMovement}</p>
+        <p>{centerFloorExercise.typeOfMovement}</p>
 
-        <p>Description: {centerFloorExercise.description}</p>
+        <p>{centerFloorExercise.description}</p>
 
       </div>
     </div>

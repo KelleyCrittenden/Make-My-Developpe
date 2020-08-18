@@ -39,25 +39,13 @@
     {
       "id": 10,
       "userId": 1,
-      "name": "Friday Class",
+      "name": "Monday Class",
       "date": "2020-08-07",
       "barreExerciseId": 5,
       "barreExerciseDescription": "At the Barre",
       "centerFloorExerciseId": 5,
       "centerFloorExerciseDescription": "7 Across the Floor",
       "comment": "Stretch before class, bring extra water",
-      "completed": false
-    },
-    {
-      "id": 11,
-      "userId": 1,
-      "name": "Saturday Class",
-      "date": "2020-08-08",
-      "barreExerciseId": 1,
-      "barreExerciseDescription": "At The Bare",
-      "centerFloorExerciseId": 1,
-      "centerFloorExerciseDescription": "Across the floor",
-      "comment": "make sure to stretch",
       "completed": false
     },
     {
@@ -71,6 +59,78 @@
       "centerFloorExerciseDescription": "Start in own corner, 2 Battement front in croise devant, 2 Battement 2nd in ecarte, 2 Battement back in epoule",
       "comment": "Second Day Of Class!!",
       "completed": true
+    },
+    {
+      "id": 13,
+      "userId": 1,
+      "name": "Thursday Class",
+      "date": "2020-08-18",
+      "barreExerciseId": 3,
+      "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
+      "centerFloorExerciseId": 2,
+      "centerFloorExerciseDescription": "Start in own corner, 2 Battement front in croise devant, 2 Battement 2nd in ecarte, 2 Battement back in epoule",
+      "comment": "Stretch Before Class Begins, drink more water!",
+      "completed": true
+    },
+    {
+      "id": 14,
+      "userId": 1,
+      "name": "Tuesday Class",
+      "date": "2020-08-15",
+      "barreExerciseId": 1,
+      "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
+      "centerFloorExerciseId": 13,
+      "centerFloorExerciseDescription": "Start in own corner, 2 Battement front in croise devant, 2 Battement 2nd in ecarte, 2 Battement back in epoule",
+      "comment": "Take a break between exercises",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "name": "Wednesday Class",
+      "date": "2020-08-12",
+      "barreExerciseId": 13,
+      "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
+      "centerFloorExerciseId": 9,
+      "centerFloorExerciseDescription": "Start in own corner, 2 Battement front in croise devant, 2 Battement 2nd in ecarte, 2 Battement back in epoule",
+      "comment": "Drink more water!",
+      "completed": false,
+      "id": 15
+    },
+    {
+      "id": 16,
+      "userId": 1,
+      "name": "Thursday Class",
+      "date": "2020-08-11",
+      "barreExerciseId": 4,
+      "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
+      "centerFloorExerciseId": 3,
+      "centerFloorExerciseDescription": "Start in own corner, 2 Battement front in croise devant, 2 Battement 2nd in ecarte, 2 Battement back in epoule",
+      "comment": "Repeat each exercise",
+      "completed": false
+    },
+    {
+      "id": 17,
+      "userId": 1,
+      "name": "Friday Class",
+      "date": "2020-08-17",
+      "barreExerciseId": 5,
+      "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
+      "centerFloorExerciseId": 4,
+      "centerFloorExerciseDescription": "Start in own corner, 2 Battement front in croise devant, 2 Battement 2nd in ecarte, 2 Battement back in epoule",
+      "comment": "Need new pointe shoes",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "name": "Saturday Class",
+      "date": "2020-08-22",
+      "barreExerciseId": 6,
+      "barreExerciseDescription": "Starting in 5th, arm in second. 2 Degage Front, 2 Degage Side, 2 Degage Back, 2 Degage Side",
+      "centerFloorExerciseId": 6,
+      "centerFloorExerciseDescription": "Start in own corner, 2 Battement front in croise devant, 2 Battement 2nd in ecarte, 2 Battement back in epoule",
+      "comment": "Need new Leos!",
+      "completed": false,
+      "id": 18
     }
   ],
   "barreExercises": [
@@ -655,7 +715,7 @@
     {
       "id": 8,
       "userId": 1,
-      "name": "Arabesque",
+      "name": "Arabesque at Barre",
       "date": "2020-08-01",
       "description": "At the Barre",
       "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600245/developpe/hnad8u3emcm2lw2fn525.jpg"
@@ -687,9 +747,9 @@
     {
       "id": 12,
       "userId": 1,
-      "name": "Degage",
+      "name": "Degage on Releve",
       "date": "2020-08-01",
-      "description": "On Releve",
+      "description": "New Pointe Shoes",
       "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597600737/developpe/n6uta8eemvfnpga3tie9.jpg"
     },
     {
@@ -731,6 +791,14 @@
       "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597601064/developpe/nqd6pywou2ixwmvlyt6r.jpg",
       "description": "First time using new pointe shoes",
       "id": 17
+    },
+    {
+      "id": 18,
+      "userId": 1,
+      "name": "Tendu",
+      "date": "2020-08-28",
+      "description": "Pointed foot should rest gently on the floor",
+      "url": "https://res.cloudinary.com/kelleycrittenden/image/upload/v1597722755/developpe/cgrzxhtieipidittawjx.jpg"
     }
   ]
 }
