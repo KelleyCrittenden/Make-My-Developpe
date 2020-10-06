@@ -6,7 +6,7 @@
 ## Ballet Training and Progress Tracker
 
 # Description: 
-  I created this app that allows a user to build a virtual library of ballet training workouts, as well as track their progress via image uploads and reference a glossary of ballet terms.
+  Make My Developpe allows a user to build a virtual library of ballet training workouts, as well as track their progress via image uploads and reference a glossary of ballet terms.
 
 # Purpose:
   When Covid-19 hit, our youngest daughter’s dance studio was closed. This left her training at home, mostly on her own, for months. During this time, she struggled to create, write out and keep track of her own ballet training workouts.
